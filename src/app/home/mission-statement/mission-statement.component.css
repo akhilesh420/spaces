@@ -1,0 +1,21 @@
+.text-center{
+  text-align: center;
+}
+
+.title-spacing {
+  margin-bottom: 48px;
+}
+
+.tile-spacing {
+  margin-bottom: 36px;
+}
+
+.content-spacing {
+  margin-bottom: 16px;
+}
+
+.y-center {
+  align-items: center;
+}
+
+
