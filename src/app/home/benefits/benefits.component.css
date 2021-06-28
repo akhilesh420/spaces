@@ -1,0 +1,23 @@
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.middle-line {
+  margin-top: 2px;
+}
+
+.bottom-line {
+  margin-top: 16px;
+  max-width: 342px;
+  word-wrap: break-word;
+}
+
+.spacing {
+  margin-top: 36px;
+}
