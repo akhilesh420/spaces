@@ -11,6 +11,7 @@ import { CollectionComponent } from './home/how-it-works/collection/collection.c
 import { CreateComponent } from './home/how-it-works/create/create.component';
 import { ShareComponent } from './home/how-it-works/share/share.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { SignUpBannerComponent } from './home/sign-up-banner/sign-up-banner.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     CollectionComponent,
     CreateComponent,
     ShareComponent,
-    SignUpComponent
+    SignUpComponent,
+    SignUpBannerComponent
   ],
   imports: [
     BrowserModule,
