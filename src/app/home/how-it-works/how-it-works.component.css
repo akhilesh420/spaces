@@ -1,0 +1,28 @@
+.outerPanel {
+
+    width: 550px;
+    height: 840px;
+    border: 1px solid #FDF0DD;
+    border-radius: 20px;
+    filter: drop-shadow(4px 0px 12px #000000);
+    box-sizing: border-box;
+
+}
+
+.heading {
+
+    margin-top: 16px;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.collection {
+
+    margin-top: 48px;
+
+}
+
+.create {
+    margin-top: 48px;
+}

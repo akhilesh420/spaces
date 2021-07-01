@@ -1,4 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+/* font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Source Serif Pro', serif; */
+
 .column {
   display: flex;
   flex-direction: column;
@@ -8,3 +17,98 @@
   display: flex;
   flex-direction: row;
 }
+
+.dark {
+  background: #040605;
+  color: #040605;
+}
+
+.light {
+  background: #FDF0DD;
+  color: #FDF0DD;
+  background-blend-mode: hard-light;
+  mix-blend-mode: hard-light;
+}
+
+.primary {
+  background: #66B8FF;
+  color: #66B8FF;
+  mix-blend-mode: normal;
+}
+
+h1, h2, h3, h4 {
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+
+  font-family: 'Source Serif Pro', serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 140%;
+  color: #FDF0DD;
+  mix-blend-mode: hard-light;
+  letter-spacing: 0em;
+  margin: 0;
+  padding: 0;
+
+}
+
+h2 {
+
+  font-family: 'Source Serif Pro', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 140%;
+  color: #FDF0DD;
+  mix-blend-mode: hard-light;
+  letter-spacing: 0em;
+  margin: 0;
+  padding: 0;
+
+}
+
+h3 {
+
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: #FDF0DD;
+  mix-blend-mode: normal;
+  letter-spacing: 0.02em;
+  margin: 0;
+  padding: 0;
+
+}
+
+h4 {
+
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 125%;
+  color: #66B8FF;
+  margin: 0;
+  padding: 0;
+
+}
+
+p {
+
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 125%;
+  letter-spacing: 0.01em;
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+
+}
+

@@ -1,0 +1,267 @@
+.title {
+    justify-content: center;
+    width: 100%;
+}
+
+.visualsContainer {
+
+    width: 100%;
+    margin-top: 16px;
+
+}
+
+/* Collect Column */
+
+.collectSection {
+
+    width: 100px;
+    margin-left: 62px;
+
+}
+
+.collectVisual {
+
+    padding-left: 4px;
+
+}
+
+.outerBox {
+
+    width: 92px;
+    height: 92px;
+    border: 1px solid #040605;
+    box-sizing: border-box;
+
+}
+
+.topPanel {
+
+    margin-top: 3px;
+    margin-left: 3px;
+    margin-bottom: 3px;
+
+}
+
+.dpCircle {
+
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #040605;
+    box-sizing: border-box;
+
+}
+
+.profileDetails {
+
+    margin-top: 1px;
+    margin-left: 2px;
+    width: 68px;
+    
+}
+
+.topRow {
+
+    border: 1px solid #040605;
+    box-sizing: border-box;
+    border-radius: 1px;
+    width: 100%;
+    height: 6px;
+
+}
+
+.bottomRow {
+
+    border: 1px solid #040605;
+    box-sizing: border-box;
+    border-radius: 1px;
+    width: 48px;
+    height: 4px;
+    margin-top: 2px;
+
+}
+
+.postImage {
+
+    width: 100%;
+    height: 53px;
+    background: #FDF0DD;
+    background-blend-mode: hard-light;
+    mix-blend-mode: normal;
+    border-top: 2px solid #040605;
+    border-bottom: 2px solid #040605;
+    border-left: 1px solid #040605;
+    border-right: 1px solid #040605;
+    box-sizing: border-box;
+
+}
+
+.postDescription {
+
+    border: 1px solid #040605;
+    box-sizing: border-box;
+    border-radius: 1px;
+    margin-top: 3px;
+    margin-left: 3px;
+    width: 62px;
+    height: 11px;
+
+}
+
+.collectButton {
+
+    background: #040605;
+    border: 1px solid #040605;
+    box-sizing: border-box;
+    border-radius: 1px;
+    margin-left: 2px;
+    margin-top: 5px;
+    width: 20px;
+    height: 7px;
+
+}
+
+
+/* Make a post column */
+
+.makePostSection {
+
+    width: 100px;
+    margin-left: 63px;
+
+}
+
+.makePostVisual {
+
+    padding-left: 4px;
+
+}
+
+.makePostBox {
+
+    border: 2px solid #040605;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: #FDF0DD;
+    align-content: center;
+
+}
+
+.makePostImage {
+    width: 100%;
+    height: 100%;
+}
+
+.imageText {
+
+    margin-top: 4px;
+    text-align: center;
+    width: 100px;
+   
+}
+
+.imageText > p {
+
+    color: #040605;
+
+}
+
+/* Build Collection column */
+
+ul {
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+
+}
+
+li {
+    
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.collectionVisual {
+
+    padding-left: 4px;
+
+}
+
+.collectionSection {
+
+   margin-left: 63px;
+
+}
+
+.selectPost {
+
+    width: 100%;
+    height: 34px;
+
+}
+
+.selectPostImage {
+
+    margin-left: 2px;
+    margin-top: 2px;
+    height: 30px;
+    width: 30px;
+    border: 1px solid #040605;
+    box-sizing: border-box;
+
+}
+
+.selectPostDetails {
+
+    margin-left: 2px;
+    height: 34px;
+
+}
+
+.selectDP {
+
+    width: 12px;
+    height: 12px;
+    border: 1px solid #040605;
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin-top: 5px;
+
+}
+
+.profileName {
+
+    width: 40px;
+    height: 6px;
+    border: 1px solid #040605;
+    box-sizing: border-box;
+    border-radius: 1px;
+    margin-top: 8px;
+    margin-left: 2px;
+
+}
+
+.selectPostDescription {
+
+    width: 54px;
+    height: 10px;
+    border: 1px solid #040605;
+    box-sizing: border-box;
+    border-radius: 1px;
+    margin-top: 2px;
+
+}
+
+
+
+
+
+
+
+
+
+
