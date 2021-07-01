@@ -33,8 +33,7 @@ font-family: 'Source Serif Pro', serif; */
 .primary {
   background: #66B8FF;
   color: #66B8FF;
-  background-blend-mode: hard-light;
-  mix-blend-mode: hard-light;
+  mix-blend-mode: normal;
 }
 
 h1, h2, h3, h4 {
@@ -76,10 +75,10 @@ h3 {
   font-family: 'Source Sans Pro', sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 24px;
   line-height: 140%;
   color: #FDF0DD;
-  mix-blend-mode: hard-light;
+  mix-blend-mode: normal;
   letter-spacing: 0.02em;
   margin: 0;
   padding: 0;
