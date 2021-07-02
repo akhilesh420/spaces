@@ -1,0 +1,28 @@
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.wrap > div {
+  margin-left: 64px;
+  margin-right: 64px;
+}
+
+.bottom-margin {
+  margin-bottom: 48px;
+}
+
+h2 {
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1164px) {
+  .restrict {
+    max-width: 550px;
+  }
+}
