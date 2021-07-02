@@ -58,13 +58,12 @@
 
 /* Collection column */
 
-
 ul {
 
     list-style: none;
     margin: 0;
     padding: 0;
-    overflow-y: scroll;
+    overflow-y: hidden;
 
 }
 
@@ -84,7 +83,7 @@ li {
 
 .collectionSection {
 
-   margin-left: 58px;
+   margin-left: 56px;
    width: 110px;
 
 }
@@ -147,3 +146,99 @@ li {
     margin-top: 2px;
 
 }
+
+/* Size column */
+
+.sizeSection {
+
+    width: 110px;
+    margin-left: 53px;
+
+}
+
+.sizeSectionVisual {
+
+    padding-left: 9px;
+
+}
+
+
+.noBorder {
+
+    border: none;
+    position: relative;
+
+}
+
+.sizeImage {
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.topLeftSizer {
+
+    display: inline-block;
+    position: absolute;
+    top: -3px;
+    left: 0px;
+    width: auto;
+    height: auto;
+    z-index: 5;
+
+}
+
+.topRightSizer {
+
+    display: inline-block;
+    position: absolute;
+    top: -3px;
+    right: 0px;
+    width: auto;
+    height: auto;
+    z-index: 5;
+    transform: rotate(90deg);
+
+}
+
+.bottomLeftSizer {
+
+    display: inline-block;
+    position: absolute;
+    bottom: -3px;
+    left: 0px;
+    width: auto;
+    height: auto;
+    z-index: 5;
+    transform: rotate(-90deg);
+
+}
+
+.bottomRightSizer {
+
+    display: inline-block;
+    position: absolute;
+    bottom: -3px;
+    right: 0px;
+    width: auto;
+    height: auto;
+    z-index: 5;
+    transform: rotate(-180deg);
+
+}
+
+.innerImage {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+
+}
+
+
+
+
+
