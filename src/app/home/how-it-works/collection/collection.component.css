@@ -42,6 +42,12 @@
 
 }
 
+.bottomPanel {
+
+    position: relative;
+
+}
+
 .dpCircle {
 
     width: 14px;
@@ -118,6 +124,107 @@
     margin-top: 5px;
     width: 20px;
     height: 7px;
+    position: relative;
+
+}
+
+.clickBar {
+
+    width: 1px;
+    background-color: #FDF0DD;
+    border-radius: 40%;
+    animation: click-bar-first 3s ease-in-out both infinite;
+
+}
+
+.one {
+
+    position: absolute;
+    left: 50%;
+    top: -5px;
+    transform: translate(-50%, 0%);
+
+}
+
+.two {
+
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translate(-50%, 0%);
+
+}
+
+.three {
+
+    position: absolute;
+    left: -4px;
+    top: 1px;
+    transform: rotate(90deg);
+
+}
+
+
+.four {
+
+    position: absolute;
+    right: -4px;
+    top: 1px;
+    transform: rotate(90deg);
+
+}
+
+
+.five {
+
+    position: absolute;
+    right: -3px;
+    top: -4px;
+    transform: rotate(45deg);
+
+}
+
+.six {
+
+    position: absolute;
+    right: -3px;
+    bottom: -4px;
+    transform: rotate(-45deg);
+
+}
+
+.seven {
+
+    position: absolute;
+    left: -3px;
+    bottom: -4px;
+    transform: rotate(45deg);
+
+}
+
+.eight {
+
+        position: absolute;
+        left: -3px;
+        top: -4px;
+        transform: rotate(-45deg);
+    
+}
+
+
+
+.clickCircle {
+
+    height: 7px;
+    width: 20px;
+    border-radius: 1px;
+    position: absolute;
+    background-color: #FDF0DD;
+    box-sizing: border-box;
+    left: -1px;
+    top: -1px;
+    animation: collect-button-click 3s ease-in-out both infinite;
+
 
 }
 
@@ -144,12 +251,14 @@
     overflow: hidden;
     background: #FDF0DD;
     align-content: center;
+    position: relative;
 
 }
 
 .makePostImage {
     width: 100%;
     height: 100%;
+    animation: image-add 3s ease-in-out both infinite;
 }
 
 .imageText {
@@ -163,6 +272,15 @@
 .imageText > p {
 
     color: #040605;
+
+}
+
+.centeredPlus {
+
+    position: absolute;
+    top: 29px;
+    left: 29px;
+    animation: plus-click 3s ease-in-out both infinite;
 
 }
 
@@ -255,6 +373,127 @@ li {
     margin-top: 2px;
 
 }
+
+/* Animations */
+
+@keyframes collect-button-click {
+
+    0% {
+
+        transform: scale(0);
+
+    }
+
+    20% {
+        
+        transform: scale(1);
+
+    }
+
+    60% {
+
+        transform: scale(1);
+
+    }
+
+    80% {
+
+        transform: scale(0);
+
+    }
+
+    100% {
+
+        transform: scale(0);
+
+    }
+
+  }
+
+@keyframes click-bar-first {
+
+    0% {
+
+        height: 0px;
+
+    }
+
+    20% {
+
+        height: 3px;
+
+    }
+
+    40% {
+
+        height: 0px;
+
+    }
+
+
+
+}
+
+@keyframes plus-click {
+
+    0% {
+
+        transform: scale(1);
+
+    }
+
+    15% {
+
+        transform: scale(0.8);
+
+    }
+
+    30% {
+
+        transform: scale(1);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
+
+@keyframes image-add {
+
+    0% {
+
+        transform: scale(0);
+
+    }
+
+    30% {
+
+        transform: scale(0);
+
+    }
+
+    60% {
+
+        transform: scale(1);
+
+    }
+
+    80% {
+
+        transform: scale(1);
+
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+
 
 
 

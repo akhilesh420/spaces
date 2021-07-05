@@ -56,6 +56,34 @@
 
 }
 
+.one {
+    animation: select-tile-one 4s ease-out both infinite;
+}
+
+.two {
+    animation: select-tile-two 4s both infinite;
+}
+
+.three {
+    animation: select-tile-three 4s both infinite;
+}
+
+.four {
+    animation: select-tile-four 4s both infinite;
+}
+
+.five {
+    animation: select-tile-five 4s both infinite;
+}
+
+.six {
+    animation: select-tile-six 4s both infinite;
+}
+
+.seven {
+    animation: select-tile-seven 4s both infinite;
+}
+
 /* Collection column */
 
 ul {
@@ -92,6 +120,17 @@ li {
 
     width: 100%;
     height: 34px;
+    animation: collection-scroll 2s ease-out both infinite;
+
+}
+
+.postSelectAnimation {
+
+    animation: post-select 2s ease-out both infinite;
+    width: 100%;
+    height: 34px;
+    z-index: -1;
+    
 
 }
 
@@ -147,6 +186,14 @@ li {
 
 }
 
+.image {
+
+    background-color: #FDF0DD;
+    width: 100%;
+    height: 100%;
+
+}
+
 /* Size column */
 
 .sizeSection {
@@ -167,13 +214,15 @@ li {
 
     border: none;
     position: relative;
-
+    
 }
 
 .sizeImage {
 
     width: 100%;
     height: 100%;
+    position: relative;
+    animation: scale-outer-image 3s ease-in-out both infinite;
 
 }
 
@@ -238,7 +287,267 @@ li {
 
 }
 
+/* Animations */
 
+@keyframes select-tile-one {
+
+    0% {
+
+        background-color: none;
+
+    }
+
+    5% {
+
+        background-color: #040605;
+
+    }
+
+    90% {
+
+        background-color: #040605;
+
+    }
+
+    100% {
+
+        background-color: #040605;
+
+    }
+
+}
+
+@keyframes select-tile-two {
+
+    15% {
+
+        background-color: none;
+
+    }
+
+    20% {
+
+        background-color: #040605;
+
+    }
+
+    90% {
+
+        background-color: #040605;
+
+    }
+
+    100% {
+
+        background-color: #040605;
+
+    }
+
+}
+
+@keyframes select-tile-three {
+
+    30% {
+
+        background-color: none;
+
+    }
+
+    35% {
+
+        background-color: #040605;
+
+    }
+
+    90% {
+
+        background-color: #040605;
+
+    }
+
+    100% {
+
+        background-color: #040605;
+
+    }
+
+}
+
+@keyframes select-tile-four {
+
+    45% {
+
+        background-color: none;
+
+    }
+
+    50% {
+
+        background-color: #040605;
+
+    }
+
+    90% {
+
+        background-color: #040605;
+
+    }
+
+    100% {
+
+        background-color: #040605;
+
+    }
+
+}
+
+@keyframes select-tile-five {
+
+    60% {
+
+        background-color: none;
+
+    }
+
+    65% {
+
+        background-color: #040605;
+
+    }
+
+    90% {
+
+        background-color: #040605;
+
+    }
+
+    100% {
+
+        background-color: #040605;
+
+    }
+
+}
+
+@keyframes select-tile-six {
+
+    75% {
+
+        background-color: none;
+
+    }
+
+    80% {
+
+        background-color: #040605;
+
+    }
+
+    90% {
+
+        background-color: #040605;
+
+    }
+
+    100% {
+
+        background-color: #040605;
+
+    }
+
+}
+
+@keyframes select-tile-seven {
+
+    90% {
+
+        background-color: #040605;
+
+    }
+
+    100% {
+
+        background-color: #040605;
+
+    }
+
+}
+
+@keyframes collection-scroll {
+
+    0% {
+        transform: translate(0,0);
+    }
+
+    40% {
+
+        transform: translate(0,-300%);
+
+    }
+
+    90% {
+
+        transform: translate(0,-300%);
+
+    }
+
+    100% {
+        
+        transform: translate(0,0);
+        
+    }
+
+}
+
+@keyframes post-select {
+
+    80% {
+
+        background-color: none;
+        
+    }
+
+    90% {
+        background-color: #FDF0DD;
+    }
+
+    100% {
+
+        background-color: none;
+
+    }
+
+
+
+}
+
+@keyframes scale-outer-image {
+
+    40% {
+
+        transform: scale(0.6);
+
+    }
+
+    70% {
+
+        transform: scale(0.8);
+
+    }
+
+    90% {
+
+        transform: scale(0.8);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
 
 
 
