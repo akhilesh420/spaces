@@ -322,6 +322,18 @@ li {
 
 }
 
+.searchBar {
+
+    width: 86px;
+    height: 12px;
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    border-radius: 4px;
+    background-color: #040605;
+
+}
+
 .selectPostImage {
 
     margin-left: 2px;
@@ -371,6 +383,38 @@ li {
     box-sizing: border-box;
     border-radius: 1px;
     margin-top: 2px;
+
+}
+
+.dissapearRowOne {
+
+    animation: dissapear-one 3s ease-out infinite;
+
+}
+
+.dissapearRowTwo {
+
+    animation: dissapear-two 3s ease-out infinite;
+
+}
+
+.moveUp {
+
+
+    animation: move-up 3s ease-out infinite;
+
+
+}
+
+.searchIcon {
+
+    margin: 2px;
+
+}
+
+.activateSearch {
+
+    animation: activate-search 3s ease-out infinite;
 
 }
 
@@ -493,7 +537,97 @@ li {
     }
 }
 
+@keyframes dissapear-one {
 
+    0% {
+
+        opacity: 1;
+
+    }
+
+    40% {
+
+        opacity: 0;
+
+    }
+
+    90% {
+
+        opacity: 0;
+        
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes dissapear-two {
+
+    0% {
+
+        opacity: 1;
+
+    }
+
+    80% {
+
+        opacity: 0;
+        
+
+    }
+
+    90% {
+
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+
+}
+
+@keyframes move-up {
+
+    80% {
+
+        transform: translate(0, -34px);
+
+    }
+
+}
+
+@keyframes activate-search {
+
+    0% {
+
+        background-color: #040605;
+
+    }
+
+    20% {
+
+        background-color: #FDF0DD;
+
+    }
+
+    90% {
+
+        background-color: #FDF0DD;
+
+    }
+
+    100% {
+
+        background-color: #040605;
+
+    }
+
+}
 
 
 
