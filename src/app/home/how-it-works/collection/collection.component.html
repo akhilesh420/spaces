@@ -6,7 +6,7 @@
 
     <!-- clickBar and clickCircle are the animation classes for the collectSection -->
     <div class="collectSection column">
-        
+
         <div class="collectVisual row">
 
             <div class="outerBox column">
@@ -43,45 +43,45 @@
 
                         <div class="collectButton column">
 
-                            <div class="clickCircle">
+                            <div [ngClass]="count === 0 ? 'clickCircle' : ''">
 
                             </div>
 
-                            <div class="clickBar one">
+                            <div [ngClass]="count === 0 ? 'clickBar' : ''" class="one">
 
                             </div>
-    
-                            <div class="clickBar two">
-    
-                            </div>
-    
-                            <div class="clickBar three">
-    
-                            </div>
-    
-                            <div class="clickBar four">
-    
-                            </div>
-    
-                            <div class="clickBar five">
-    
-                            </div>
-    
-                            <div class="clickBar six">
-    
-                            </div>
-    
-                            <div class="clickBar seven">
-    
-                            </div>
-    
-                            <div class="clickBar eight">
-                                
+
+                            <div [ngClass]="count === 0 ? 'clickBar' : ''" class="two">
+
                             </div>
 
-                        </div> 
+                            <div [ngClass]="count === 0 ? 'clickBar' : ''" class="three">
 
-                        
+                            </div>
+
+                            <div [ngClass]="count === 0 ? 'clickBar' : ''" class="four">
+
+                            </div>
+
+                            <div [ngClass]="count === 0 ? 'clickBar' : ''" class="five">
+
+                            </div>
+
+                            <div [ngClass]="count === 0 ? 'clickBar' : ''" class="six">
+
+                            </div>
+
+                            <div [ngClass]="count === 0 ? 'clickBar' : ''" class="seven">
+
+                            </div>
+
+                            <div [ngClass]="count === 0 ? 'clickBar' : ''" class="eight">
+
+                            </div>
+
+                        </div>
+
+
 
                 </div>
 
@@ -109,7 +109,7 @@
 
                 </div>
 
-                <img class = "makePostImage" src = "assets/images/Group 79.svg">
+                <img  [ngClass]="count === 1 ? 'makePostImage' : ''" src = "assets/images/Group 79.svg">
 
             </div>
 
@@ -132,22 +132,22 @@
 
                     <li>
                         <!-- activateSearch -->
-                        <div class="searchBar activateSearch row">
+                        <div [ngClass]="count === 2 ? 'activateSearch' : ''" class="searchBar row">
 
                             <img class = "searchIcon" src = "assets/images/searchIcon.svg">
 
                         </div>
-                        
+
                     </li>
                     <!-- dissapearRowOne -->
-                    <li class = "dissapearRowOne">
+                    <li [ngClass]="count === 2 ? 'dissapearRowOne' : ''">
 
                         <div class="selectPost row">
 
                             <div class="selectPostImage column">
 
                                 <div class="image">
-                                    
+
                                     <img src = "assets/images/image1.svg">
 
                                 </div>
@@ -180,17 +180,17 @@
 
 
                         </div>
-                        
+
                     </li>
                     <!-- moveUp -->
-                    <li class = "moveUp">
+                    <li [ngClass]="count === 2 ? 'moveUp' : ''">
 
                         <div class="selectPost row">
 
                             <div class="selectPostImage column">
 
                                 <div class="image">
-                                    
+
                                     <img src = "assets/images/image3.svg">
 
                                 </div>
@@ -223,10 +223,10 @@
 
 
                         </div>
-                        
+
                     </li>
                     <!-- dissapearRowTwo -->
-                    <li class = "dissapearRowTwo">
+                    <li [ngClass]="count === 2 ? 'dissapearRowTwo' : ''">
 
                         <div class="selectPost row">
 
@@ -235,47 +235,47 @@
                                 <div class="selectPostImage column">
 
                                     <div class="image">
-    
+
                                         <img src = "assets/images/image4.svg">
-    
+
                                     </div>
-    
+
                                 </div>
-    
+
                                 <div class="selectPostDetails column">
-    
+
                                     <div class="postDetailTop row">
-    
+
                                         <div class="selectDP column">
-    
+
                                         </div>
-    
+
                                         <div class="profileName row">
-    
+
                                         </div>
-    
+
                                     </div>
-    
+
                                     <div class="postDetailBottom row">
-    
+
                                         <div class="selectPostDescription column">
-    
+
                                         </div>
-    
+
                                     </div>
-    
+
                                 </div>
 
 
                             </div>
-                        
+
                         </div>
-                        
+
                     </li>
 
                 </ul>
 
-            </div>         
+            </div>
 
         </div>
 
