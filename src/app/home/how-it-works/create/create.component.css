@@ -138,8 +138,6 @@ li {
 
 }
 
-
-
 .selectPostImage {
 
     margin-left: 2px;
@@ -557,6 +555,29 @@ li {
         transform: scale(1);
 
     }
+
+}
+
+@media only screen and (max-width: 550px) {
+
+    .groupTiles {
+
+        margin-left: 18px;
+    
+    }
+
+    .collectionSection {
+
+        margin-left: calc((100vw - 366px)/2);
+    
+    }
+
+    .sizeSection {
+
+        margin-left: calc((100vw - 366px)/2);
+     
+     }
+
 
 }
 

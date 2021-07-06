@@ -1,3 +1,82 @@
+/* Opening sequence */
+
+.openingScreen {
+
+  position: relative;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: #040605;
+  
+}
+
+.typingSequenceOne {
+
+  width: auto;
+  position: relative;
+  margin-bottom: 0px;
+  color: #fdf0dd;
+
+}
+
+.animationCover {
+
+  position: absolute;
+  width: min-content;
+  height: 100%;
+  background-color: #040605;
+  z-index: 1;
+  right: 0px;
+  animation: reveal 4s 1 steps(60, end);
+  
+}
+
+.blinker {
+
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  animation: blinking 0.6s ease both 7;
+
+}
+
+.textContainer {
+
+  position: relative;
+  width: max-content;
+
+}
+
+@keyframes blinking {
+
+  0% {
+    /* opacity: 0; */
+    border-left: none;
+  }
+
+  100% {
+    /* opacity: 1; */
+    border-left: solid 1px #fdf0dd;
+  }
+
+}
+
+@keyframes reveal {
+
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0%;
+  }
+
+}
+
+
+
+
 .center {
   justify-content: center;
   align-items: center;
@@ -16,6 +95,12 @@
   margin-bottom: 48px;
 }
 
+.bottom-margin-exp {
+
+  margin-bottom: 72px;
+
+}
+
 h2 {
   margin-bottom: 36px;
   text-align: center;
@@ -25,4 +110,17 @@ h2 {
   .restrict {
     max-width: 550px;
   }
+}
+
+@media screen and (max-width: 550px) {
+
+  .wrap > div {
+
+    margin-left: 0px;
+    margin-right: 0px;
+
+  }
+
+
+
 }

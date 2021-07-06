@@ -629,7 +629,28 @@ li {
 
 }
 
+@media only screen and (max-width: 550px) {
 
+    .collectSection {
+
+        margin-left: 23px;
+    
+    }
+
+    .makePostSection {
+
+        margin-left: calc((100vw - 346px)/2);
+    
+    }
+
+    .collectionSection {
+
+        margin-left: calc((100vw - 346px)/2);
+     
+     }
+
+
+}
 
 
 
