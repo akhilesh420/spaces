@@ -562,19 +562,19 @@ li {
 
     .groupTiles {
 
-        margin-left: 18px;
+        margin-left: 5px;
     
     }
 
     .collectionSection {
 
-        margin-left: calc((100vw - 366px)/2);
+        margin-left: calc((100vw - 340px)/2);
     
     }
 
     .sizeSection {
 
-        margin-left: calc((100vw - 366px)/2);
+        margin-left: calc((100vw - 340px)/2);
      
      }
 
