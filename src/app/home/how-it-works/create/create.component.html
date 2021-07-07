@@ -12,72 +12,72 @@
                 <!-- All numbers written in words are animation trigger classes -->
                 <div class="row">
 
-                    <div class="column one tile">
+                    <div [ngClass]="count === 0 ? 'one' : ''"  class="column tile">
 
                     </div>
 
-                    <div class="column two tile">
-                        
+                    <div [ngClass]="count === 0 ? 'two' : ''" class="column tile">
+
                     </div>
 
-                    <div class="column three tile">
-                        
-                    </div>
+                    <div [ngClass]="count === 0 ? 'three' : ''" class="column tile">
 
-                    <div class="column tile">
-                        
                     </div>
 
                     <div class="column tile">
-                        
-                    </div>
 
-                </div>
-                <!-- All numbers written in words are animation trigger classes -->                
-                <div class="row">
-
-                    <div class="column four tile">
-
-                    </div>
-
-                    <div class="column five tile">
-                        
                     </div>
 
                     <div class="column tile">
-                        
-                    </div>
 
-                    <div class="column tile">
-                        
-                    </div>
-
-                    <div class="column tile">
-                        
                     </div>
 
                 </div>
                 <!-- All numbers written in words are animation trigger classes -->
                 <div class="row">
 
-                    <div class="column six tile">
+                    <div [ngClass]="count === 0 ? 'four' : ''"  class="column tile">
 
                     </div>
 
-                    <div class="column seven tile">
-                        
-                    </div>
+                    <div [ngClass]="count === 0 ? 'five' : ''"  class="column tile">
 
-                    <div class="column tile">
-                        
                     </div>
 
                     <div class="column tile">
-                        
+
                     </div>
 
                     <div class="column tile">
-                        
+
+                    </div>
+
+                    <div class="column tile">
+
+                    </div>
+
+                </div>
+                <!-- All numbers written in words are animation trigger classes -->
+                <div class="row">
+
+                    <div [ngClass]="count === 0 ? 'six' : ''"  class="column tile">
+
+                    </div>
+
+                    <div [ngClass]="count === 0 ? 'seven' : ''"  class="column tile">
+
+                    </div>
+
+                    <div class="column tile">
+
+                    </div>
+
+                    <div class="column tile">
+
+                    </div>
+
+                    <div class="column tile">
+
                     </div>
 
                 </div>
@@ -89,19 +89,19 @@
                     </div>
 
                     <div class="column tile">
-                        
+
                     </div>
 
                     <div class="column tile">
-                        
+
                     </div>
 
                     <div class="column tile">
-                        
+
                     </div>
 
                     <div class="column tile">
-                        
+
                     </div>
 
                 </div>
@@ -113,19 +113,19 @@
                     </div>
 
                     <div class="column tile">
-                        
+
                     </div>
 
                     <div class="column tile">
-                        
+
                     </div>
 
                     <div class="column tile">
-                        
+
                     </div>
 
                     <div class="column tile">
-                        
+
                     </div>
 
                 </div>
@@ -138,7 +138,7 @@
         <div class="imageText widthException row">
             <p>Group tiles to make a frame.</p>
         </div>
-    
+
     </div>
     <!-- Animation trigger for collectionSection column are wrapped within the li tags. selectPostAnimation postSelectAnimation is the trigger name -->
     <div class="collectionSection column">
@@ -151,12 +151,12 @@
                     <!-- selectPostAnimation is the trigger -->
                     <li>
 
-                        <div class="selectPost selectPostAnimation row">
+                        <div [ngClass]="count === 1 ? 'selectPostAnimation' : ''" class="selectPost row">
 
                             <div class="selectPostImage column">
-        
+
                                 <div class="image">
-                                    
+
                                 </div>
 
                             </div>
@@ -187,17 +187,17 @@
 
 
                         </div>
-                        
+
                     </li>
 
                     <li>
 
-                        <div class="selectPost selectPostAnimation row">
+                        <div [ngClass]="count === 1 ? 'selectPostAnimation' : ''" class="selectPost row">
 
                             <div class="selectPostImage column">
 
                                 <div class="image">
-                                    
+
                                     <img src = "assets/images/image2.svg">
 
                                 </div>
@@ -230,17 +230,17 @@
 
 
                         </div>
-                        
+
                     </li>
 
                     <li>
 
-                        <div class="selectPost selectPostAnimation row">
+                        <div [ngClass]="count === 1 ? 'selectPostAnimation' : ''" class="selectPost row">
 
                             <div class="selectPostImage column">
 
                                 <div class="image">
-                                    
+
                                     <img src = "assets/images/image1.svg">
 
                                 </div>
@@ -273,17 +273,17 @@
 
 
                         </div>
-                        
+
                     </li>
 
                     <li>
 
-                        <div class="selectPost selectPostAnimation row">
+                        <div [ngClass]="count === 1 ? 'selectPostAnimation' : ''" class="selectPost row">
 
                             <div class="selectPostImage column">
 
                                 <div class="image">
-                                    
+
                                     <img src = "assets/images/image3.svg">
 
                                 </div>
@@ -316,59 +316,59 @@
 
 
                         </div>
-                        
+
                     </li>
                     <!-- postSelectAnimation is a trigger within this tag -->
                     <li>
 
-                        <div class="selectPost selectPostAnimation row">
+                        <div [ngClass]="count === 1 ? 'selectPostAnimation' : ''" class="selectPost row">
                             <!-- postSelectAnimation is a trigger -->
-                            <div class="postSelectAnimation row">
+                            <div [ngClass]="count === 1 ? 'postSelectAnimation' : ''"  class="row">
 
                                 <div class="selectPostImage column">
 
                                     <div class="image">
-    
+
                                         <img src = "assets/images/image4.svg">
-    
+
                                     </div>
-    
+
                                 </div>
-    
+
                                 <div class="selectPostDetails column">
-    
+
                                     <div class="postDetailTop row">
-    
+
                                         <div class="selectDP column">
-    
+
                                         </div>
-    
+
                                         <div class="profileName row">
-    
+
                                         </div>
-    
+
                                     </div>
-    
+
                                     <div class="postDetailBottom row">
-    
+
                                         <div class="selectPostDescription column">
-    
+
                                         </div>
-    
+
                                     </div>
-    
+
                                 </div>
 
 
                             </div>
-                        
+
                         </div>
-                        
+
                     </li>
 
                     <li>
 
-                        <div class="selectPost selectPostAnimation row">
+                        <div [ngClass]="count === 1 ? 'selectPostAnimation' : ''" class="selectPost row">
 
                             <div class="selectPostImage column">
 
@@ -406,19 +406,19 @@
 
 
                         </div>
-                        
+
                     </li>
 
                 </ul>
 
-            </div>         
+            </div>
 
         </div>
 
         <div class="imageText row">
 
             <p>Choose a post
-                from your 
+                from your
                 collection</p>
 
         </div>
@@ -431,37 +431,37 @@
 
             <div class="outerBox noBorder column">
                 <!-- Animation trigger is sizeImageAnimation -->
-                <div class="sizeImage sizeImageAnimation">
+                <div [ngClass]="count === 2 ? 'sizeImageAnimation' : ''"  class="sizeImage">
 
-                    <img class = "sizeImage" src= "assets/images/image4.svg">     
+                    <img class = "sizeImage" src= "assets/images/image4.svg">
 
                     <div class="topLeftSizer">
 
                         <img class = "sizerImg" src= "assets/images/sizerImg.svg">
-        
+
                     </div>
 
                     <div class="topRightSizer">
 
                         <img class = "sizerImg" src= "assets/images/sizerImg.svg">
-        
+
                     </div>
 
                     <div class="bottomLeftSizer">
 
                         <img class = "sizerImg" src= "assets/images/sizerImg.svg">
-        
+
                     </div>
 
                     <div class="bottomRightSizer">
 
                         <img class = "sizerImg" src= "assets/images/sizerImg.svg">
-        
+
                     </div>
 
-                </div>  
+                </div>
 
-                <img class = "innerImage" src= "assets/images/sizeImageFrame.svg">     
+                <img class = "innerImage" src= "assets/images/sizeImageFrame.svg">
 
             </div>
 
