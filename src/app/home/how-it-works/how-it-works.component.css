@@ -32,3 +32,14 @@
     margin-top: 48px;
     
 }
+
+@media only screen and (max-width: 550px) {
+
+    .outerPanel {
+
+        width: 100vw;
+        border-radius: 0px;
+
+    }
+
+}
