@@ -12,6 +12,8 @@ import { CreateComponent } from './home/how-it-works/create/create.component';
 import { ShareComponent } from './home/how-it-works/share/share.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignUpBannerComponent } from './home/sign-up-banner/sign-up-banner.component';
+import { IntroComponent } from './intro/intro.component';
+import { MessageComponent } from './sign-up/message/message.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { SignUpBannerComponent } from './home/sign-up-banner/sign-up-banner.comp
     CreateComponent,
     ShareComponent,
     SignUpComponent,
-    SignUpBannerComponent
+    SignUpBannerComponent,
+    IntroComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
