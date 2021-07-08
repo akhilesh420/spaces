@@ -1,3 +1,4 @@
+import { environment } from './../environments/environment';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -14,6 +15,10 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignUpBannerComponent } from './home/sign-up-banner/sign-up-banner.component';
 import { IntroComponent } from './intro/intro.component';
 import { MessageComponent } from './sign-up/message/message.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,11 @@ import { MessageComponent } from './sign-up/message/message.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule, // firestore
+    AngularFireAuthModule, // auth
   ],
   providers: [],
   bootstrap: [AppComponent]

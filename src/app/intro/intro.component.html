@@ -2,7 +2,7 @@
 
   <div class="coverScreen column">
     <!-- First Message -->
-    <!-- <div class="textContainer row">
+    <div *ngIf='($count | async)  === 0' class="textContainer row">
 
       <h4 class = "typingSequence">It's difficult to constantly post </h4>
 
@@ -16,7 +16,7 @@
 
     </div>
 
-    <div class="textContainer row">
+    <div *ngIf='($count | async)  === 0' class="textContainer row">
 
       <h4 class = "typingSequence opacityVary" >to engage your audience and grow.</h4>
 
@@ -28,10 +28,10 @@
 
       </div>
 
-    </div> -->
+    </div>
 
     <!-- Second message -->
-    <!-- <div class="textContainer row">
+    <div *ngIf='($count | async) === 1' class="textContainer row">
 
       <h4 class = "typingSequence">Instead, collect and use the content you like</h4>
 
@@ -45,7 +45,7 @@
 
     </div>
 
-    <div class="textContainer row">
+    <div *ngIf='($count | async)  === 1' class="textContainer row">
 
       <h4 class = "typingSequence opacityVary" >to make interactive moodboards.</h4>
 
@@ -57,10 +57,10 @@
 
       </div>
 
-    </div> -->
+    </div>
 
     <!-- Third message -->
-    <div class="textContainer row">
+    <div *ngIf='($count | async)  === 2' class="textContainer row">
 
       <h4 class = "typingSequence">Quality takes time, so</h4>
 
@@ -74,7 +74,7 @@
 
     </div>
 
-    <div class="textContainer row">
+    <div *ngIf='($count | async)  === 2' class="textContainer row">
 
       <h4 class = "typingSequence" >engage people with what inspires you,</h4>
 
@@ -88,7 +88,7 @@
 
     </div>
 
-    <div class="textContainer row">
+    <div *ngIf='($count | async)  === 2' class="textContainer row">
 
       <h4 class = "typingSequence" >while you focus on your craft.</h4>
 

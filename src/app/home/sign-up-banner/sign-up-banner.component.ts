@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs';
+import { DatabaseService } from './../../services/database.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignUpBannerComponent implements OnInit {
 
-  constructor() { }
+  earlyCount = new Observable((observer) => observer.next(0));
+
+  constructor(private databaseService: DatabaseService) { }
 
   ngOnInit(): void {
+    this.earlyCount = this.databaseService.getEarlyAccessCount();
   }
 
 }
