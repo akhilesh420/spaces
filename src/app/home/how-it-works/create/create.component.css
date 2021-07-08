@@ -310,9 +310,10 @@ li {
 
     0% {
 
-        background-color: none;
+        background-color: #040605;
 
     }
+
 
     5% {
 
@@ -336,6 +337,7 @@ li {
 
 @keyframes select-tile-two {
 
+    
     15% {
 
         background-color: none;
@@ -363,6 +365,7 @@ li {
 }
 
 @keyframes select-tile-three {
+
 
     30% {
 
@@ -420,6 +423,7 @@ li {
 
 @keyframes select-tile-five {
 
+
     60% {
 
         background-color: none;
@@ -475,6 +479,7 @@ li {
 }
 
 @keyframes select-tile-seven {
+
 
     90% {
 
