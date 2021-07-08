@@ -40,6 +40,7 @@
     height: 18px;
     border: 1px solid #040605;
     box-sizing: border-box;
+    
 
 }
 
@@ -56,8 +57,15 @@
 
 }
 
+.keepColor {
+    background-color: #040605;
+}
+
 .one {
+    
+    
     animation: select-tile-one 4s ease-out both infinite;
+    
 }
 
 .two {
