@@ -30,8 +30,13 @@
 
 .logo {
 
-  margin-top: 64px;
+  margin-top: 48px;
 
+}
+
+.alignSlogan {
+
+  justify-content: center;
 }
 
 h2 {
