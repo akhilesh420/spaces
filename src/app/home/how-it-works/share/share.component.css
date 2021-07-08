@@ -103,10 +103,11 @@
     height: 18px;
     position: absolute;
     bottom: 0px;
-    left: 0px;
+    left: -1px;
     background: #FDF0DD;
     border-top: 2px solid #040605;
     border-right: 2px solid #040605;
+    border-left: 2px solid #040605;
     box-sizing: border-box;
     z-index: 1;
     animation: scale-post 3s ease-in-out infinite both;
@@ -319,14 +320,13 @@
 
         width: 38px;
         height: 18px;
-        border-left: 2px solid #040605;
       
     }
 
     70% {
 
         height: 100%;
-        width: 100%;  
+        width: 100%;
 
     }
 
@@ -339,17 +339,10 @@
 
     }
 
-    99% {
-
-        border-left: 2px solid #040605;
-
-    }
-
     100% {
 
         /* left: 0px;
         bottom: 0px; */
-        border-left: none;
 
     }
 }
