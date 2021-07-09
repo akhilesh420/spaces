@@ -1,3 +1,4 @@
+import { SharedService } from './../services/shared.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  startIntro: Boolean = false;
+
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit(): void {
+    this.startIntro = this.sharedService.startIntro;
   }
 
 }
