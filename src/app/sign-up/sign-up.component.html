@@ -53,7 +53,7 @@
                     <h4>E-mail address</h4>
                 </div>
 
-                <div class="feildInput row" [ngClass]='{"error-border": !!errors.name}'>
+                <div class="feildInput row" [ngClass]='{"error-border": !!errors.email}'>
                   <input type="text"
                          class = "input"
                          [(ngModel)]="email"
@@ -81,7 +81,7 @@
                     <h4>Social Link</h4>
                 </div>
 
-                <div [ngClass]='{"error-border": !!errors.name}'  class="feildInput row">
+                <div [ngClass]='{"error-border": !!errors.link}'  class="feildInput row">
                   <input type="text"
                          class = "input"
                          [(ngModel)]="link"
