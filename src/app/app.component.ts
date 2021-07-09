@@ -1,5 +1,6 @@
 import { AuthService } from './services/auth.service';
 import { Component, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ export class AppComponent implements OnInit {
   constructor(private authService: AuthService) {}
 
   ngOnInit() {
+    AOS.init();
     this.authService.anonSignIn();
   }
-
 }
