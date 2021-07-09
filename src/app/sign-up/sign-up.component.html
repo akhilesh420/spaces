@@ -22,18 +22,21 @@
                     <h4>Name</h4>
                 </div>
 
-                <div class="feildInput row">
+                <div class="feildInput row"
+                    [ngClass]='{"error-border": !!errors.name}'>
 
                     <input type='text'
                            class = "input"
                            [(ngModel)]="name"
-                           appTitleCase>
+                           (focusout)='validName()'
+                           name='fullname'
+                           id="fullname">
 
                 </div>
 
-                <div class="feildError row">
+                <div *ngIf='errors.name' class="feildError row">
 
-                  <p class = "error">Add an e-mail address</p>
+                  <p class = "error">{{errors.name}}</p>
 
                 </div>
 
@@ -49,13 +52,18 @@
                     <h4>E-mail address</h4>
                 </div>
 
-                <div class="feildInput row">
-                  <input type="text" class = "input" [(ngModel)]="email">
+                <div class="feildInput row" [ngClass]='{"error-border": !!errors.name}'>
+                  <input type="text"
+                         class = "input"
+                         [(ngModel)]="email"
+                         (focusout)='validEmail()'
+                          name='email'
+                          id="email">
                 </div>
 
-                <div class="feildError row">
+                <div *ngIf='errors.email' class="feildError row">
 
-                    <p class = "error">Add an e-mail address</p>
+                    <p class = "error">{{errors.email}}</p>
 
                 </div>
 
@@ -71,13 +79,18 @@
                     <h4>Social Link</h4>
                 </div>
 
-                <div class="feildInput row">
-                  <input type="text" class = "input" [(ngModel)]="link">
+                <div [ngClass]='{"error-border": !!errors.name}'  class="feildInput row">
+                  <input type="text"
+                         class = "input"
+                         [(ngModel)]="link"
+                         (focusout)='validLink()'
+                          name='link'
+                          id="link">
                 </div>
 
-                <div class="feildError row">
+                <div *ngIf='errors.link' class="feildError row">
 
-                  <p class = "error">Add an e-mail address</p>
+                  <p class = "error">{{errors.link}}</p>
 
                 </div>
 

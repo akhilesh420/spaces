@@ -31,9 +31,30 @@ export class SignUpComponent implements OnInit, OnDestroy {
   }
 
   validName() {
-    if (this.name && this.name.length === 0) this.errors.name = 'Name is required';
+    if (!this.name || this.name.length === 0) return this.errors.name = 'Name is required';
+    return this.errors.name = undefined;
   }
 
+  validEmail() {
+    if (!this.email || this.email.length === 0) return this.errors.email = 'Email is required';
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!re.test(String(this.email).toLowerCase())) return this.errors.email = 'Invalid email';
+    return this.errors.email = undefined;
+  }
+
+  validLink() {
+    if (!this.link || this.link.length === 0) return this.errors.link = 'Social link is required';
+    if (this.link.indexOf(' ') >= 0) return this.errors.link = 'Invalid social link';
+    const linkify = require('linkifyjs');
+    const links =  linkify.find(this.link);
+    if (links.length <= 0) return this.errors.link = 'Invalid social link';
+    return this.errors.link = undefined;
+  }
+
+  validateEmail(email: string) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return ;
+  }
 
   ngOnDestroy() {
 

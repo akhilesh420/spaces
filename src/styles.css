@@ -13,6 +13,7 @@ font-family: 'Source Serif Pro', serif; */
   --accent: #FDF0DD;
   --dark: #040605;
   --white: #ffffff;
+  --red: #CC2A28;
 }
 
 ::-webkit-scrollbar {
