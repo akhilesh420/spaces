@@ -1,6 +1,5 @@
 import { SharedService } from './../services/shared.service';
 import { Component, OnDestroy, OnInit, AfterViewInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
