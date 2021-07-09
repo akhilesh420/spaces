@@ -115,6 +115,8 @@ h4 {
 
         border-radius: 0px;
         width: 100%;
+        border-left: none;
+        border-right: none;
         
     }  
 
