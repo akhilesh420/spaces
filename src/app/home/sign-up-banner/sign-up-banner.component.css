@@ -1,20 +1,17 @@
 .button {
+
   width: 144px;
   height: 48px;
-  /* Primary */
-
   background: #66B8FF;
-  /* Light */
-
   border: 1px solid #FDF0DD;
   box-sizing: border-box;
   box-shadow: 0px 0px 16px #000000;
   border-radius: 8px;
-
   justify-content: center;
   align-items: center;
-
+  transition: ease-in-out 0.3s;
   cursor: pointer;
+
 }
 
 .text {
@@ -24,8 +21,33 @@
 
 h3 {
   font-size: 22px;
+  transition: ease-in-out 0.3s;
 }
 
 p {
   color: var(--accent);
+  transition: ease-in-out 0.3s;
+}
+
+@media(hover: hover) and (pointer: fine) {
+
+  .button:hover {
+
+    background: var(--dark);
+    border: 1px solid #66B8FF;
+
+  }
+
+  .button:hover > h3 {
+
+    color: #66B8FF;
+
+  }
+
+  .selector:hover p {
+
+    color: #66B8FF;
+
+  }
+
 }
