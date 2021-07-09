@@ -1,9 +1,3 @@
-
-
-
-
-
-
 .center {
   justify-content: center;
   align-items: center;
@@ -30,13 +24,20 @@
 
 .logo {
 
-  margin-top: 64px;
+  margin-top: 36px;
+
+}
+
+.alignSlogan {
+
+  justify-content: center;
 
 }
 
 h2 {
-  margin-bottom: 36px;
+  margin-bottom: 24px;
   text-align: center;
+  margin-top: 16px;
 }
 
 .linksRow {

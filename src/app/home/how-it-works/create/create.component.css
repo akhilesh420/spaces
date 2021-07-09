@@ -40,6 +40,7 @@
     height: 18px;
     border: 1px solid #040605;
     box-sizing: border-box;
+    
 
 }
 
@@ -56,8 +57,15 @@
 
 }
 
+.keepColor {
+    background-color: #040605;
+}
+
 .one {
+    
+    
     animation: select-tile-one 4s ease-out both infinite;
+    
 }
 
 .two {
@@ -302,9 +310,10 @@ li {
 
     0% {
 
-        background-color: none;
+        background-color: #040605;
 
     }
+
 
     5% {
 
@@ -328,6 +337,7 @@ li {
 
 @keyframes select-tile-two {
 
+    
     15% {
 
         background-color: none;
@@ -355,6 +365,7 @@ li {
 }
 
 @keyframes select-tile-three {
+
 
     30% {
 
@@ -412,6 +423,7 @@ li {
 
 @keyframes select-tile-five {
 
+
     60% {
 
         background-color: none;
@@ -468,6 +480,7 @@ li {
 
 @keyframes select-tile-seven {
 
+
     90% {
 
         background-color: #040605;
@@ -494,14 +507,20 @@ li {
 
     }
 
-    90% {
+    85% {
 
         transform: translate(0,-300%);
 
     }
 
-    100% {
+    98% {
         
+        transform: translate(0,0);
+        
+    }
+
+    100% {
+
         transform: translate(0,0);
         
     }
@@ -562,19 +581,19 @@ li {
 
     .groupTiles {
 
-        margin-left: 5px;
+        margin-left: 10px;
     
     }
 
     .collectionSection {
 
-        margin-left: calc((100vw - 340px)/2);
+        margin-left: calc((100vw - 350px)/2);
     
     }
 
     .sizeSection {
 
-        margin-left: calc((100vw - 340px)/2);
+        margin-left: calc((100vw - 350px)/2);
      
      }
 

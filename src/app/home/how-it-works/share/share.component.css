@@ -10,6 +10,7 @@
     width: 100%;
     margin-top: 16px;
     justify-content: center;
+    margin-bottom: 48px;
 
 }
 
@@ -103,10 +104,11 @@
     height: 18px;
     position: absolute;
     bottom: 0px;
-    left: 0px;
+    left: -1px;
     background: #FDF0DD;
     border-top: 2px solid #040605;
     border-right: 2px solid #040605;
+    border-left: 2px solid #040605;
     box-sizing: border-box;
     z-index: 1;
     animation: scale-post 3s ease-in-out infinite both;
@@ -138,6 +140,29 @@
     right: 0px;
     box-sizing: border-box;
     border-left: 2px solid #040605;
+
+}
+
+.fourthBlock {
+
+    position: absolute;
+    width: 52px;
+    height: 18px;
+    background: #040605;
+    bottom: 0px;
+    right: 0px;
+    box-sizing: border-box;
+    border-left: 2px solid #040605;
+
+}
+
+.backImage {
+
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: -4px;
 
 }
 
@@ -302,7 +327,7 @@
     70% {
 
         height: 100%;
-        width: 100%;  
+        width: 100%;
 
     }
 
@@ -310,15 +335,15 @@
 
         height: 100%;
         width: 100%;
-        left: 1px;
-        bottom: 1px;
+        /* left: 1px;
+        bottom: 1px; */
 
     }
 
     100% {
 
-        left: 0px;
-        bottom: 0px;
+        /* left: 0px;
+        bottom: 0px; */
 
     }
 }
