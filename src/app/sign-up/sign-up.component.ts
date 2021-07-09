@@ -2,12 +2,6 @@ import { DatabaseService } from './../services/database.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { User } from '../models/user.model';
 
-enum Errors {
-    name = '',
-    email = '',
-    link = ''
-}
-
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -19,6 +13,9 @@ export class SignUpComponent implements OnInit, OnDestroy {
   email = ''
   link = ''
   creating: Boolean = false;
+  errors: { name: string  | undefined;
+            email: string  | undefined;
+            link: string  | undefined; } = {name: undefined, email: undefined, link: undefined};
 
   constructor(private databaseService: DatabaseService) { }
 
@@ -32,6 +29,11 @@ export class SignUpComponent implements OnInit, OnDestroy {
     await this.databaseService.setUser(user);
     this.creating = false
   }
+
+  validName() {
+    if (this.name && this.name.length === 0) this.errors.name = 'Name is required';
+  }
+
 
   ngOnDestroy() {
 
