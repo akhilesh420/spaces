@@ -11,7 +11,6 @@ export class WindowService {
   constructor() { }
 
   setDimensions(height: number, width: number) {
-    console.log({width, height})
     this.height = height;
     this.width = width;
   }
