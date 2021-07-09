@@ -507,14 +507,20 @@ li {
 
     }
 
-    90% {
+    85% {
 
         transform: translate(0,-300%);
 
     }
 
-    100% {
+    98% {
         
+        transform: translate(0,0);
+        
+    }
+
+    100% {
+
         transform: translate(0,0);
         
     }
@@ -575,19 +581,19 @@ li {
 
     .groupTiles {
 
-        margin-left: 5px;
+        margin-left: 10px;
     
     }
 
     .collectionSection {
 
-        margin-left: calc((100vw - 340px)/2);
+        margin-left: calc((100vw - 350px)/2);
     
     }
 
     .sizeSection {
 
-        margin-left: calc((100vw - 340px)/2);
+        margin-left: calc((100vw - 350px)/2);
      
      }
 

@@ -24,7 +24,7 @@
 
 .logo {
 
-  margin-top: 48px;
+  margin-top: 36px;
 
 }
 
@@ -37,6 +37,7 @@
 h2 {
   margin-bottom: 24px;
   text-align: center;
+  margin-top: 16px;
 }
 
 .linksRow {
