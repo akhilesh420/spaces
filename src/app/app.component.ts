@@ -32,7 +32,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
 
     this.router.events.pipe(filter((event): event is NavigationEnd => event instanceof NavigationEnd))
       .subscribe(event  => {
-        if (event.urlAfterRedirects.startsWith('/home')) this.sharedService.startIntro = false;
+        if (!event.urlAfterRedirects.startsWith('/home')) this.sharedService.startIntro = false;
       });
 
     this.sharedService.getModal()
