@@ -13,6 +13,13 @@
     margin-top: 16px;
     text-align: center;
     justify-content: center;
+    align-items: center;
+    width: calc(100% - 32px);
+    height: 48px;
+    margin-left: 16px;
+    background-color: var(--dark);
+    border-radius: 16px;
+
 
 }
 
@@ -50,3 +57,4 @@
     }
 
 }
+
