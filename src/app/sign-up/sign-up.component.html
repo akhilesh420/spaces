@@ -1,4 +1,4 @@
-<div class="row logo">
+<div class="row logo" routerLink='/home'>
 
     <img src = "assets/images/logo.svg">
 
@@ -29,6 +29,7 @@
                            class = "input"
                            [(ngModel)]="name"
                            (focusout)='validName()'
+                           (keyup)='validName()'
                            name='fullname'
                            id="fullname">
 
@@ -57,6 +58,7 @@
                          class = "input"
                          [(ngModel)]="email"
                          (focusout)='validEmail()'
+                         (keyup)='validEmail()'
                           name='email'
                           id="email">
                 </div>
@@ -84,6 +86,7 @@
                          class = "input"
                          [(ngModel)]="link"
                          (focusout)='validLink()'
+                         (keyup)='validLink()'
                           name='link'
                           id="link">
                 </div>
@@ -101,10 +104,13 @@
         <div class="row nextIcon feild" (click)='saveUser()'>
 
             <!-- Confirm arrow -->
-            <img src = "assets/images/nextIcon.svg">
+            <img *ngIf='!errors.name && !errors.email && !errors.link; else errorIcon'
+                  src = "assets/images/nextIcon.svg">
 
             <!-- Error arrow -->
-            <!-- <img src = "assets/images/nextIconError.svg"> -->
+            <ng-template #errorIcon>
+              <img src = "assets/images/nextIconError.svg">
+            </ng-template>
 
         </div>
 

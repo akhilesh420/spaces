@@ -24,6 +24,10 @@ export class SignUpComponent implements OnInit, OnDestroy {
 
   async saveUser() {
     if (this.creating) return;
+    this.validName();
+    this.validEmail();
+    this.validLink();
+    if (this.errors.name || this.errors.email || this.errors.link) return;
     this.creating = true;
     const user: User = new User(this.name, this.email, this.link);
     await this.databaseService.setUser(user);
@@ -49,11 +53,6 @@ export class SignUpComponent implements OnInit, OnDestroy {
     const links =  linkify.find(this.link);
     if (links.length <= 0) return this.errors.link = 'Invalid social link';
     return this.errors.link = undefined;
-  }
-
-  validateEmail(email: string) {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return ;
   }
 
   ngOnDestroy() {
