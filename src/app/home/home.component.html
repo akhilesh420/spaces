@@ -9,7 +9,7 @@
           Engage people with the<br>things that inspire you.
         </h2>
       </div>
-      <div class="row moreArrow center">
+      <div class="row moreArrow center" (click)='scrollDown()'>
         <img src = "assets/images/moreArrow.svg">
       </div>
     </div>
@@ -17,7 +17,7 @@
   <div class="restrict">
     <div class="row wrap center">
       <div data-aos="fade-up" class="bottom-margin">
-        <app-how-it-works ></app-how-it-works>
+        <app-how-it-works id='howitworks'></app-how-it-works>
       </div>
       <div data-aos="fade-up" class='column bottom-margin-exp'>
         <app-benefits class='bottom-margin'></app-benefits>
@@ -47,5 +47,5 @@
   </div>
 </div>
 
-<app-intro *ngIf='startIntro'></app-intro>
+<!-- <app-intro *ngIf='startIntro'></app-intro> -->
 

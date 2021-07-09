@@ -3,17 +3,16 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { IntroComponent } from './intro/intro.component';
 
 const routes: Routes = [
-  {path: '', component: IntroComponent},
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'signup', component: SignUpComponent},
   {path: 'message', component: MessageComponent},
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

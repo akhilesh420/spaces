@@ -54,7 +54,7 @@
                 </div>
 
                 <div class="feildInput row" [ngClass]='{"error-border": !!errors.email}'>
-                  <input type="text"
+                  <input type="email"
                          class = "input"
                          [(ngModel)]="email"
                          (focusout)='validEmail()'
@@ -82,7 +82,7 @@
                 </div>
 
                 <div [ngClass]='{"error-border": !!errors.link}'  class="feildInput row">
-                  <input type="text"
+                  <input type="url"
                          class = "input"
                          [(ngModel)]="link"
                          (focusout)='validLink()'

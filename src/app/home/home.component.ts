@@ -1,3 +1,4 @@
+import { WindowService } from './../services/window.service';
 import { SharedService } from './../services/shared.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,11 +10,21 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   startIntro: Boolean = false;
+  offset = 10;
 
-  constructor(private sharedService: SharedService) { }
+  constructor(private sharedService: SharedService,
+              private windowService: WindowService) { }
 
   ngOnInit(): void {
     this.startIntro = this.sharedService.startIntro;
+  }
+
+  scrollDown() {
+    window.scrollTo({
+      top: this.windowService.height - this.offset,
+      left: 0,
+      behavior: 'smooth'
+    })
   }
 
 }

@@ -1,7 +1,8 @@
+import { WindowService } from './services/window.service';
 import { SharedService } from './services/shared.service';
 import * as AOS from 'aos';
 import { AuthService } from './services/auth.service';
-import { Component, OnInit, OnDestroy, Inject, Renderer2, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject, Renderer2, ViewEncapsulation, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
 import { DOCUMENT } from '@angular/common';
@@ -12,12 +13,15 @@ import { NavigationEnd, Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   title = 'Postpress';
   notifier$ = new Subject();
 
+  @ViewChild('master') master: ElementRef<HTMLElement>;
+
   constructor(private authService: AuthService,
               private sharedService: SharedService,
+              private windowService: WindowService,
               @Inject(DOCUMENT) private _document: any,
               private renderer: Renderer2,
               private router: Router) {}
@@ -44,6 +48,15 @@ export class AppComponent implements OnInit, OnDestroy {
       }
     });
   }
+
+  ngAfterViewInit() {
+    this.onResize();
+  }
+
+  onResize() {
+    this.windowService.setDimensions(this.master.nativeElement.offsetHeight, this.master.nativeElement.offsetWidth);
+  }
+
 
   ngOnDestroy() {
     this.notifier$.next();
