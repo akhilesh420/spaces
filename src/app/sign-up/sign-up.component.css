@@ -45,7 +45,7 @@ h4 {
 
 .feild {
 
-    width: 280px;
+    width: calc(100% - 32px);
     margin-top: 36px;
     align-self: center;
     justify-content: center;
