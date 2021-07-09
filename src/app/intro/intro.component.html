@@ -1,4 +1,4 @@
-<div class="openingScreen closingAnimation">
+<div [ngClass]="{'closingAnimation': ($count | async) === 3, 'hide': ($count | async) >= 4}" class="openingScreen top">
 
   <div class="coverScreen column">
     <!-- First Message -->
@@ -60,7 +60,7 @@
     </div>
 
     <!-- Third message -->
-    <div *ngIf='($count | async)  === 2' class="textContainer row">
+    <div *ngIf='($count | async)  >= 2' class="textContainer row">
 
       <h4 class = "typingSequence">Quality takes time, so</h4>
 
@@ -74,7 +74,7 @@
 
     </div>
 
-    <div *ngIf='($count | async)  === 2' class="textContainer row">
+    <div *ngIf='($count | async)  >= 2' class="textContainer row">
 
       <h4 class = "typingSequence" >engage people with what inspires you,</h4>
 
@@ -88,7 +88,7 @@
 
     </div>
 
-    <div *ngIf='($count | async)  === 2' class="textContainer row">
+    <div *ngIf='($count | async)  >= 2' class="textContainer row">
 
       <h4 class = "typingSequence" >and post when you're ready.</h4>
 
