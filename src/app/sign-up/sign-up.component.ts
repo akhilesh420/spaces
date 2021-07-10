@@ -1,3 +1,4 @@
+import { MixpanelService } from './../services/mixpanel.service';
 import { Router } from '@angular/router';
 import { DatabaseService } from './../services/database.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
@@ -19,6 +20,7 @@ export class SignUpComponent implements OnInit, OnDestroy {
             link: string  | undefined; } = {name: undefined, email: undefined, link: undefined};
 
   constructor(private databaseService: DatabaseService,
+              private mixpanelService: MixpanelService,
               private router: Router) { }
 
   ngOnInit(): void {
@@ -33,7 +35,10 @@ export class SignUpComponent implements OnInit, OnDestroy {
     this.creating = true;
     const user: User = new User(this.name, this.email, this.link);
     await this.databaseService.setUser(user)
-      .then(() => this.router.navigate(['message']))
+      .then((timestamp) => {
+        this.mixpanelService.earlyAccess({...user, timestamp});
+        this.router.navigate(['message']);
+      })
       .catch((e) => alert(e));
     this.creating = false
   }

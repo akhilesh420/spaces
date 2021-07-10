@@ -1,9 +1,9 @@
-import { DatabaseService } from './services/database.service';
+import { MixpanelService } from './services/mixpanel.service';
 import { WindowService } from './services/window.service';
 import { SharedService } from './services/shared.service';
 import * as AOS from 'aos';
 import { AuthService } from './services/auth.service';
-import { Component, OnInit, OnDestroy, Inject, Renderer2, ViewEncapsulation, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject, Renderer2, ViewChild, ElementRef, AfterViewInit, HostListener } from '@angular/core';
 import { Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
 import { DOCUMENT } from '@angular/common';
@@ -17,19 +17,20 @@ import { NavigationEnd, Router } from '@angular/router';
 export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   title = 'Postpress';
   notifier$ = new Subject();
+  beforeUnloadTriggered: boolean = false;
 
   @ViewChild('master') master: ElementRef<HTMLElement>;
 
   constructor(private authService: AuthService,
               private sharedService: SharedService,
               private windowService: WindowService,
+              private mixpanelService: MixpanelService,
               @Inject(DOCUMENT) private _document: any,
               private renderer: Renderer2,
               private router: Router) {}
 
   ngOnInit() {
-    this.authService.anonSignIn();
-    AOS.init();
+    this.initialization();
 
     this.router.events.pipe(filter((event): event is NavigationEnd => event instanceof NavigationEnd))
       .subscribe(event  => {
@@ -50,6 +51,12 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
     });
   }
 
+  initialization() {
+    this.mixpanelService.init(); //Initialize tracking
+    this.authService.anonSignIn();
+    AOS.init();
+  }
+
   ngAfterViewInit() {
     this.onResize();
   }
@@ -58,6 +65,12 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
     this.windowService.setDimensions(this.master.nativeElement.offsetHeight, this.master.nativeElement.offsetWidth);
   }
 
+  @HostListener('window:beforeunload')
+  onBeforeUnload() {
+    if (this.beforeUnloadTriggered) return;
+    this.beforeUnloadTriggered= true;
+    this.mixpanelService.sessionEndTrack();
+  }
 
   ngOnDestroy() {
     this.notifier$.next();

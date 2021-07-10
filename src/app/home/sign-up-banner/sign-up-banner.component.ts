@@ -1,3 +1,4 @@
+import { MixpanelService } from './../../services/mixpanel.service';
 import { Observable } from 'rxjs';
 import { DatabaseService } from './../../services/database.service';
 import { Component, OnInit } from '@angular/core';
@@ -11,10 +12,15 @@ export class SignUpBannerComponent implements OnInit {
 
   earlyCount = new Observable((observer) => observer.next(0));
 
-  constructor(private databaseService: DatabaseService) { }
+  constructor(private databaseService: DatabaseService,
+              private mixpanelService: MixpanelService) { }
 
   ngOnInit(): void {
     this.earlyCount = this.databaseService.getEarlyAccessCount();
+  }
+
+  track() {
+    this.mixpanelService.goToEarlyAccess();
   }
 
 }
