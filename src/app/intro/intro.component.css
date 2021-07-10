@@ -1,7 +1,7 @@
 /* Opening sequence */
   .closingAnimation {
 
-    animation: closing-animation 1.2s ease-in 1;
+    animation: closing-animation 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1;
 
   }
 
@@ -62,7 +62,7 @@
     background-color: #040605;
     z-index: 0;
     right: 0px;
-    animation: reveal-two 5.2s 1 steps(60, end);
+    animation: reveal-two 4s 1 steps(60, end);
     animation-delay: 3.0s;
 
   }
@@ -109,7 +109,7 @@
     background-color: #040605;
     z-index: 0;
     right: 0px;
-    animation: reveal-two 5.2s 1 steps(60, end);
+    animation: reveal-two 3s 1 steps(60, end);
     animation-delay: 6.0s;
 
   }
