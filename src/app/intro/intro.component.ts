@@ -10,7 +10,7 @@ import { takeUntil } from 'rxjs/operators';
 })
 export class IntroComponent implements OnInit, AfterViewInit, OnDestroy {
 
-  times = [6400, 6400, 9200, 1200];
+  times = [6600, 6700, 9000, 310];
   $count: BehaviorSubject<number> = new BehaviorSubject(0);
   $notifier = new Subject();
 
