@@ -1,3 +1,4 @@
+import { DatabaseService } from './services/database.service';
 import { WindowService } from './services/window.service';
 import { SharedService } from './services/shared.service';
 import * as AOS from 'aos';
@@ -27,8 +28,8 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
               private router: Router) {}
 
   ngOnInit() {
-    AOS.init();
     this.authService.anonSignIn();
+    AOS.init();
 
     this.router.events.pipe(filter((event): event is NavigationEnd => event instanceof NavigationEnd))
       .subscribe(event  => {

@@ -20,6 +20,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { FormsModule } from '@angular/forms';
 import { TitleCaseDirective } from './directives/title-case.directive';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { TitleCaseDirective } from './directives/title-case.directive';
     SignUpBannerComponent,
     IntroComponent,
     MessageComponent,
-    TitleCaseDirective
+    TitleCaseDirective,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

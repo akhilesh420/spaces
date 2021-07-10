@@ -11,7 +11,7 @@ export class AuthService {
   async anonSignIn() {
     await this.auth.setPersistence('local');
     await this.auth.signInAnonymously()
-      .then(() => console.log('signed in!'))
+      .then((user) => console.log('signed in!'))
       .catch((e) => console.log(e));
   }
 

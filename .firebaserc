@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "call-it-whatever-bro"
+    "default": "call-it-whatever-bro",
+    "testing": "postpress-81df8"
   }
 }

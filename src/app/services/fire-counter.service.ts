@@ -13,20 +13,31 @@ export class FireCounterService {
 
   constructor(private afs: AngularFirestore) { }
 
-  createCounter(ref: DocumentReference, num_shards: number = this.num_shards) {
-    var batch = this.afs.firestore.batch();
+  async createCounter(ref: DocumentReference, num_shards: number = this.num_shards) {
+    await ref.get().then(async (doc) => {
+      if (doc.exists) {
+          console.log("Document already exists");
+      } else {
+          console.log('Creating doc...')
+          var batch = this.afs.firestore.batch();
 
-    // Initialize the counter document
-    batch.set(ref, { num_shards: num_shards });
+          // Initialize the counter document
+          batch.set(ref, { num_shards: num_shards });
 
-    // Initialize each shard with count=0
-    for (let i = 0; i < num_shards; i++) {
-        const shardRef = ref.collection('shards').doc(i.toString());
-        batch.set(shardRef, { count: 0 });
-    }
+          // Initialize each shard with count=0
+          for (let i = 0; i < num_shards; i++) {
+              const shardRef = ref.collection('shards').doc(i.toString());
+              batch.set(shardRef, { count: 0 });
+          }
 
-    // Commit the write batch
-    return batch.commit();
+          // Commit the write batch
+          await batch.commit()
+            .then(() => console.log('done'))
+            .catch((e) => console.log('An error occurred: ',e));
+        }
+    }).catch((error) => {
+        console.log("Error creating document:", error);
+    });
   }
 
   incrementCounter(ref: DocumentReference, num_shards: number = this.num_shards) {

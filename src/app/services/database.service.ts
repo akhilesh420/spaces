@@ -35,7 +35,21 @@ export class DatabaseService {
 
     await batch.commit()
       .then(() => this.router.navigate(['message']))
-      .catch(() => alert('Something went wrong! Please try again.'))
+      .catch((e) => {
+        console.log(e);
+        alert('Something went wrong! Please try again.')
+      })
+  }
+
+  createCounters() {
+    console.log('creating counters')
+    const counterRef = this.afs.firestore.collection('counter');
+    const privateRef = counterRef.doc('private');
+    const publicRef = counterRef.doc('public');
+
+    this.countService.createCounter(privateRef);
+    this.countService.createCounter(publicRef);
+
   }
 
 }

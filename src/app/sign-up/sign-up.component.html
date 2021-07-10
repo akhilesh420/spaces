@@ -103,14 +103,19 @@
 
         <div class="row nextIcon feild" (click)='saveUser()'>
 
+
+          <app-loading *ngIf='creating; else button'></app-loading>
+
+          <ng-template #button>
             <!-- Confirm arrow -->
             <img *ngIf='!errors.name && !errors.email && !errors.link; else errorIcon'
-                  src = "assets/images/nextIcon.svg">
+            src = "assets/images/nextIcon.svg">
 
             <!-- Error arrow -->
             <ng-template #errorIcon>
               <img src = "assets/images/nextIconError.svg">
             </ng-template>
+          </ng-template>
 
         </div>
 
