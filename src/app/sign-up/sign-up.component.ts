@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { DatabaseService } from './../services/database.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { User } from '../models/user.model';
@@ -17,7 +18,8 @@ export class SignUpComponent implements OnInit, OnDestroy {
             email: string  | undefined;
             link: string  | undefined; } = {name: undefined, email: undefined, link: undefined};
 
-  constructor(private databaseService: DatabaseService) { }
+  constructor(private databaseService: DatabaseService,
+              private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -30,7 +32,9 @@ export class SignUpComponent implements OnInit, OnDestroy {
     if (this.errors.name || this.errors.email || this.errors.link) return;
     this.creating = true;
     const user: User = new User(this.name, this.email, this.link);
-    await this.databaseService.setUser(user);
+    await this.databaseService.setUser(user)
+      .then(() => this.router.navigate(['message']))
+      .catch((e) => alert(e));
     this.creating = false
   }
 

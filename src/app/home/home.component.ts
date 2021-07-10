@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   startIntro: Boolean = false;
-  offset = 10;
+  offset = 16;
 
   constructor(private sharedService: SharedService,
               private windowService: WindowService) { }

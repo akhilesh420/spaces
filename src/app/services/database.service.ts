@@ -24,21 +24,26 @@ export class DatabaseService {
     const id = this.afs.createId();
     const user = (await this.auth.currentUser);
     const uid = user ? user.uid : this.afs.createId();
-    const userDocRef = this.afs.firestore.collection('alphaUsers').doc(uid).collection('signUps').doc(id);
+    const emailRef = this.afs.firestore.collection('alphaUsers').doc(userInfo.email);
     const publicCountRef = this.afs.firestore.collection('counter').doc('public');
     const privateCountRef = this.afs.firestore.collection('counter').doc('private');
-    const batch = this.afs.firestore.batch();
 
-    batch.set(userDocRef, {...userInfo, timestamp: Date()});
-    this.countService.batchIncrementCounter(publicCountRef, batch);
-    this.countService.batchIncrementCounter(privateCountRef, batch);
+    const transaction =  this.afs.firestore.runTransaction(async (t) => {
+      return t.get(emailRef).then((response) => {
+        if (response.exists) throw 'email_used';
 
-    await batch.commit()
-      .then(() => this.router.navigate(['message']))
-      .catch((e) => {
-        console.log(e);
-        alert('Something went wrong! Please try again.')
-      })
+        t.set(emailRef, {...userInfo, timestamp: Date(), uid: uid});
+        this.countService.batchIncrementCounter(publicCountRef, t);
+        this.countService.batchIncrementCounter(privateCountRef, t);
+
+        return Promise.resolve();
+      });
+    }).catch((e) =>{
+      if (e === 'email_used') throw "This email has already been used!";
+      throw "Something went wrong! Please try again.";
+    });
+
+    return transaction;
   }
 
   createCounters() {

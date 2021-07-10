@@ -50,14 +50,14 @@ export class FireCounterService {
   }
 
   batchIncrementCounter(ref: DocumentReference,
-                        batch: firebase.firestore.WriteBatch,
+                        t: firebase.firestore.Transaction,
                         num_shards: number = this.num_shards) {
     // Select a shard of the counter at random
     const shard_id = Math.floor(Math.random() * num_shards).toString();
     const shard_ref = ref.collection('shards').doc(shard_id);
 
     // Update count
-    batch.update(shard_ref, {"count": firebase.firestore.FieldValue.increment(1)});
+    t.update(shard_ref, {"count": firebase.firestore.FieldValue.increment(1)});
   }
 
   getCount(ref: AngularFirestoreDocument) {
