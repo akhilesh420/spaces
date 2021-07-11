@@ -20,8 +20,6 @@ export class MixpanelService {
       this.reset();
       console.log('Has opted out of tracking? :', mixpanel.has_opted_out_tracking());
       this.sessionStartTrack();
-      this.timeEvent('session end');
-      this.timeEvent('early access sign up');
       this.timeEvent('click early access button');
     }
 
@@ -102,10 +100,6 @@ export class MixpanelService {
       this.track('session start', action);
     }
 
-    sessionEndTrack(action: any = {}) {
-      this.track('session end', action);
-    }
-
     signIn(uid: string, newUser: boolean) {
       newUser ? this.alias(uid) : this.identify(uid);
       this.track('sign in');
@@ -120,6 +114,7 @@ export class MixpanelService {
 
     goToEarlyAccess(action: any = {}) {
       this.track('click early access button', action);
+      this.timeEvent('early access sign up');
     }
 
     clickInstagram(action: any = {}) {

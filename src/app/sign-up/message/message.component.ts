@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MixpanelService } from 'src/app/services/mixpanel.service';
 
 @Component({
   selector: 'app-message',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mixpanelService: MixpanelService) { }
 
   ngOnInit(): void {
   }
 
+  clickEmail() {
+    this.mixpanelService.clickEmail();
+  }
+
+  clickInstagram() {
+    this.mixpanelService.clickInstagram();
+  }
 }

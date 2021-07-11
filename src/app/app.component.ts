@@ -17,7 +17,6 @@ import { NavigationEnd, Router } from '@angular/router';
 export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   title = 'Postpress';
   notifier$ = new Subject();
-  beforeUnloadTriggered: boolean = false;
 
   @ViewChild('master') master: ElementRef<HTMLElement>;
 
@@ -63,13 +62,6 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
 
   onResize() {
     this.windowService.setDimensions(this.master.nativeElement.offsetHeight, this.master.nativeElement.offsetWidth);
-  }
-
-  @HostListener('window:beforeunload')
-  onBeforeUnload() {
-    if (this.beforeUnloadTriggered) return;
-    this.beforeUnloadTriggered= true;
-    this.mixpanelService.sessionEndTrack();
   }
 
   ngOnDestroy() {
