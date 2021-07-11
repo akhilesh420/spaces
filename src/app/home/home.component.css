@@ -78,7 +78,7 @@ h2 {
 
 }
 
-.emailLink > img {
+.emailLink > a > img {
 
   height: 30px;
   width: 30px;
@@ -133,5 +133,5 @@ h2 {
   100% {
     transform: scale(1);
   }
-  
+
 }
