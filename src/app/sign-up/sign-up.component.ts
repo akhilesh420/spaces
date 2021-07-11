@@ -16,8 +16,7 @@ export class SignUpComponent implements OnInit, OnDestroy {
   link = ''
   creating: Boolean = false;
   errors: { name: string  | undefined;
-            email: string  | undefined;
-            link: string  | undefined; } = {name: undefined, email: undefined, link: undefined};
+            email: string  | undefined;} = {name: undefined, email: undefined};
 
   constructor(private databaseService: DatabaseService,
               private mixpanelService: MixpanelService,
@@ -30,8 +29,7 @@ export class SignUpComponent implements OnInit, OnDestroy {
     if (this.creating) return;
     this.validName();
     this.validEmail();
-    this.validLink();
-    if (this.errors.name || this.errors.email || this.errors.link) return;
+    if (this.errors.name || this.errors.email) return;
     this.creating = true;
     const user: User = new User(this.name, this.email, this.link);
     await this.databaseService.setUser(user)
@@ -53,15 +51,6 @@ export class SignUpComponent implements OnInit, OnDestroy {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (!re.test(String(this.email).toLowerCase())) return this.errors.email = 'Invalid email';
     return this.errors.email = undefined;
-  }
-
-  validLink() {
-    if (!this.link || this.link.length === 0) return this.errors.link = 'Social link is required';
-    if (this.link.indexOf(' ') >= 0) return this.errors.link = 'Invalid social link';
-    const linkify = require('linkifyjs');
-    const links =  linkify.find(this.link);
-    if (links.length <= 0) return this.errors.link = 'Invalid social link';
-    return this.errors.link = undefined;
   }
 
   ngOnDestroy() {
