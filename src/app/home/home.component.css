@@ -1,12 +1,29 @@
-.mainPage {
+.main {
+  position: relative;
+}
 
-  height: 100vh;
+.backgroundCover {
+
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
 
 }
 
-.centerLogo {
+.backgroundCover > img {
 
-  margin-top: 60%;
+  width: 100vw;
+  height: 100vh;
+  
+}
+
+.mainPage {
+
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
 
 }
 
@@ -15,7 +32,6 @@
   width: auto;
   height: auto;
   margin-top: 48px;
-  background-color: var(--dark);
   animation: more-arrow 1s ease-in-out infinite both;
 
 }
