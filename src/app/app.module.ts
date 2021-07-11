@@ -15,13 +15,14 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignUpBannerComponent } from './home/sign-up-banner/sign-up-banner.component';
 import { IntroComponent } from './intro/intro.component';
 import { MessageComponent } from './sign-up/message/message.component';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireAuthModule } from '@angular/fire/auth';
 import { FormsModule } from '@angular/forms';
 import { TitleCaseDirective } from './directives/title-case.directive';
 import { LoadingComponent } from './loading/loading.component';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireAnalyticsModule, ScreenTrackingService, UserTrackingService  } from '@angular/fire/analytics';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,8 +47,12 @@ import { LoadingComponent } from './loading/loading.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule, // firestore
     AngularFireAuthModule, // auth
+    AngularFireAnalyticsModule, // analytics
   ],
-  providers: [],
+  providers: [
+    ScreenTrackingService,
+    UserTrackingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
