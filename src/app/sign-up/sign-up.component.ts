@@ -13,7 +13,6 @@ export class SignUpComponent implements OnInit, OnDestroy {
 
   name = ''
   email = ''
-  link = ''
   creating: Boolean = false;
   errors: { name: string  | undefined;
             email: string  | undefined;} = {name: undefined, email: undefined};
@@ -31,7 +30,7 @@ export class SignUpComponent implements OnInit, OnDestroy {
     this.validEmail();
     if (this.errors.name || this.errors.email) return;
     this.creating = true;
-    const user: User = new User(this.name, this.email, this.link);
+    const user: User = new User(this.name, this.email);
     await this.databaseService.setUser(user)
       .then((timestamp) => {
         this.mixpanelService.earlyAccess({...user, timestamp});
