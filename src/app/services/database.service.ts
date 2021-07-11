@@ -32,11 +32,12 @@ export class DatabaseService {
       return t.get(emailRef).then((response) => {
         if (response.exists) throw 'email_used';
 
-        t.set(emailRef, {...userInfo, timestamp: Date(), uid: uid});
+        const timestamp = new Date();
+        t.set(emailRef, {...userInfo, timestamp:timestamp, uid: uid});
         this.countService.batchIncrementCounter(publicCountRef, t);
         this.countService.batchIncrementCounter(privateCountRef, t);
 
-        return Promise.resolve();
+        return Promise.resolve(timestamp);
       });
     }).catch((e) =>{
       if (e === 'email_used') throw "This email has already been used!";

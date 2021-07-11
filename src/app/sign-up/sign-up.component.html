@@ -73,34 +73,6 @@
 
         </div>
 
-        <div class="row feild">
-
-            <div class="column feildSize">
-
-                <div class="feildTitle row">
-                    <h4>Social Link</h4>
-                </div>
-
-                <div [ngClass]='{"error-border": !!errors.link}'  class="feildInput row">
-                  <input type="url"
-                         class = "input"
-                         [(ngModel)]="link"
-                         (focusout)='validLink()'
-                         (keyup)='validLink()'
-                          name='link'
-                          id="link">
-                </div>
-
-                <div *ngIf='errors.link' class="feildError row">
-
-                  <p class = "error">{{errors.link}}</p>
-
-                </div>
-
-            </div>
-
-        </div>
-
         <div class="row nextIcon feild" (click)='saveUser()'>
 
 
@@ -108,7 +80,7 @@
 
           <ng-template #button>
             <!-- Confirm arrow -->
-            <img *ngIf='!errors.name && !errors.email && !errors.link; else errorIcon'
+            <img *ngIf='!errors.name && !errors.email; else errorIcon'
             src = "assets/images/nextIcon.svg">
 
             <!-- Error arrow -->

@@ -1,3 +1,4 @@
+import { MixpanelService } from './../services/mixpanel.service';
 import { WindowService } from './../services/window.service';
 import { SharedService } from './../services/shared.service';
 import { Component, OnInit } from '@angular/core';
@@ -13,7 +14,8 @@ export class HomeComponent implements OnInit {
   offset = 16;
 
   constructor(private sharedService: SharedService,
-              private windowService: WindowService) { }
+              private windowService: WindowService,
+              private mixpanelService: MixpanelService) { }
 
   ngOnInit(): void {
     this.startIntro = this.sharedService.startIntro;
@@ -25,6 +27,14 @@ export class HomeComponent implements OnInit {
       left: 0,
       behavior: 'smooth'
     })
+  }
+
+  clickEmail() {
+    this.mixpanelService.clickEmail();
+  }
+
+  clickInstagram() {
+    this.mixpanelService.clickInstagram();
   }
 
 }

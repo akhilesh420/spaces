@@ -9,5 +9,7 @@ export const environment = {
     appId: "1:1028978753848:web:79fc2fc6fa9e04eaf641cd",
     measurementId: "G-8VKNW9FN3E"
   },
+  mixpanelProjectID: "2517bb25ce1b9dcc265548ef366cecb3",
+  mixpanelDebug: false,
   startIntro: true,
 };
