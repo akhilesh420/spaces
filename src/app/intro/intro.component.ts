@@ -10,36 +10,20 @@ import { takeUntil } from 'rxjs/operators';
 })
 export class IntroComponent implements OnInit, AfterViewInit, OnDestroy {
 
-  times = [6600, 6700, 9000, 310];
-  $count: BehaviorSubject<number> = new BehaviorSubject(0);
-  $notifier = new Subject();
+ 
 
-  constructor(private sharedService: SharedService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.sharedService.setModal(true);
+    
   }
 
   ngAfterViewInit() {
-    this.sharedService.startIntro = false;
-    this.$count.pipe(takeUntil(this.$notifier)).subscribe((count) => {
-      console.log(count);
-      if (count >= 4) {
-        this.sharedService.setModal(false);
-        this.$count.complete();
-        this.$notifier.next();
-        this.$notifier.complete();
-      }
-      setTimeout(() => {
-        this.$count.next(count + 1);
-      }, this.times[count]);
-    });
+    
   }
 
   ngOnDestroy() {
-    this.$count.complete();
-    this.$notifier.next();
-    this.$notifier.complete();
+    
   }
 
 }

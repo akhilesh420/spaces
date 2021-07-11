@@ -15,7 +15,7 @@ export class SharedService {
   setModal(value: Boolean) {
     this.modal.next(value);
   }
-
+  
   getModal() {
     return this.modal;
   }
