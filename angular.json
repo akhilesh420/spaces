@@ -64,7 +64,7 @@
             "development": {
               "buildOptimizer": true,
               "optimization": true,
-              "vendorChunk": false,
+              "vendorChunk": true,
               "aot": true,
               "extractLicenses": false,
               "sourceMap": true,
