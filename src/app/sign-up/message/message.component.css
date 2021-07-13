@@ -11,6 +11,7 @@
     align-items: center;
     height: 100%;
     width: 100%;
+    flex-flow: wrap;
 
 }
 
@@ -25,8 +26,8 @@ a, a:hover, a:focus, a:active {
     position: absolute;
     z-index: -1;
     top: 0px;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     
   }
   
@@ -92,6 +93,29 @@ a, a:hover, a:focus, a:active {
   
     }
   
+  }
+
+  @media screen and (max-width: 765px) {
+
+    .card {
+
+        margin-top: 36px;
+        margin-left: 0px;
+
+    }
+
+    .phoneMargin {
+
+        margin-bottom: 36px;
+
+    }
+
+    .backgroundCover {
+
+        display: none;
+
+    }
+
   }
 
 
