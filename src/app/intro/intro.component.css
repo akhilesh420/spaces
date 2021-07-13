@@ -1,6 +1,204 @@
-.placeHolder {
+.backgroundCover {
 
-    width: 0px;
-    height: 0px;
+    width: 100vw;
+    height: 1670px;
+    position: absolute;
+    z-index: -2;
+
+}
+
+.backgroundCover > img {
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.mainInfo {
+
+    margin-top: 254px;
+
+}
+
+.infoCard {
+
+    height: 420px;
+    width: 720px;
+    backdrop-filter: blur(12px);
+    background: linear-gradient(108.79deg, rgba(102, 184, 255, 0.05) 50.68%, rgba(102, 184, 255, 0) 100%);
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.3));
+    border-radius: 16px;
+    margin-top: 64px;
+    margin-left: 180px;
+    float: left;
+
+}
+
+.infoCardTwo {
+
+    height: 420px;
+    width: 720px;
+    backdrop-filter: blur(12px);
+    background: linear-gradient(108.79deg, rgba(102, 184, 255, 0.05) 50.68%, rgba(102, 184, 255, 0) 100%);
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.3));
+    border-radius: 16px;
+    margin-top: 64px;
+    margin-right: 180px;
+    float: right;
+
+}
+
+h1 {
+
+    font-weight: 900px;
+
+}
+
+h3 {
+
+    color: var(--primary);
+    opacity: 0.9;
+     
+}
+
+.title {
+
+    position: relative;
+    margin-top: 48px;
+    margin-left: 48px;
+
+}
+
+.top {
+
+    position: absolute;
+    mix-blend-mode: normal;
+
+}
+
+.bottom {
+
+    position: absolute;
+    color: var(--primary);
+    top: 1px;
+    left: 2px;
+    mix-blend-mode: normal;
+
+}
+
+.topDescription {
+
+    margin-top: 2px;
+    margin-left: 48px;
+    max-width: 460px;
+
+}
+
+.bottomDescription {
+
+    margin-top: 48px;
+    margin-left: 48px;
+
+}
+
+.infoCardTwo {
+
+    height: 420px;
+    width: 720px;
+    float: right;
+    background: linear-gradient(108.79deg, rgba(102, 184, 255, 0.05) 50.68%, rgba(102, 184, 255, 0) 100%);
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.3));
+    border-radius: 16px;
+    margin-top: 64px;
+    margin-right: 180px;
+
+}
+
+.progressButtons {
+
+    margin-top: 48px;
+    justify-content: center;
+
+}
+
+.circle {
+
+    height: 16px;
+    width: 16px;
+    margin-right: 36px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+
+}
+
+.circleHighlight {
+
+    background-color: var(--primary);
+
+}
+
+.circleNoMargin {
+
+    margin-right: 0px;
+
+}
+
+@media screen and (max-width: 900px) {
+
+    .infoCard {
+
+        height: auto;
+        width: 360px;
+        margin-left: calc((100vw - 360px) / 2);
     
+    }
+
+    .infoCardTwo {
+
+        height: auto;
+        width: 360px;
+        float: left;
+        margin-left: calc((100vw - 360px) / 2);
+    
+    }
+
+
+    .title {
+
+        margin-left: 16px;
+
+    }
+
+    .progressButtons {
+
+        margin-bottom: 36px;
+    
+    }
+
+    .topDescription {
+
+        margin-left: 16px;
+        margin-right: 6px;
+    
+    }
+    
+    .bottomDescription {
+    
+        margin-left: 16px;
+    
+    }
+
+    .mainInfo {
+
+        margin-top: 190px;
+
+    }
+
 }
