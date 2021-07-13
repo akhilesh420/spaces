@@ -1,4 +1,4 @@
- <div class="row logo" routerLink='/home'>
+ <!-- <div class="row logo" routerLink='/home'>
 
     <img src = "assets/images/logo.svg">
 
@@ -54,6 +54,77 @@
             <img class = "emailIcon" src = "assets/images/blueEmailIcon.svg">
           </a>
         </div>
+
+    </div>
+
+</div> -->
+
+<div class="column mainPage">
+
+    <div class="row container">
+
+        <div class="backgroundCover">
+            <img src="assets/images/messageBackgroundImage.png">
+        </div>
+    
+        <a href="https://www.instagram.com/postpress.io/" target="_blank" (click)='clickInstagram();'>
+        <div class="card no-margin column">
+
+            <div class="row instaIcon">
+
+                <img src = "assets/images/blueInstaIcon.svg">
+
+            </div>
+
+            <div class="row title">
+
+                <h3>Follow us on IG</h3>
+
+            </div>
+
+            <div class="row description">
+
+                <p>
+                    Keep up with updates about the app.
+                    <br>
+                    <br>
+                    It’s also where  we do weekly artist 
+                    profiles on our affiliates.
+                </p>
+
+            </div>
+
+        </div>
+        </a>
+
+        <a href="mailto:contact@postpress.io" (click)='clickEmail();'>  
+        <div class="card column">
+
+            <div class="row instaIcon">
+
+                <img src = "assets/images/blueEmailIcon.svg">
+
+            </div>
+
+            <div class="row title">
+
+                <h3>Contact us</h3>
+
+            </div>
+
+            <div class="row description">
+
+                <p>
+                    Send us a link to your portfolio to
+                    become an early affiliate.<br>
+                    <br>
+                    Reach out to us if you have any questions !
+                </p>
+
+            </div>
+    
+        </div>
+        </a>
 
     </div>
 
