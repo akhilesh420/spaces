@@ -121,7 +121,9 @@ h2 {
 .links {
 
   align-items: center;
-  width: 50%;
+  /* Replace width with 50% when insta icon is added back */
+  width: 100%;
+
 
 }
 
