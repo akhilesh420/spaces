@@ -15,7 +15,6 @@ export const environment = {
   },
   mixpanelProjectID: "599675032915a388af5e0c310358bea2",
   mixpanelDebug: true,
-  startIntro: false,
 };
 
 /*
