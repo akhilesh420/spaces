@@ -5,6 +5,19 @@
 
 }
 
+.restrict {
+
+  max-width: 770px;
+
+}
+
+.cardsBox {
+
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
 .container {
 
     justify-content: center;
@@ -12,6 +25,14 @@
     height: 100%;
     width: 100%;
     flex-flow: wrap;
+
+}
+
+.mainMessage {
+
+  margin-bottom: 64px;
+  text-align: center;
+  justify-content: center;
 
 }
 
@@ -97,6 +118,13 @@ a, a:hover, a:focus, a:active {
 
   @media screen and (max-width: 765px) {
 
+
+    .restrict {
+
+      max-width: 430px;
+
+    }
+
     .card {
 
         margin-top: 36px;
@@ -114,6 +142,12 @@ a, a:hover, a:focus, a:active {
 
         display: none;
 
+    }
+
+    .mainMessage {
+
+      margin-top: 64px;
+    
     }
 
   }
