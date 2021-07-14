@@ -54,6 +54,12 @@ app-intro {
 
 }
 
+.moreArrow > img {
+
+  cursor: pointer;
+
+}
+
 .restrict {
 
   margin-top: 124px;
