@@ -1,5 +1,6 @@
 .main {
   position: relative;
+  overflow-x: hidden;
 }
 
 app-intro {
@@ -24,7 +25,7 @@ app-intro {
   height: 100vh;
   width: 100vw;
   filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.35));
-  
+
 }
 
 .backgroundCover > img {
@@ -33,7 +34,7 @@ app-intro {
   width: 100%;
   object-fit: cover;
   border-radius: 0px 0px 16px 16px;
-  
+
 }
 
 .mainPage {
@@ -63,7 +64,7 @@ app-intro {
 .restrict {
 
   margin-top: 124px;
-  
+
 }
 
 .center {
