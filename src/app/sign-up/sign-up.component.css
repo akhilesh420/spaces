@@ -35,6 +35,35 @@ h4 {
 
 }
 
+.signUpHelpers {
+
+    width: 100%;
+    margin-bottom: 36px;
+
+}
+
+.signin-button {
+
+    width: 210px;
+    height: 48px;
+
+}
+
+.orMarker {
+
+    width: 100%;
+    margin-bottom: 16px;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.marker > p {
+
+    font-size: 12px;
+
+}
+
 .title {
 
     width: 100%;
@@ -74,6 +103,12 @@ h4 {
     height: 36px;
     border: 1px solid #FFFFFF;
 
+}
+
+.no-margin-top {
+
+    margin-top: 0px;
+    
 }
 
 .input {
