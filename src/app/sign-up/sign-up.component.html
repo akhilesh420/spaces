@@ -25,7 +25,9 @@
         <!-- Google sign-up button -->
         <div class="row signUpHelpers">
 
-            <div id="my-signin2"></div>
+            <div id="my-signin2" (click)='googleSignUp();'>
+              <button>Google sign in</button>
+            </div>
 
         </div>
 
@@ -103,7 +105,7 @@
 
         </div>
 
-        <div class="row nextIcon feild" (click)='saveUser()'>
+        <div class="row nextIcon feild" (click)='manualUser()'>
 
 
           <app-loading *ngIf='creating; else button'></app-loading>

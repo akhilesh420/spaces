@@ -1,3 +1,4 @@
+import { AuthService } from './../services/auth.service';
 import { MixpanelService } from './../services/mixpanel.service';
 import { Router } from '@angular/router';
 import { DatabaseService } from './../services/database.service';
@@ -19,18 +20,33 @@ export class SignUpComponent implements OnInit, OnDestroy {
 
   constructor(private databaseService: DatabaseService,
               private mixpanelService: MixpanelService,
+              private authService: AuthService,
               private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  async saveUser() {
+  manualUser() {
     if (this.creating) return;
     this.validName();
     this.validEmail();
     if (this.errors.name || this.errors.email) return;
     this.creating = true;
     const user: User = new User(this.name, this.email);
+    this.saveUser(user);
+  }
+
+  googleSignUp() {
+    if (this.creating) return;
+    this.authService.googleAuth()
+    .then((user) => {
+      this.creating = true;
+      this.saveUser(user)
+    })
+    .catch((e) => console.log(e));
+  }
+
+  async saveUser(user: User) {
     await this.databaseService.setUser(user)
       .then((timestamp) => {
         this.mixpanelService.earlyAccess({...user, timestamp});

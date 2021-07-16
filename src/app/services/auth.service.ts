@@ -1,3 +1,4 @@
+import { User } from './../models/user.model';
 import { MixpanelService } from './mixpanel.service';
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
@@ -13,12 +14,30 @@ export class AuthService {
               private mixpanelService: MixpanelService) { }
 
   async anonSignIn() {
-    await this.auth.setPersistence(firebase.auth.Auth.Persistence.NONE);
+    await this.auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
     await this.auth.signInAnonymously()
       .then((user) => {
         this.mixpanelService.signIn(user.user.uid, user.additionalUserInfo.isNewUser);
       })
       .catch((e) => console.log(e));
   }
+
+    // Sign in with Google
+    googleAuth() {
+      return this.authLogin(new firebase.auth.GoogleAuthProvider());
+    }
+
+    // Auth logic to run auth providers
+    async authLogin(provider: firebase.auth.AuthProvider) {
+      try {
+        const result = await this.auth.signInWithPopup(provider);
+        const user = result.user;
+        return new User(user.displayName, user.email);
+      } catch (error) {
+        console.log(error);
+        throw "Something went wrong! Please try again."
+      }
+    }
+
 
 }

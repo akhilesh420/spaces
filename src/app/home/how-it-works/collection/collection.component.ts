@@ -8,9 +8,16 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class CollectionComponent implements OnInit, OnDestroy {
 
+  count = 0;
+
+
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    setInterval(() => {
+      this.count = (this.count + 1) % 3
+    }, 3000);
+  }
 
 
   ngOnDestroy() {}

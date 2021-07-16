@@ -1,5 +1,4 @@
 import { AngularFireAuth } from '@angular/fire/auth';
-import { Router } from '@angular/router';
 import { FireCounterService } from './fire-counter.service';
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
@@ -13,8 +12,7 @@ export class DatabaseService {
 
   constructor(private afs: AngularFirestore,
               private auth: AngularFireAuth,
-              private countService: FireCounterService,
-              private router: Router) { }
+              private countService: FireCounterService) { }
 
   getEarlyAccessCount () {
     return this.countService.getCount(this.afs.collection('counter').doc('public'));

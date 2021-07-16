@@ -17,9 +17,6 @@ export class MixpanelService {
  */
     init(): void {
       mixpanel.init(environment.mixpanelProjectID, {batch_requests: true, debug: environment.mixpanelDebug});
-      this.reset();
-      console.log('Has opted out of tracking? :', mixpanel.has_opted_out_tracking());
-      this.sessionStartTrack();
       this.timeEvent('click early access button');
     }
 
@@ -96,10 +93,6 @@ export class MixpanelService {
       mixpanel.people.set(name, property);
     }
 
-    sessionStartTrack(action: any = {}) {
-      this.track('session start', action);
-    }
-
     signIn(uid: string, newUser: boolean) {
       newUser ? this.alias(uid) : this.identify(uid);
       this.track('sign in');
@@ -107,9 +100,7 @@ export class MixpanelService {
 
     earlyAccess(action: any = {}) {
       this.track('early access sign up', action);
-      for (const property in action) {
-        this.setProperty('$' + property, action[property]);
-      }
+      for (const property in action) this.setProperty('$' + property, action[property]);
      }
 
     goToEarlyAccess(action: any = {}) {

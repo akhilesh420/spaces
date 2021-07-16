@@ -9,10 +9,14 @@ import { takeUntil } from 'rxjs/operators';
 })
 export class CreateComponent implements OnInit {
 
+  count = 0;
 
   constructor() { }
 
   ngOnInit(): void {
+    setInterval(() => {
+      this.count = (this.count + 1) % 3
+    }, 3000);
   }
 
 }

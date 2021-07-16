@@ -23,6 +23,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireAnalyticsModule, ScreenTrackingService, UserTrackingService  } from '@angular/fire/analytics';
+import { GoogleSignInComponent } from './google-sign-in/google-sign-in.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { AngularFireAnalyticsModule, ScreenTrackingService, UserTrackingService 
     IntroComponent,
     MessageComponent,
     TitleCaseDirective,
-    LoadingComponent
+    LoadingComponent,
+    GoogleSignInComponent
   ],
   imports: [
     BrowserModule,
