@@ -45,16 +45,15 @@ button {
 .signUpHelpers {
 
     width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     justify-content: center;
 
 }
 
 button > img {
 
-    width: calc(100% - 32px);
     cursor: pointer;
-    
+ 
 }
 
 .orMarker {
