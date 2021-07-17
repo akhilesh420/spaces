@@ -6,8 +6,15 @@ h3 {
 
 h4 {
 
-    color: #FDF0DD;
+    color: var(--accent);
 
+}
+
+button {
+
+    border-style: none;
+    outline-style: none;
+    background-color: var(--primary);
 }
 
 .logo {
@@ -38,15 +45,15 @@ h4 {
 .signUpHelpers {
 
     width: 100%;
-    margin-bottom: 36px;
+    margin-bottom: 24px;
+    justify-content: center;
 
 }
 
-.signin-button {
+button > img {
 
-    width: 210px;
-    height: 48px;
-
+    width: calc(100% - 32px);
+    
 }
 
 .orMarker {
@@ -68,6 +75,7 @@ h4 {
 
     width: 100%;
     margin-top: 36px;
+    margin-bottom: 36px;
     justify-content: center;
 
 }
