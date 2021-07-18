@@ -28,15 +28,15 @@ export class AuthService {
 
     // Sign in with Google
     googleAuth() {
-      return this.authLogin(new firebase.auth.GoogleAuthProvider());
+      const provider = new firebase.auth.GoogleAuthProvider();
+      return this.authLogin(provider);
     }
 
     // Auth logic to run auth providers
     async authLogin(provider: firebase.auth.AuthProvider) {
       try {
         const result = await (await this.auth.currentUser).linkWithPopup(provider);
-        const user = result.user;
-        return new User(user.displayName, user.email);
+        return new User(result.additionalUserInfo.profile['name'], result.user.email);
       } catch (error) {
         console.log(error);
         if (error.code === 'auth/credential-already-in-use') throw "This email has already been used!";
