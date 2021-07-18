@@ -27,7 +27,6 @@ export class MixpanelService {
    * @memberof MixpanelService
    */
     private identify(userToken: string): void {
-      console.log('user identified');
       mixpanel.identify(userToken);
     }
 

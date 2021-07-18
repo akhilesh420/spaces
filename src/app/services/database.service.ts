@@ -3,6 +3,7 @@ import { FireCounterService } from './fire-counter.service';
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { User } from '../models/user.model';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -19,7 +20,6 @@ export class DatabaseService {
   }
 
   async setUser(userInfo: User) {
-    const id = this.afs.createId();
     const user = (await this.auth.currentUser);
     const uid = user ? user.uid : this.afs.createId();
     const emailRef = this.afs.firestore.collection('alphaUsers').doc(userInfo.email);
@@ -31,7 +31,7 @@ export class DatabaseService {
         if (response.exists) throw 'email_used';
 
         const timestamp = new Date();
-        t.set(emailRef, {...userInfo, timestamp:timestamp, uid: uid});
+        t.set(emailRef, {...userInfo, timestamp:timestamp, uid: uid, production: environment.production});
         this.countService.batchIncrementCounter(publicCountRef, t);
         this.countService.batchIncrementCounter(privateCountRef, t);
 

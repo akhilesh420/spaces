@@ -11,7 +11,11 @@ import 'firebase/auth';
 export class AuthService {
 
   constructor(private auth: AngularFireAuth,
-              private mixpanelService: MixpanelService) { }
+              private mixpanelService: MixpanelService) {
+                auth.onAuthStateChanged((user) => {
+                  console.log(user.uid);
+                })
+              }
 
   async anonSignIn() {
     await this.auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
@@ -30,11 +34,12 @@ export class AuthService {
     // Auth logic to run auth providers
     async authLogin(provider: firebase.auth.AuthProvider) {
       try {
-        const result = await this.auth.signInWithPopup(provider);
+        const result = await (await this.auth.currentUser).linkWithPopup(provider);
         const user = result.user;
         return new User(user.displayName, user.email);
       } catch (error) {
         console.log(error);
+        if (error.code === 'auth/credential-already-in-use') throw "This email has already been used!";
         throw "Something went wrong! Please try again."
       }
     }

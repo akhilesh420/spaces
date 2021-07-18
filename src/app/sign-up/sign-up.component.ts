@@ -43,7 +43,10 @@ export class SignUpComponent implements OnInit, OnDestroy {
       this.creating = true;
       this.saveUser(user)
     })
-    .catch((e) => console.log(e));
+    .catch((e) => {
+      if (e === "This email has already been used!") setTimeout(() => alert(e), 1);
+      console.log(e);
+    });
   }
 
   async saveUser(user: User) {
