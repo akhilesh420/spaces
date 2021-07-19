@@ -32,7 +32,7 @@ export class SignUpComponent implements OnInit, OnDestroy {
     this.validEmail();
     if (this.errors.name || this.errors.email) return;
     this.creating = true;
-    const user: User = new User(this.name, this.email);
+    const user: User = new User(this.name, this.email, 'manual');
     this.saveUser(user);
   }
 
@@ -41,12 +41,13 @@ export class SignUpComponent implements OnInit, OnDestroy {
     this.authService.googleAuth()
     .then((user) => {
       this.creating = true;
-      this.saveUser(user)
+      this.saveUser(user);
     })
     .catch((e) => {
       if (e === "This email has already been used!") setTimeout(() => alert(e), 1);
       console.log(e);
-    });
+    })
+    .finally(() => this.mixpanelService.clickGoogleSignUp());
   }
 
   async saveUser(user: User) {

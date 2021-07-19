@@ -2,7 +2,7 @@ export const environment = {
   production: true,
   firebaseConfig: {
     apiKey: "AIzaSyBsJbF5tLKW9rb_ClpQBSro5oYklG0OpIs",
-    authDomain: "call-it-whatever-bro.firebaseapp.com",
+    authDomain: "www.postpress.io",
     projectId: "call-it-whatever-bro",
     storageBucket: "call-it-whatever-bro.appspot.com",
     messagingSenderId: "1028978753848",
