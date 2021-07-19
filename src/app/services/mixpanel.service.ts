@@ -61,25 +61,6 @@ export class MixpanelService {
       mixpanel.time_event(id);
     }
 
-    /**
-     * Clears super properties and generates a new random distinct_id
-     *
-     * @memberof MixpanelService
-     */
-    private reset(): void {
-      mixpanel.reset();
-    }
-
-    /**
-   * Increments property for user
-   *
-   *
-   * @memberof MixpanelService
-   */
-    private increment(property: string, counter = 1): void {
-      mixpanel.people.increment(property, counter);
-    }
-
    /**
    * Set property of user
    *
@@ -113,6 +94,10 @@ export class MixpanelService {
 
     clickEmail(action: any = {}) {
       this.track('click email link', action);
+    }
+
+    clickGoogleSignUp(action: any = {}) {
+      this.track('click google signup button', action);
     }
 
 }
