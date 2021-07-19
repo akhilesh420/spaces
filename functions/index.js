@@ -19,7 +19,7 @@ exports.welcomeEmail = functions.firestore
             to: email,
             message: {
               subject: "Hey, "+ name +", thank you for signing up!",
-              text: "<code>Hey " + name +`,
+              text: "Hey " + name +`,
 
               It's Ishaan. I just wanted to say thank you for signing up for early access to Postpress. It means the world to us.
 
@@ -30,7 +30,7 @@ exports.welcomeEmail = functions.firestore
               Best Wishes,
               Ishaan Kapoor
               Postpress | Co-Founder`,
-              html: `<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">
+              html: `<code><p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">
               <span style="background-color: transparent; font-family: Arial; font-size: 10pt; white-space: pre-wrap; color: rgb(0, 0, 0); caret-color: rgb(0, 0, 0);">Hey ` + name +`,</span></p>
             <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">
               <span id="docs-internal-guid-3ed903b0-7fff-c86f-2d51-662589f296ed" style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); text-size-adjust: auto;">&nbsp;</span></p>
