@@ -11,7 +11,7 @@ exports.welcomeEmail = functions.firestore
   .onCreate((snap, context) => {
       const email = context.params.email;
       const firstName = snap.data().firstName;
-      if (!firstName) return functions.logger.info("Name doesn't exists.");
+      if (!firstName) return functions.logger.info("First name doesn't exists.");
 
       db
           .collection("mail")
