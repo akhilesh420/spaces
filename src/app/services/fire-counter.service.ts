@@ -68,7 +68,6 @@ export class FireCounterService {
         shards.forEach((shard) => {
             total_count += shard.count;
         });
-
         return total_count;
       }));
   }

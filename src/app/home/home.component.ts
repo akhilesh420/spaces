@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
   }
 
   clickEmail() {
-    this.mixpanelService.clickEmail();
+    this.mixpanelService.clickEmail({location: "home page"});
   }
 
   clickInstagram() {

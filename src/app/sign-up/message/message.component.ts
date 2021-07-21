@@ -14,7 +14,7 @@ export class MessageComponent implements OnInit {
   }
 
   clickEmail() {
-    this.mixpanelService.clickEmail();
+    this.mixpanelService.clickEmail({location: "message page"});
   }
 
   clickInstagram() {

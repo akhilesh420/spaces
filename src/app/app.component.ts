@@ -1,3 +1,4 @@
+import { SharedService } from './services/shared.service';
 import { MixpanelService } from './services/mixpanel.service';
 import { WindowService } from './services/window.service';
 import * as AOS from 'aos';
@@ -19,9 +20,11 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
 
   constructor(private authService: AuthService,
               private windowService: WindowService,
+              private sharedService: SharedService,
               private mixpanelService: MixpanelService) {}
 
   ngOnInit() {
+    this.sharedService.setUserCount();
     this.initialization();
   }
 
