@@ -18,6 +18,7 @@ export class MixpanelService {
     init(): void {
       mixpanel.init(environment.mixpanelProjectID, {batch_requests: true, debug: environment.mixpanelDebug});
       this.timeEvent('click early access button');
+      this.timeEvent('route change');
     }
 
     /**
@@ -100,4 +101,8 @@ export class MixpanelService {
       this.track('click google signup button', action);
     }
 
+    routeChange(action: any = {}) {
+      this.track('route change', action);
+      this.timeEvent('route change');
+    }
 }
