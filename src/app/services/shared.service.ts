@@ -1,3 +1,4 @@
+import { environment } from 'src/environments/environment';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { DatabaseService } from './database.service';
@@ -7,15 +8,15 @@ import { DatabaseService } from './database.service';
 })
 export class SharedService {
 
-  startValue: number = 700;
-  userCount: BehaviorSubject<number> = new BehaviorSubject(this.startValue);
+  private startValue: number = environment.startUsers;
+  private userCount: BehaviorSubject<number> = new BehaviorSubject(this.startValue);
 
   constructor(private databaseService: DatabaseService) {}
 
   setUserCount() {
     const totalTime = 1000;
+    let currentCount = this.startValue;
     this.databaseService.getEarlyAccessCount().subscribe(count => {
-      let currentCount = this.startValue;
       const interval = setInterval(() => {
         if (currentCount >= count) return clearInterval(interval);
         this.userCount.next(++currentCount);
