@@ -5,6 +5,7 @@ import { BehaviorSubject } from 'rxjs';
 import { DatabaseService } from './database.service';
 import { NavigationEnd, Router, Event as NavigationEvent } from '@angular/router';
 import { filter, pairwise } from 'rxjs/operators';
+import { templates } from '../extras/templates';
 
 @Injectable({
   providedIn: 'root'
@@ -40,6 +41,23 @@ export class SharedService {
 
   getUserCount() {
     return this.userCount;
+  }
+
+  setTemplate() {
+    if (localStorage.getItem('template'))  return;
+    const length = templates.length;
+    const template = templates[this.getRandomInt(length)];
+    localStorage.setItem('template', template);
+  }
+
+  getTemplate() {
+    const template =  localStorage.getItem('template');
+    if (!template) return this.setTemplate();
+    return template;
+  }
+
+  private getRandomInt(max: number) {
+    return Math.floor(Math.random() * max);
   }
 
 }
