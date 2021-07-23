@@ -1,5 +1,5 @@
 <div class="column main center">
-  <div class="backgroundCover">
+  <div class="backgroundCover" appViewTrace name='starting card'>
     <img src="assets/images/backgroundImage.jpeg">
   </div>
   <div class="row mainPage">
@@ -20,23 +20,23 @@
       </div>
     </div>
   </div>
-  <app-intro></app-intro>
+  <app-intro appViewTrace name='Introduction'></app-intro>
   <div class="restrict">
     <div class="row wrap center">
-      <div data-aos="fade-up" class="bottom-margin">
+      <div data-aos="fade-up" class="bottom-margin" appViewTrace name='how it works card'>
         <app-how-it-works id='howitworks'></app-how-it-works>
       </div>
       <div data-aos="fade-up" class='column bottom-margin-exp'>
-        <app-benefits class='bottom-margin'></app-benefits>
+        <app-benefits class='bottom-margin' appViewTrace name='benefits card'></app-benefits>
         <app-sign-up-banner location='benefits card'></app-sign-up-banner>
       </div>
       <div data-aos="fade-up" class="column bottom-margin">
-        <app-mission-statement class='bottom-margin'></app-mission-statement>
+        <app-mission-statement class='bottom-margin' appViewTrace name='mission statement card'></app-mission-statement>
         <app-sign-up-banner location='mission statement card'></app-sign-up-banner>
       </div>
     </div>
 
-    <div class="row linksRow">
+    <div class="row linksRow" appViewTrace name='links'>
 
         <!-- <div class="instaLink column links">
           <a href="https://www.instagram.com/postpress.io/" target="_blank" (click)='clickInstagram();'>

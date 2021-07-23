@@ -32,5 +32,4 @@ export class HomeComponent implements OnInit {
   clickInstagram() {
     this.mixpanelService.clickInstagram();
   }
-
 }
