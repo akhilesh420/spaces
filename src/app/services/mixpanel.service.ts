@@ -113,4 +113,12 @@ export class MixpanelService {
     inViewTime(name: string) {
       this.timeEvent('view ' + name);
     }
+
+    setTemplateId(templateId: string) {
+      this.setProperty('Template', templateId);
+    }
+
+    setScrapedEmail(email: string) {
+      this.setProperty('Scraped email', email);
+    }
 }

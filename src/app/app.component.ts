@@ -5,6 +5,8 @@ import * as AOS from 'aos';
 import { AuthService } from './services/auth.service';
 import { Component, OnInit, OnDestroy, Inject, Renderer2, ViewChild, ElementRef, AfterViewInit, HostListener } from '@angular/core';
 import { Subject } from 'rxjs';
+import { take} from 'rxjs/operators';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -21,10 +23,12 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(private authService: AuthService,
               private windowService: WindowService,
               private sharedService: SharedService,
-              private mixpanelService: MixpanelService) {}
+              private mixpanelService: MixpanelService,
+              private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.sharedService.setUserCount();
+    this.trackIncoming();
     this.initialization();
   }
 
@@ -32,6 +36,17 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
     this.mixpanelService.init(); //Initialize tracking
     this.authService.anonSignIn();
     AOS.init();
+  }
+
+  trackIncoming() {
+    this.route.queryParams.pipe(take(2)).subscribe(params => {
+      const templateId = params.template;
+      const scrapedEmail = params.email;
+
+      if (!templateId && !scrapedEmail) return;
+      this.mixpanelService.setTemplateId(templateId);
+      this.mixpanelService.setScrapedEmail(scrapedEmail);
+    });
   }
 
   ngAfterViewInit() {
