@@ -11,11 +11,7 @@ import 'firebase/auth';
 export class AuthService {
 
   constructor(private auth: AngularFireAuth,
-              private mixpanelService: MixpanelService) {
-                auth.onAuthStateChanged((user) => {
-                  console.log(user.uid);
-                })
-              }
+              private mixpanelService: MixpanelService) {}
 
   async anonSignIn() {
     await this.auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);

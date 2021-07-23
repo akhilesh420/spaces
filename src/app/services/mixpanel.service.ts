@@ -105,4 +105,12 @@ export class MixpanelService {
       this.track('route change', action);
       this.timeEvent('route change');
     }
+
+    inView(name: string, action: any = {}) {
+      this.track('view ' + name, action);
+    }
+
+    inViewTime(name: string) {
+      this.timeEvent('view ' + name);
+    }
 }
