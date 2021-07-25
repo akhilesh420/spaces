@@ -6,7 +6,7 @@ import { AuthService } from './services/auth.service';
 import { Component, OnInit, OnDestroy, Inject, Renderer2, ViewChild, ElementRef, AfterViewInit, HostListener } from '@angular/core';
 import { Subject } from 'rxjs';
 import { take} from 'rxjs/operators';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -24,7 +24,8 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
               private windowService: WindowService,
               private sharedService: SharedService,
               private mixpanelService: MixpanelService,
-              private route: ActivatedRoute) {}
+              private route: ActivatedRoute,
+              private router: Router) {}
 
   ngOnInit() {
     this.sharedService.setUserCount();
@@ -47,6 +48,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
       if (!templateId && !scrapedEmail) return;
       this.mixpanelService.setTemplateId(templateId);
       this.mixpanelService.setScrapedEmail(scrapedEmail);
+      this.router.navigate(['.']);
     });
   }
 
