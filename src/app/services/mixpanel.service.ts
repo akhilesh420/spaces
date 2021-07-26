@@ -16,7 +16,12 @@ export class MixpanelService {
  * @memberof MixpanelService
  */
     init(): void {
-      mixpanel.init(environment.mixpanelProjectID, {batch_requests: true, debug: environment.mixpanelDebug});
+      mixpanel.init(environment.mixpanelProjectID, {
+        batch_requests: true,
+        debug: environment.mixpanelDebug,
+        // whether to ignore or respect the web browser's Do Not Track setting
+        ignore_dnt: true,
+      });
       this.timeEvent('click early access button');
       this.timeEvent('route change');
     }
