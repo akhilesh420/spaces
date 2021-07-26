@@ -11,6 +11,12 @@
 
 }
 
+.cardPadding {
+
+  margin-right: 36px;
+
+}
+
 .cardsBox {
 
   flex-wrap: wrap;
@@ -130,6 +136,12 @@ a, a:hover, a:focus, a:active {
         margin-top: 36px;
         margin-left: 0px;
 
+    }
+
+    .cardPadding {
+
+      margin-right: 0px;
+      
     }
 
     .phoneMargin {
