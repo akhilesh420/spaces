@@ -123,7 +123,7 @@ export class MixpanelService {
       this.setProperty('Template', templateId);
     }
 
-    setScrapedEmail(email: string) {
-      this.setProperty('Scraped email', email);
+    setEid(email: string) {
+      this.setProperty('eid', email);
     }
 }

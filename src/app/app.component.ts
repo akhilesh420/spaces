@@ -43,11 +43,11 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   trackIncoming() {
     this.route.queryParams.pipe(take(2)).subscribe(params => {
       const templateId = params.template;
-      const scrapedEmail = params.email;
+      const eid = params.eid;
 
-      if (!templateId && !scrapedEmail) return;
+      if (!templateId && !eid) return;
       this.mixpanelService.setTemplateId(templateId);
-      this.mixpanelService.setScrapedEmail(scrapedEmail);
+      this.mixpanelService.setEid(eid);
       this.router.navigate(['.']);
     });
   }
