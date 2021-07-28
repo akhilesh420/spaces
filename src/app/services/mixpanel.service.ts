@@ -119,11 +119,7 @@ export class MixpanelService {
       this.timeEvent('view ' + name);
     }
 
-    setTemplateId(templateId: string) {
-      this.setProperty('Template', templateId);
-    }
-
-    setEid(email: string) {
-      this.setProperty('eid', email);
+    setUserProperty(name: string, value: string) {
+      this.setProperty(name, value);
     }
 }
