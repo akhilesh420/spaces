@@ -28,14 +28,14 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
               private router: Router) {}
 
   ngOnInit() {
+    this.initialization();
     this.sharedService.setUserCount();
     this.trackIncoming();
-    this.initialization();
   }
 
   initialization() {
-    this.sharedService.setTemplate();
     this.mixpanelService.init(); //Initialize tracking
+    this.sharedService.setTemplate();
     this.authService.anonSignIn();
     AOS.init();
   }

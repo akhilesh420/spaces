@@ -111,6 +111,10 @@ export class MixpanelService {
       this.timeEvent('route change');
     }
 
+    setABtemplate(action = {}) {
+      this.track('AB template set', action);
+    }
+
     inView(name: string, action: any = {}) {
       this.track('view ' + name, action);
     }

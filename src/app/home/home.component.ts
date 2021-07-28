@@ -1,4 +1,3 @@
-import { SharedService } from './../services/shared.service';
 import { MixpanelService } from './../services/mixpanel.service';
 import { WindowService } from './../services/window.service';
 import { Component, OnInit } from '@angular/core';
@@ -13,11 +12,9 @@ export class HomeComponent implements OnInit {
   offset = 16;
 
   constructor(private windowService: WindowService,
-              private mixpanelService: MixpanelService,
-              private sharedService: SharedService) { }
+              private mixpanelService: MixpanelService) { }
 
   ngOnInit(): void {
-    console.log(this.sharedService.getTemplate());
   }
 
   scrollDown() {
