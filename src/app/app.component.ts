@@ -46,10 +46,9 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
       const eid = params.eid;
       const cid = params.cid;
 
-      if (!tid && !eid) return;
-      this.mixpanelService.setUserProperty('tid', tid);
-      this.mixpanelService.setUserProperty('eid', eid);
-      this.mixpanelService.setUserProperty('cid', cid);
+      if (!!tid) this.mixpanelService.setUserProperty('tid', tid);      ;
+      if (!!eid) this.mixpanelService.setUserProperty('eid', eid);
+      if (!!cid) this.mixpanelService.setUserProperty('cid', cid);
       this.router.navigate(['.']);
     });
   }
