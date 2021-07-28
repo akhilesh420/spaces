@@ -43,6 +43,7 @@ app-intro {
   width: 100vw;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 
 }
 
