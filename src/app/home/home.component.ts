@@ -1,5 +1,4 @@
 import { MixpanelService } from './../services/mixpanel.service';
-import { WindowService } from './../services/window.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,20 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  offset = 16;
-
-  constructor(private windowService: WindowService,
-              private mixpanelService: MixpanelService) { }
+  constructor(private mixpanelService: MixpanelService) { }
 
   ngOnInit(): void {
-  }
-
-  scrollDown() {
-    window.scrollTo({
-      top: this.windowService.height - this.offset,
-      left: 0,
-      behavior: 'smooth'
-    })
   }
 
   clickEmail() {
