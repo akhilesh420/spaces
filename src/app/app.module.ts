@@ -24,7 +24,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireAnalyticsModule, ScreenTrackingService, UserTrackingService  } from '@angular/fire/analytics';
 import { ViewTraceDirective } from './directives/view-trace.directive';
-import { BannerComponent } from './banner/banner.component';
+import { BannerComponent } from './banners/banner/banner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +42,7 @@ import { BannerComponent } from './banner/banner.component';
     TitleCaseDirective,
     LoadingComponent,
     ViewTraceDirective,
-    BannerComponent
+    BannerComponent,
   ],
   imports: [
     BrowserModule,
