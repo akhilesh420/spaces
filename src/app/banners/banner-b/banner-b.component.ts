@@ -1,15 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import { WindowService } from '../../services/window.service';
 
 @Component({
-  selector: 'app-banner-b',
-  templateUrl: './banner-b.component.html',
-  styleUrls: ['./banner-b.component.css']
+  selector: 'app-banner',
+  templateUrl: './banner.component.html',
+  styleUrls: ['./banner.component.css']
 })
-export class BannerBComponent implements OnInit {
+export class BannerComponent implements OnInit {
 
-  constructor() { }
+  offset = 16;
+
+  constructor(private windowService: WindowService) { }
 
   ngOnInit(): void {
   }
 
+  scrollDown() {
+    window.scrollTo({
+      top: this.windowService.height - this.offset,
+      left: 0,
+      behavior: 'smooth'
+    })
+  }
+
 }
+
