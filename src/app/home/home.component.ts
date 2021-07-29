@@ -1,3 +1,4 @@
+import { SharedService } from './../services/shared.service';
 import { MixpanelService } from './../services/mixpanel.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private mixpanelService: MixpanelService) { }
+  template: string;
+
+  constructor(private mixpanelService: MixpanelService,
+              private sharedService: SharedService) { }
 
   ngOnInit(): void {
+    this.template = this.sharedService.getTemplate();
   }
 
   clickEmail() {

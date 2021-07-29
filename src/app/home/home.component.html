@@ -1,7 +1,10 @@
 <div class="column main center">
 
   <!-- Switch for AB test -->
-  <app-banner></app-banner>
+  <app-banner-b *ngIf='template === "B"; else bannerA;'></app-banner-b>
+  <ng-template #bannerA>
+    <app-banner></app-banner>
+  </ng-template>
 
   <app-intro appViewTrace name='Introduction'></app-intro>
   <div class="restrict">

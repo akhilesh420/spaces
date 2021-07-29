@@ -3,7 +3,7 @@
     width: 100vw;
     justify-content: center;
     z-index: 2;
-  
+
 }
 
 .backgroundCover {
@@ -37,14 +37,14 @@
 
 .logo {
 
-    margin-top: 92px;
-  
+    margin-top: 64px;
+
 }
 
 .alignSlogan {
 
     justify-content: center;
-  
+
 }
 
 h2 {
@@ -58,7 +58,7 @@ h2 {
 .signUpButton {
 
     margin-top: 48px;
-  
+
 }
 
 .center {
@@ -74,14 +74,14 @@ h2 {
     height: auto;
     margin-top: 48px;
     animation: more-arrow 1s ease-in-out infinite both;
-  
+
 }
-  
+
 
 .moreArrow > img {
-  
+
     cursor: pointer;
-  
+
 }
 
 
@@ -92,11 +92,11 @@ h2 {
       display: none;
 
   }
-  
+
   .midCircles {
 
       display: block;
-  
+
   }
 
 
@@ -120,7 +120,7 @@ h2 {
   .phoneCircles {
 
       display: block;
-  
+
   }
 
   .desktopCircles {
@@ -132,7 +132,7 @@ h2 {
   .midCircles {
 
       display: none;
-  
+
   }
 
 
@@ -142,33 +142,33 @@ h2 {
 @keyframes more-arrow{
 
     0% {
-  
+
       opacity: 1;
-  
+
     }
-  
+
     50% {
-  
+
       opacity: 0.4;
-  
+
     }
-  
+
     100% {
-  
+
       opacity: 1;
-  
+
     }
-  
+
   }
-  
+
   @keyframes scale-logo {
-  
+
     0% {
       transform: scale(0);
     }
-  
+
     100% {
       transform: scale(1);
     }
-  
+
   }
