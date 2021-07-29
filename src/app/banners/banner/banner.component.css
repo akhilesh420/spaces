@@ -1,4 +1,4 @@
-.backgroundCover {
+.backgroundCoverCard {
 
     position: absolute;
     z-index: -1;
@@ -9,13 +9,42 @@
   
 }
 
-.backgroundCover > img {
+.backgroundCoverCard > img {
 
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 0px 0px 16px 16px;
   
+}
+
+.backgroundCover {
+
+  width: 100vw;
+  height: 2290px;
+  position: absolute;
+  z-index: -2;
+
+}
+
+.backgroundCover > img {
+
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+}
+
+.phoneCircles {
+
+  display: none;
+
+}
+
+.midCircles {
+
+  display: none;
+
 }
 
 .mainPage {
@@ -75,6 +104,62 @@ h2 {
   
     cursor: pointer;
   
+}
+
+
+@media screen and (max-width: 900px) {
+
+  .desktopCircles {
+
+      display: none;
+
+  }
+  
+  .midCircles {
+
+      display: block;
+  
+  }
+
+  .infoCard {
+
+    backdrop-filter: blur(50px);
+
+}
+
+.infoCardTwo {
+
+    backdrop-filter: blur(50px);
+
+}
+
+
+
+}
+
+@media screen and (max-width: 500px) {
+
+
+
+  .phoneCircles {
+
+      display: block;
+  
+  }
+
+  .desktopCircles {
+
+      display: none;
+
+  }
+
+  .midCircles {
+
+      display: none;
+  
+  }
+
+
 }
 
 
