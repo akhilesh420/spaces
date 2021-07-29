@@ -3,4 +3,4 @@ export const templates: string[] = [
   'B',
 ]
 
-export const ab_version: number = 1.0;
+export const ab_version: number = 1.5;
