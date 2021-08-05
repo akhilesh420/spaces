@@ -1,33 +1,33 @@
-import { MixpanelService } from 'src/app/services/mixpanel.service';
 import { isPlatformBrowser } from '@angular/common';
-import { Directive, ElementRef, AfterViewInit, Output, EventEmitter, OnInit, OnDestroy, Input, NgZone, Inject, PLATFORM_ID } from '@angular/core';
+import { Directive, ElementRef, Output, EventEmitter, OnInit, OnDestroy, Input, NgZone, Inject, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { fromEvent, Subscription } from 'rxjs';
 import { debounceTime, filter } from 'rxjs/operators';
 import { NavigationEnd, Router, Event as NavigationEvent } from '@angular/router';
-
 @Directive({
-  selector: '[appViewTrace]'
+  selector: '[appAOS]'
 })
-export class ViewTraceDirective implements OnInit, AfterViewInit, OnDestroy {
+export class AOSDirective implements OnInit {
 
-  @Input() public name: string;
+
+  @Input() public className: string;
   @Input() public fallbackEnabled: boolean = true;
   @Input() public removeListenersAfterLoad: boolean = false;
-  @Input() public threshold: number = 0.2;
+  @Input() public threshold_aos: number = 0.4;
   @Output() public viewChanged: EventEmitter<any> = new EventEmitter();
 
   private _intersectionObserver?: IntersectionObserver;
   private _scrollSubscription?: Subscription;
 
-  private _skipFirstTrace: boolean = null;
+  private _skipFirstTrace: boolean = false;
   private isTiming: boolean = false;
 
   constructor (
       private _element: ElementRef,
       private _zone: NgZone,
       @Inject(PLATFORM_ID) private platformId: Object,
-      private mixpanelService: MixpanelService,
-      private router: Router
+      private router: Router,
+      private renderer: Renderer2,
+      private hostElement: ElementRef
   ) { }
 
   public ngOnInit() {
@@ -72,7 +72,7 @@ export class ViewTraceDirective implements OnInit, AfterViewInit, OnDestroy {
       }
       this._intersectionObserver = new IntersectionObserver(entries => {
           this.checkForIntersection(entries);
-      }, {threshold: this.threshold});
+      }, {threshold: this.threshold_aos});
   }
 
   private checkForIntersection = (entries: Array<IntersectionObserverEntry>) => {
@@ -106,13 +106,17 @@ export class ViewTraceDirective implements OnInit, AfterViewInit, OnDestroy {
          return;
       }
 
-      if (visible) {
-        this.mixpanelService.inViewTime(this.name);
-        this.isTiming = true;
-      } else {
-        this.mixpanelService.inView(this.name, {name: this.name});
-        this.isTiming = false;
-      }
+     visible ? this.onVisible() : this.onNotVisible();
+  }
+
+  private onVisible() {
+    this.renderer.addClass(this.hostElement.nativeElement, this.className);
+    this.renderer.removeClass(this.hostElement.nativeElement, this.className + '-reverse');
+  }
+
+  private onNotVisible() {
+    this.renderer.addClass(this.hostElement.nativeElement, this.className + '-reverse');
+    this.renderer.removeClass(this.hostElement.nativeElement, this.className);
   }
 
   private addScrollListeners () {
@@ -147,7 +151,7 @@ export class ViewTraceDirective implements OnInit, AfterViewInit, OnDestroy {
       let scrollPosition = this.getScrollPosition();
       let elementOffset = this._element.nativeElement.getBoundingClientRect().top + (window.scrollY || window.pageYOffset);
       let elementHeight = this._element.nativeElement.offsetHeight;
-      return (elementOffset + elementHeight*this.threshold <= scrollPosition && elementOffset + elementHeight >= scrollPosition);
+      return (elementOffset + elementHeight*this.threshold_aos <= scrollPosition && elementOffset + elementHeight >= scrollPosition);
   }
 
   private getScrollPosition () {
@@ -155,4 +159,5 @@ export class ViewTraceDirective implements OnInit, AfterViewInit, OnDestroy {
       return (window.scrollY || window.pageYOffset)
           + (document.documentElement.clientHeight || document.body.clientHeight);
   }
+
 }
