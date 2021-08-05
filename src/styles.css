@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~aos/dist/aos.css";
-@import "src\app\extras\aos.css";
 
 html {
   -webkit-font-smoothing: antialiased;
@@ -149,3 +148,12 @@ p {
 }
 
 
+.test {
+  opacity: 1;
+  transition: all 1s;
+}
+
+.test-reverse {
+  opacity: 0;
+  transition: all 1s;
+}
