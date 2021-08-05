@@ -34,7 +34,6 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   initialization() {
-    this.mixpanelService.init(); //Initialize tracking
     this.sharedService.setTemplate();
     this.authService.anonSignIn();
     AOS.init();
