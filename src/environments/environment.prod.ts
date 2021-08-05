@@ -1,4 +1,3 @@
-import { ab_version } from './../app/extras/AB-test-data';
 export const environment = {
   production: true,
   firebaseConfig: {
@@ -12,6 +11,6 @@ export const environment = {
   },
   mixpanelProjectID: "2517bb25ce1b9dcc265548ef366cecb3",
   mixpanelDebug: false,
-  startUsers: 900,
+  startUsers: 1000,
   ab_version: 1.0,
 };
