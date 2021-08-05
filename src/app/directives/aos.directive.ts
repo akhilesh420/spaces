@@ -1,8 +1,5 @@
-import { isPlatformBrowser } from '@angular/common';
-import { Directive, ElementRef, Output, EventEmitter, OnInit, OnDestroy, Input, NgZone, Inject, PLATFORM_ID, Renderer2, HostListener } from '@angular/core';
-import { fromEvent, Subscription } from 'rxjs';
-import { debounceTime, filter } from 'rxjs/operators';
-import { NavigationEnd, Event as NavigationEvent } from '@angular/router';
+import { Directive, ElementRef, OnInit, Input, Renderer2, HostListener } from '@angular/core';
+
 @Directive({
   selector: '[appAOS]'
 })
