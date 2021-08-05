@@ -10,7 +10,7 @@ export class AOSDirective implements OnInit {
 
 
   @Input() public className: string;
-  @Input() public threshold_aos: number = 0.4;
+  @Input() public threshold_aos: number = 0.7;
 
   constructor (
       private renderer: Renderer2,
@@ -22,10 +22,9 @@ export class AOSDirective implements OnInit {
 
   @HostListener('window:scroll', ['$event'])
   private onScroll(event: any) {
-    const scroll = window.pageYOffset;
     const elementPosition = this.hostElement.nativeElement.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
-    const trigger = elementPosition + windowHeight*this.threshold_aos <= scroll;
+    const trigger = elementPosition <= windowHeight*this.threshold_aos;
     trigger ? this.inView(): this.notInView();
   }
 
