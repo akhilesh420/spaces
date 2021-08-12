@@ -28,6 +28,7 @@ import { BannerComponent } from './banners/banner/banner.component';
 import { BannerBComponent } from './banners/banner-b/banner-b.component';
 import { MainComponent } from './main/main.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { LandingBannerComponent } from './landing-banner/landing-banner.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     BannerComponent,
     BannerBComponent,
     MainComponent,
-    NavbarComponent
+    NavbarComponent,
+    LandingBannerComponent
   ],
   imports: [
     BrowserModule,

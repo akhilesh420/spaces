@@ -1,7 +1,61 @@
 .backPanel {
-    
+
     background: rgba(4, 6, 5, 0.8);
     backdrop-filter: blur(8px);
     height: 96px;
+    width: 100vw;
 
+}
+
+.link {
+
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+
+}
+
+.expand {
+    width: 100%;
+}
+
+.navLinks {
+
+    width: 694px;
+
+}
+
+.logo {
+    align-self: flex-start;
+    padding-left: 38px;
+}
+
+.howItWorks {
+
+    align-self: flex-start;
+
+}
+
+.affiliateWithUs {
+
+    align-self: flex-end;
+
+}
+
+.button {
+
+    width: 176px;
+    height: 66px;
+    background-color: var(--primary);
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    align-self: flex-end;
+    margin-right: 38px;
+
+}
+
+.sizer {
+
+    width: 214px;
+    
 }
