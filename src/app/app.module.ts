@@ -26,6 +26,7 @@ import { AngularFireAnalyticsModule, ScreenTrackingService, UserTrackingService 
 import { ViewTraceDirective } from './directives/view-trace.directive';
 import { BannerComponent } from './banners/banner/banner.component';
 import { BannerBComponent } from './banners/banner-b/banner-b.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { BannerBComponent } from './banners/banner-b/banner-b.component';
     LoadingComponent,
     ViewTraceDirective,
     BannerComponent,
-    BannerBComponent
+    BannerBComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
