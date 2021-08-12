@@ -27,6 +27,7 @@ import { ViewTraceDirective } from './directives/view-trace.directive';
 import { BannerComponent } from './banners/banner/banner.component';
 import { BannerBComponent } from './banners/banner-b/banner-b.component';
 import { MainComponent } from './main/main.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { MainComponent } from './main/main.component';
     ViewTraceDirective,
     BannerComponent,
     BannerBComponent,
-    MainComponent
+    MainComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
