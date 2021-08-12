@@ -1,0 +1,7 @@
+.backPanel {
+    
+    background: rgba(4, 6, 5, 0.8);
+    backdrop-filter: blur(8px);
+    height: 96px;
+
+}
