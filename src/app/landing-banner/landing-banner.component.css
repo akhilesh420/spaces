@@ -1,0 +1,63 @@
+.backCover {
+
+    width: 100%;
+    z-index: 0;
+
+}
+
+.background {
+
+    position: absolute;
+
+}
+
+.landingBanner {
+
+    max-width: 1440px;
+    height: 100vh;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.centerDiv {
+
+    z-index: 1;
+
+}
+
+.slogan {
+
+
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 91px;
+    line-height: 140%;
+    color: #FDF0DD;
+    z-index: 1;
+
+}
+
+.underSlogan {
+
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 140%;
+    color: #FDF0DD;
+    margin-top: 8px;
+    z-index: 1;
+    align-self: flex-start;
+
+}
+
+.signUpButton {
+
+    margin-top: 12px;
+    
+}
+
+

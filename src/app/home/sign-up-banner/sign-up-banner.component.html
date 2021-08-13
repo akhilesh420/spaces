@@ -1,12 +1,61 @@
-<div class="row selector">
-  <div class="button column" routerLink='/signup' (click)='track()'>
-    <h3>
-      Early Access
-    </h3>
+<div class="column">
+
+  <div class="row selector">
+    <div class="button column" routerLink='/signup' (click)='track()'>
+      <h3>
+        Early Access
+      </h3>
+    </div>
+    <div class="text column">
+      <p>
+        Join {{earlyCount | async}} more creatives
+      </p>
+    </div>
   </div>
-  <div class="text column">
-    <p>
-      Join {{earlyCount | async}} more creatives
-    </p>
+
+  <div class="row links">
+
+    <div class="column instaLink">
+
+      <div class="row">
+
+        <div class="column">
+
+          <img src = "assets/images/instaLink.svg">
+
+        </div>
+
+        <div class="column linkText">
+
+          <span>Follow us on Instagram</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="column emailLink">
+
+      <div class="row">
+
+        <div class="column">
+
+          <img class = "emailImage" src = "assets/images/emailIcon.svg">
+
+        </div>
+
+        <div class="column linkText">
+
+          <span>contact@postpress.io</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
+
 </div>
+
