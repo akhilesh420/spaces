@@ -18,3 +18,11 @@
     z-index: 0;
 
 }
+
+.how-it-works {
+
+    margin-top: calc(100vh + 148px);
+    width: 100%;
+    max-width: 1440px;
+
+}
