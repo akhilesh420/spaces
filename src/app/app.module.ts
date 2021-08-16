@@ -30,6 +30,7 @@ import { MainComponent } from './main/main.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LandingBannerComponent } from './landing-banner/landing-banner.component';
 import { HowItWorksBComponent } from './how-it-works-b/how-it-works-b.component';
+import { CardOneComponent } from './how-it-works-b/card-one/card-one.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { HowItWorksBComponent } from './how-it-works-b/how-it-works-b.component'
     MainComponent,
     NavbarComponent,
     LandingBannerComponent,
-    HowItWorksBComponent
+    HowItWorksBComponent,
+    CardOneComponent
   ],
   imports: [
     BrowserModule,
