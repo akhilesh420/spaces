@@ -28,9 +28,9 @@ import { BannerComponent } from './banners/banner/banner.component';
 import { BannerBComponent } from './banners/banner-b/banner-b.component';
 import { MainComponent } from './main/main.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { LandingBannerComponent } from './landing-banner/landing-banner.component';
-import { HowItWorksBComponent } from './how-it-works-b/how-it-works-b.component';
-import { CardOneComponent } from './how-it-works-b/card-one/card-one.component';
+import { LandingBannerComponent } from './main/landing-banner/landing-banner.component';
+import { HowItWorksBComponent } from './main/how-it-works-b/how-it-works-b.component';
+import { CardOneComponent } from './main/how-it-works-b/card-one/card-one.component';
 
 @NgModule({
   declarations: [
