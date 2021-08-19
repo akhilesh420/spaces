@@ -33,6 +33,21 @@
 
 }
 
+.underlineSVG {
+
+    bottom: -4px;
+    position: absolute;
+    right: 0;
+    width: 264px;
+
+}
+
+.sloganHighlight {
+
+    color: var(--primary);
+
+}
+
 .underSlogan {
 
     font-family: 'Source Sans Pro';
@@ -44,6 +59,7 @@
     margin-top: 8px;
     z-index: 1;
     align-self: flex-start;
+    position: relative;
 
 }
 
@@ -56,8 +72,17 @@
 .landingLogo {
 
     margin-left: 58px;
-    filter: drop-shadow(33.4194px 13.3845px 89px rgba(0, 0, 0, 0.2)) drop-shadow(16.9186px 6.7759px 38.7984px rgba(0, 0, 0, 0.135)) drop-shadow(6.68388px 2.6769px 14.4625px rgba(0, 0, 0, 0.1)) drop-shadow(1.4621px 0.585571px 5.14531px rgba(0, 0, 0, 0.065));
+    flex-grow: 1;
+    align-items: flex-end;
+    margin-right: 48px;
 
 }
 
+.landingLogo > img {
+
+    height: 320px;
+    width: 320px;
+    filter: drop-shadow(33.4194px 13.3845px 89px rgba(0, 0, 0, 0.2)) drop-shadow(16.9186px 6.7759px 38.7984px rgba(0, 0, 0, 0.135)) drop-shadow(6.68388px 2.6769px 14.4625px rgba(0, 0, 0, 0.1)) drop-shadow(1.4621px 0.585571px 5.14531px rgba(0, 0, 0, 0.065));
+
+}
 

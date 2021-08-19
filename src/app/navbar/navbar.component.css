@@ -1,9 +1,9 @@
 .backPanel {
 
-    background: rgba(4, 6, 5, 0.8);
+    background-color: rgba(6, 10, 15, 0.95);
+    box-shadow: 0px 2px 12px rgba(4, 6, 5, 0.18);
     backdrop-filter: blur(8px);
-    height: 96px;
-    width: 100vw;
+    height: 94px;
 
 }
 

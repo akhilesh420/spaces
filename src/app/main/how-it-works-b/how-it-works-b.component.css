@@ -6,7 +6,7 @@
     font-size: 76px;
     line-height: 140%;
     color: #FDF0DD;
-    margin-left: 127px;
+    margin-left: 155px;
     height: 294px;
     align-content: center;
 
@@ -32,7 +32,7 @@
 
 .subHeadingHighlight {
 
-    font-family: 'Source Serif Pro';
+    font-family: 'Recoleta';
     font-style: normal;
     font-weight: bold;
     font-size: 40.5px;
@@ -45,10 +45,10 @@
 .divider {
 
     background-color: var(--accent);
-    width: 12px;
+    width: 6px;
     height: 230px;
     margin-right: 20px;
-    border-radius: 12px 0px 0px 12px;
+    border-radius: 20px;
     margin-top: 43px;
 
 }
@@ -96,8 +96,15 @@
 .cardTwo {
 
     align-items: flex-end;
-    margin-top: 62px;
+    margin-top: 76px;
     margin-right: 258px;
+    
+}
+
+.cardThree {
+
+    margin-top: 124px;
+    margin-left: 320px;
     
 }
 

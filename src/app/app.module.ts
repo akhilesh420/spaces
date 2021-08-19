@@ -32,6 +32,7 @@ import { LandingBannerComponent } from './main/landing-banner/landing-banner.com
 import { HowItWorksBComponent } from './main/how-it-works-b/how-it-works-b.component';
 import { CardOneComponent } from './main/how-it-works-b/card-one/card-one.component';
 import { CardTwoComponent } from './main/how-it-works-b/card-two/card-two.component';
+import { CardThreeComponent } from './main/how-it-works-b/card-three/card-three.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { CardTwoComponent } from './main/how-it-works-b/card-two/card-two.compon
     LandingBannerComponent,
     HowItWorksBComponent,
     CardOneComponent,
-    CardTwoComponent
+    CardTwoComponent,
+    CardThreeComponent
   ],
   imports: [
     BrowserModule,
