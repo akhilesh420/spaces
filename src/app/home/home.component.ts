@@ -9,14 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  template: string;
-
-  constructor(private mixpanelService: MixpanelService,
-              private sharedService: SharedService) { }
+  constructor(private mixpanelService: MixpanelService) { }
 
   ngOnInit(): void {
-    this.template = this.sharedService.getTemplate();
-  }
+}
 
   clickEmail() {
     this.mixpanelService.clickEmail({location: "home page"});

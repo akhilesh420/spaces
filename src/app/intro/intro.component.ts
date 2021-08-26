@@ -9,12 +9,10 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 })
 export class IntroComponent implements OnInit, OnDestroy {
 
-  template: string;
 
-  constructor(private sharedService: SharedService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.template = this.sharedService.getTemplate();
   }
 
   ngOnDestroy() {}
