@@ -12,5 +12,5 @@ export const environment = {
   mixpanelProjectID: "2517bb25ce1b9dcc265548ef366cecb3",
   mixpanelDebug: false,
   startUsers: 1100,
-  ab_version: 1.0,
+  ab_version: 1.1,
 };
