@@ -1,0 +1,53 @@
+.spread {
+  justify-content: space-between;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.gears {
+  margin-right: 20px;
+}
+
+.relative {
+  position: relative;
+  width: 435px;
+  height: 411px;
+}
+
+.artwork {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 380px;
+  border-radius: 20px;
+}
+
+.artist {
+  position: absolute;
+  top: 349px;
+  left: 125px;
+  width: 266px;
+  height: 48px;
+  background-color: var(--dark);
+  border-radius: 16px;
+  border: 2px solid var(--accent);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.instagram {
+  width: 30px;
+  height: 30px;
+}
+
+.y-center {
+  justify-content: center;
+}
+
+.space {
+  margin-right: 135px;
+}
