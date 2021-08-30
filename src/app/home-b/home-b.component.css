@@ -5,6 +5,13 @@
 
 }
 
+.navbar {
+
+  position: absolute;
+  top: 18px;
+  
+}
+
 .center {
   justify-content: center;
   align-items: center;

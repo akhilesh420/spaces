@@ -28,6 +28,7 @@ import { BannerComponent } from './banners/banner/banner.component';
 import { HomeBComponent } from './home-b/home-b.component';
 import { MainComponent } from './main/main.component';
 import { HowItWorksBComponent } from './home-b/how-it-works-b/how-it-works-b.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { HowItWorksBComponent } from './home-b/how-it-works-b/how-it-works-b.com
     HomeBComponent,
     MainComponent,
     HowItWorksBComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
