@@ -1,4 +1,13 @@
+.how-it-works {
+
+  width: 100vw;
+  background-color: var(--primary);
+
+}
+
 .center {
   justify-content: center;
   align-items: center;
 }
+
+
