@@ -70,7 +70,7 @@ h5 {
   top: 0;
   left: 0;
   width: auto;
-  height: 380px;
+  height: 420px;
   border-radius: 20px;
   filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.4));
 }
@@ -78,8 +78,8 @@ h5 {
 .artist {
 
   position: absolute;
-  top: 349px;
-  left: 125px;
+  top: 389px;
+  left: 158px;
   width: 310px;
   height: 62px;
   background-color: var(--dark);
@@ -117,5 +117,5 @@ h5 {
 
 .space {
   margin-right: 135px;
-  margin-top: 16px;
+  margin-top: 24px;
 }

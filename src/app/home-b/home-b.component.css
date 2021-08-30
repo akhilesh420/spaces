@@ -7,8 +7,11 @@
 
 .navbar {
 
-  position: absolute;
+  position: fixed;
+  width: 100vw;
   top: 18px;
+  z-index: 2;
+  justify-content: center;
   
 }
 

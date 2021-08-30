@@ -1,11 +1,91 @@
+h6 {
+    margin: 0px;
+}
+
 .backpanel {
 
     width: 100vw;
     height: 72px;
-    background: var(--accent);
+    background: var(--dark);
     box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(20px);
-    border-radius: 8px;
+    border-radius: 16px;
     max-width: 1170px;
+    margin-left: 32px;
+    margin-right: 32px;
+    border: 2px solid var(--accent);
+    display: flex;
 
 }
+
+.name {
+
+    width: 145px;
+    margin-left: 20px;
+    justify-content: center;
+    align-content: center;
+    
+
+}
+
+.name > h2 {
+
+    font-weight: bold;
+    color: var(--primary);
+
+}
+
+.imageLink {
+
+    justify-content: center;
+
+}
+
+.linkSpacer {
+
+    margin-left: 48px;
+
+}
+
+.links {
+
+    margin-left: 64px;
+    justify-content: center;
+
+}
+
+.link {
+
+    justify-content: center;
+
+}
+
+.text {
+
+    margin-left: 12px;
+    /* padding-bottom: 4px; */
+
+}
+
+.signUpLink {
+
+    justify-content: center;
+    flex-grow: 2;
+    align-items: flex-end;
+    
+
+}
+
+.signUpButton {
+
+    border: 1px solid #FDF0DD;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 8px;
+    width: 124px;
+    height: 48px;
+    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+

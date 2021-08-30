@@ -89,10 +89,10 @@ h1 {
 
 }
 
-h3 {
+/* h3 {
 
 
-}
+} */
 
 h4 {
 
@@ -132,7 +132,7 @@ color: #FFFFFF;
 
 h2 {
 
-  font-family: 'Source Serif Pro', serif;
+  font-family: 'Recoleta';
   font-style: normal;
   font-weight: 600;
   font-size: 28px;
