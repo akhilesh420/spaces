@@ -29,6 +29,7 @@ import { HomeBComponent } from './home-b/home-b.component';
 import { MainComponent } from './main/main.component';
 import { HowItWorksBComponent } from './home-b/how-it-works-b/how-it-works-b.component';
 import { NavbarComponent } from './home-b/navbar/navbar.component';
+import { CardBComponent } from './card-b/card-b.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { NavbarComponent } from './home-b/navbar/navbar.component';
     MainComponent,
     HowItWorksBComponent,
     NavbarComponent,
+    CardBComponent,
   ],
   imports: [
     BrowserModule,
