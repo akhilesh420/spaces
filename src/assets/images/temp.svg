@@ -1,0 +1,31 @@
+<svg width="245" height="245" viewBox="0 0 245 245" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d)">
+<rect x="12" y="10.0001" width="221" height="221" rx="16" fill="#040605"/>
+<rect x="13" y="11.0001" width="219" height="219" rx="15" stroke="#66B8FF" stroke-width="2"/>
+</g>
+<rect x="59" y="88.4001" width="126.8" height="72.2" fill="#FDF0DD" stroke="#FDF0DD" stroke-width="2"/>
+<rect x="58.5" y="57.5001" width="128" height="30" stroke="#FDF0DD"/>
+<circle cx="73.4001" cy="72.4001" r="9.3" fill="#FDF0DD" stroke="black"/>
+<rect x="86.5" y="64.5001" width="94.2" height="7.4" rx="0.5" stroke="#FDF0DD"/>
+<rect x="64.1001" y="167.3" width="85.8" height="14.4" rx="0.5" stroke="#FDF0DD"/>
+<rect x="153.7" y="170.1" width="27" height="8.8" rx="0.5" fill="#66B8FF" stroke="#66B8FF"/>
+<rect x="86.5" y="75.7001" width="64.8" height="4.6" rx="0.5" stroke="#FDF0DD"/>
+<rect x="58.5" y="161.7" width="127.8" height="25.6" stroke="#FDF0DD"/>
+<path d="M216.416 197.705C216.98 197.103 217.333 196.341 217.333 195.5C217.333 193.568 215.543 192 213.333 192C211.124 192 209.333 193.568 209.333 195.5C209.333 196.341 209.687 197.103 210.251 197.705C204.376 199.099 200 204.365 200 210.667C200 218.031 205.969 224 213.333 224C220.697 224 226.667 218.031 226.667 210.667C226.667 204.365 222.291 199.099 216.416 197.705ZM213.333 194C214.417 194 215.333 194.687 215.333 195.5C215.333 196.313 214.417 197 213.333 197C212.249 197 211.333 196.313 211.333 195.5C211.333 194.687 212.249 194 213.333 194ZM213.333 221.333C207.452 221.333 202.667 216.548 202.667 210.667C202.667 204.785 207.452 200 213.333 200C219.215 200 224 204.785 224 210.667C224 216.548 219.215 221.333 213.333 221.333ZM214.187 210.647C214.185 211.107 213.813 211.48 213.353 211.48C212.893 211.48 212.52 211.107 212.52 210.647C212.52 210.185 212.892 209.813 213.353 209.813C213.812 209.815 214.187 210.188 214.187 210.647ZM213.333 202.667C208.916 202.667 205.333 206.249 205.333 210.667C205.333 215.084 208.916 218.667 213.333 218.667C217.751 218.667 221.333 215.084 221.333 210.667C221.333 206.249 217.751 202.667 213.333 202.667ZM214.769 212.063C214.329 212.503 213.739 212.699 213.148 212.64L209.333 214.668L211.361 210.849C211.303 210.271 211.496 209.672 211.937 209.231C212.383 208.785 212.987 208.589 213.587 208.659L217.333 206.667L215.343 210.415C215.416 211.047 215.193 211.64 214.769 212.063Z" fill="url(#paint0_linear)"/>
+<defs>
+<filter id="filter0_d" x="0" y="6.10352e-05" width="245" height="245" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="6"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear" x1="200.333" y1="192" x2="226.333" y2="224" gradientUnits="userSpaceOnUse">
+<stop offset="0.22842" stop-color="#99D0FF"/>
+<stop offset="0.762435" stop-color="#447BAA"/>
+</linearGradient>
+</defs>
+</svg>

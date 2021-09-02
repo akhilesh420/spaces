@@ -30,6 +30,7 @@ import { MainComponent } from './main/main.component';
 import { HowItWorksBComponent } from './home-b/how-it-works-b/how-it-works-b.component';
 import { NavbarComponent } from './home-b/navbar/navbar.component';
 import { CardBComponent } from './card-b/card-b.component';
+import { SubCardComponent } from './card-b/sub-card/sub-card.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { CardBComponent } from './card-b/card-b.component';
     HowItWorksBComponent,
     NavbarComponent,
     CardBComponent,
+    SubCardComponent,
   ],
   imports: [
     BrowserModule,

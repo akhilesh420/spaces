@@ -1,0 +1,21 @@
+.container {
+  width: 1170px;
+  height: 698px;
+  background-color: var(--dark);
+  margin-top: 62px;
+  border-radius: 38px;
+  border: 4px solid var(--accent);
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin-top: 42px;
+}
+
+.evenly {
+  justify-content: space-evenly;
+}
