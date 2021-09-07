@@ -12,6 +12,7 @@ export class SubCard {
 
   constructor(
     public animation: string,
-    public information: string
+    public title: string,
+    public information: string,
   ){}
 }
