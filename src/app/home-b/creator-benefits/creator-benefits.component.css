@@ -1,0 +1,121 @@
+  h1, h2, h3, h4, h5, h6 {
+
+    z-index: 2;
+
+  }
+
+  h4 {
+
+    color: #0BDBFE;
+    z-index: 2;
+
+  }
+  
+  .background {
+  
+    z-index: 0;
+    position: absolute;
+    top: 162px;
+    left: 48px;
+    height: 1397px;
+    width: auto;
+  
+  }
+  
+  .background > img {
+  
+    width: 100vw;
+    
+  }
+  
+  .spread {
+  
+    justify-content: space-between;
+    align-self: center;
+    max-width: 1440px;
+    margin-top: 148px;
+  
+  }
+  
+  .grow {
+  
+    justify-content: space-between;
+  
+  }
+  
+  .center {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .gears {
+    margin-right: 12px;
+  }
+  
+  .gears > img {
+  
+    margin-left: -16px;
+  
+  }
+  
+  .relative {
+    position: relative;
+    width: 435px;
+    height: 411px;
+  }
+  
+  .artwork {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 420px;
+    border-radius: 20px;
+    filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.4));
+  }
+  
+  .artist {
+  
+    position: absolute;
+    top: 389px;
+    left: 158px;
+    width: 310px;
+    height: 62px;
+    background-color: var(--dark);
+    border-radius: 16px;
+    border: 2px solid var(--accent);
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
+  
+  }
+  
+  .instagram {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .highlightSpace {
+  
+    position: relative;
+  
+  }
+  
+  .highlight {
+  
+    position: absolute;
+    top: -32px;
+    left: -62px;
+  
+  }
+  
+  .y-center {
+    justify-content: center;
+  }
+  
+  .space {
+    margin-right: 96px;
+    margin-top: 24px;
+  }
+  

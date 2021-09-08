@@ -5,6 +5,17 @@
 
 }
 
+.creator-benefits {
+
+  position: absolute;
+  top: 2340px;
+  width: 100vw;
+  height: 1638px;
+  background: #0D0618;
+  z-index: 0;
+
+}
+
 .navbar {
 
   position: fixed;
