@@ -31,6 +31,7 @@ import { HowItWorksBComponent } from './home-b/how-it-works-b/how-it-works-b.com
 import { NavbarComponent } from './home-b/navbar/navbar.component';
 import { CardBComponent } from './card-b/card-b.component';
 import { SubCardComponent } from './card-b/sub-card/sub-card.component';
+import { CreatorBenefitsComponent } from './home-b/creator-benefits/creator-benefits.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { SubCardComponent } from './card-b/sub-card/sub-card.component';
     NavbarComponent,
     CardBComponent,
     SubCardComponent,
+    CreatorBenefitsComponent,
   ],
   imports: [
     BrowserModule,

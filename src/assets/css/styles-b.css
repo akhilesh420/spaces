@@ -1,0 +1,194 @@
+h1 {
+
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60.75px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #FDF0DD;
+
+}
+
+h2 {
+
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #FDF0DD;
+
+}
+
+h3 {
+
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 140%;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+
+h4 {
+
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 125%;
+    letter-spacing: 0.01em;
+    color: #80C4FF;
+
+}
+
+h5 {
+
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 140%;
+    letter-spacing: 0.06em;
+    color: #C2E3FF;
+
+}
+
+h6 {
+
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 140%;
+    color: #FDF0DD;
+
+}
+
+span {
+
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40.5px;
+    line-height: 140%;
+    color: #FDF0DD;
+
+}
+
+p {
+
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+
+}
+
+
+@media screen and (max-width: 550px) {
+
+    h1 {
+
+        font-family: 'Recoleta';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40.5px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        color: #FDF0DD;
+
+    }
+
+    h2 {
+
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 140%;
+        letter-spacing: 0.01em;
+        color: #FDF0DD;
+
+    }
+
+    h3 {
+
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 140%;
+        text-align: center;
+        color: #FFFFFF;
+
+    }
+
+    h4 {
+
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 27px;
+        line-height: 125%;
+        letter-spacing: 0.01em;
+        color: #FDF0DD;
+
+    }
+
+    h5 {
+
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 140%;
+        letter-spacing: 0.06em;
+        color: #FDF0DD;
+
+    }
+
+    h6 {
+
+
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 140%;
+        color: #FDF0DD;
+
+    }
+
+    span {
+
+        font-family: 'Recoleta';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 27px;
+        line-height: 140%;
+        color: #FDF0DD;
+
+    }
+
+    p {
+
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 140%;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+
+    }
+
+  }
