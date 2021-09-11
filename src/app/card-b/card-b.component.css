@@ -1,10 +1,15 @@
 .container {
+  background-image: url("/src/assets/images/card_background.jpg");
   background-color: var(--dark);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
   margin-top: 62px;
   border-radius: 38px;
   border: 4px solid var(--accent);
-  padding-left: 114px;
-  padding-right: 114px;
+  /* padding-left: 114px;
+  padding-right: 114px; */
 }
 
 .center {
@@ -18,4 +23,8 @@
 
 .evenly {
   justify-content: space-evenly;
+}
+
+.wrap {
+  flex-wrap: wrap;
 }
