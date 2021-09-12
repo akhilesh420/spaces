@@ -1,3 +1,80 @@
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .body-no-scroll {
+    overflow: hidden;
+    position: fixed;
+  }
+  
+  .mainLogo {
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+  
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+  /* font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Serif Pro', serif; */
+  
+  :root {
+    --primary: #66B8FF;
+    --accent: #FDF0DD;
+    --dark: #040605;
+    --white: #ffffff;
+    --red: #CC2A28;
+  }
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .dark {
+    background: var(--dark);
+    color: var(--dark);
+  }
+  
+  .light {
+    background: var(--accent);
+    color: var(--accent);
+    background-blend-mode: hard-light;
+    mix-blend-mode: hard-light;
+  }
+  
+  .primary {
+    background: var(--primary);
+    color: var(--primary);
+    mix-blend-mode: normal;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    text-rendering: optimizeLegibility;
+    margin: 0px;
+  }
+  
+
 h1 {
 
     font-family: 'Recoleta';
@@ -41,7 +118,7 @@ h4 {
     font-style: normal;
     font-weight: 600;
     font-size: 27px;
-    line-height: 125%;
+    line-height: 140%;
     letter-spacing: 0.01em;
     color: #80C4FF;
 
@@ -62,11 +139,12 @@ h5 {
 h6 {
 
     font-family: 'Source Sans Pro';
-    font-style: normal;
+    font-style: bold;
     font-weight: 600;
     font-size: 27px;
     line-height: 140%;
     color: #FDF0DD;
+    letter-spacing: -0.01em;
 
 }
 
@@ -94,7 +172,7 @@ p {
 }
 
 
-@media screen and (min-width: 550px) {
+@media screen and (max-width: 550px) {
 
     h1 {
 
