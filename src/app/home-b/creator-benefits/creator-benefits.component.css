@@ -1,4 +1,8 @@
-  h1, h2, h3, h4, h5, h6 {
+@import url('../../../assets/css/styles-b.css');
+   
+   
+   
+   h1, h2, h3, h4, h5, h6 {
 
     z-index: 2;
 
@@ -20,13 +24,11 @@
   .circleA {
 
     position: absolute;
-    left: 96px;
-    top: 86px;
+    left: -192px;
+    top: 0px;
 
   }
 
- 
-  
   .spread {
   
     justify-content: space-between;
@@ -136,5 +138,6 @@
   .context {
 
     justify-content: center;
+
   }
   
