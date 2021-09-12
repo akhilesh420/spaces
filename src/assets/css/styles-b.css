@@ -69,7 +69,7 @@ html {
     mix-blend-mode: normal;
   }
   
-  h1, h2, h3, h4, h5 {
+  h1, h2, h3, h4, h5, h6 {
     text-rendering: optimizeLegibility;
     margin: 0px;
   }
@@ -118,7 +118,7 @@ h4 {
     font-style: normal;
     font-weight: 600;
     font-size: 27px;
-    line-height: 125%;
+    line-height: 140%;
     letter-spacing: 0.01em;
     color: #80C4FF;
 
@@ -139,11 +139,12 @@ h5 {
 h6 {
 
     font-family: 'Source Sans Pro';
-    font-style: normal;
+    font-style: bold;
     font-weight: 600;
     font-size: 27px;
     line-height: 140%;
     color: #FDF0DD;
+    letter-spacing: -0.01em;
 
 }
 
@@ -171,7 +172,7 @@ p {
 }
 
 
-@media screen and (min-width: 550px) {
+@media screen and (max-width: 550px) {
 
     h1 {
 

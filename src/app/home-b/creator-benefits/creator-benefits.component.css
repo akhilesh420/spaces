@@ -71,6 +71,18 @@
     height: 411px;
   }
 
+  .pageTitle {
+
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 140%;
+    letter-spacing: 0.06em;
+    color: #0BDBFE;
+
+  }
+
   .artworkContainer {
 
     width: 420px;
@@ -140,4 +152,92 @@
     justify-content: center;
 
   }
+
+  .contextTitle {
+
+    position: relative;
+
+  }
+
+  .contextTwo {
+
+    justify-content: center;
+    margin-right: 195px;
+    margin-top: 124px;
+
+  }
+
+  .contextSymbol {
+
+    margin-left: 82px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+  }
+
+  .contextSymbolTwo {
+
+    margin-left: 96px;
+
+  }
+
+  .contextSymbol > img {
+
+    z-index: 2;
+
+  }
+
+  .circleB {
+
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+
+  }
+
+  .progressBar {
+
+    margin-top: 20px;
+    width: 324px;
+    height: 12px;
+    background: #040605;
+    border-radius: 6px;
+    align-self: left;
+    z-index: 2;
+
+  }
+
+  .whiteBar {
+
+    width: 108px;
+    height: 12px;
+    background: #FDF0DD;
+    border-radius: 6px 0px 0px 6px;
+
+  }
+
+  .whiteBarTwo {
+
+    width: 216px;
+
+  }
+
+  .contextThree {
+
+    justify-content: center;
+    margin-right: -156px;
+    margin-top: 124px;
+
+  }
+
+  .circleC {
+
+    position: absolute;
+    top: -320px;
+    left: -295px;
+    z-index: 0;
+
+  }
+
   
