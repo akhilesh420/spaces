@@ -32,7 +32,6 @@ import { NavbarComponent } from './home-b/navbar/navbar.component';
 import { CardBComponent } from './card-b/card-b.component';
 import { SubCardComponent } from './card-b/sub-card/sub-card.component';
 import { CreatorBenefitsComponent } from './home-b/creator-benefits/creator-benefits.component';
-import { BenefitsTextComponent } from './home-b/creator-benefits/benefits-text/benefits-text.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +58,6 @@ import { BenefitsTextComponent } from './home-b/creator-benefits/benefits-text/b
     CardBComponent,
     SubCardComponent,
     CreatorBenefitsComponent,
-    BenefitsTextComponent,
   ],
   imports: [
     BrowserModule,
