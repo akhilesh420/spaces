@@ -38,6 +38,7 @@ font-family: 'Source Serif Pro', serif; */
   --dark: #040605;
   --white: #ffffff;
   --red: #CC2A28;
+  --dark-blue: #80C4FF;
 }
 
 ::-webkit-scrollbar {
@@ -116,7 +117,7 @@ h5 {
   line-height: 140%;
   letter-spacing: -0.01em;
   color: #FDF0DD;
-  
+
 }
 
 h6 {

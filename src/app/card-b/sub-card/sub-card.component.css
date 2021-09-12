@@ -4,3 +4,15 @@
   margin-top: 8px;
   padding-bottom: 60px;
 }
+
+.video {
+  height: 221px;
+  width: 221px;
+  border: 2px solid var(--primary);
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+
+h4 {
+  color: var(--dark-blue);
+}
