@@ -16,7 +16,7 @@
   margin-left: 5px;
 }
 
-.center {
+.text-align {
   justify-content: center;
   align-items: center;
 }
@@ -30,7 +30,7 @@
   margin-bottom: 70px;
 }
 
-.evenly {
+.align {
   justify-content: space-evenly;
 }
 
@@ -40,10 +40,6 @@
 
 .sub-card-padding-right {
   padding-right: 104px;
-}
-
-.sub-card-padding-left {
-  padding-left: 104px;
 }
 
 .relative{
@@ -62,7 +58,7 @@
 }
 
 .position-A {
-  transform: translate(calc(-240% - 8.1px), -50%);
+  transform: translate(calc(-320% - 8.1px), -50%);
 }
 
 .position-A > img {
@@ -70,7 +66,7 @@
 }
 
 .position-B {
-  transform: translate(calc(150% + 25px), -60%);
+  transform: translate(calc(225% + 25px), -60%);
 }
 
 
@@ -78,4 +74,44 @@
   transform: rotate(10deg);
 }
 
+.text-left {
+  text-align: left;
+}
 
+
+@media screen and (min-width: 1206px)  {
+
+ .align.wrap > app-sub-card:nth-of-type(3) {
+   padding-right: 0;
+ }
+
+}
+
+
+@media screen and (max-width: 853px)  {
+
+  .align {
+    justify-content: flex-start;
+  }
+
+  .text-align {
+    justify-content: left;
+    align-items: left;
+  }
+
+}
+
+@media screen and (max-width: 550px) {
+
+  .container {
+    padding-left: 24px;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+
+    border-radius: unset;
+    border: unset;
+    border-top: 1px solid var(--accent)
+  }
+
+}
