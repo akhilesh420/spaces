@@ -69,6 +69,7 @@ h5, h6 {
 
 .gears {
   margin-right: 12px;
+  margin-left: 4px;
 }
 
 .gears > img {
@@ -77,11 +78,18 @@ h5, h6 {
 
 }
 
+.art {
+
+  align-items: flex-end;
+
+}
+
 .artwork {
   width: auto;
-  height: 420px;
+  height: 380px;
   border-radius: 20px;
   filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.4));
+  margin-right: 20px;
 }
 
 .spacer {
@@ -99,7 +107,7 @@ h5, h6 {
   box-sizing: border-box;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
   margin-left: 150px;
-  margin-top: -20px;
+  margin-top: -30px;
   z-index: 1;
 }
 
@@ -127,7 +135,7 @@ h5, h6 {
 }
 
 .space {
-  margin-right: 96px;
+  margin-right: 62px;
   margin-top: 24px;
 }
 
