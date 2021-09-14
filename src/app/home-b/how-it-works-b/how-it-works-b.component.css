@@ -1,9 +1,22 @@
 @import url('../../../assets/css/styles-b.css');
 
 
-h5 {
+h5, h6 {
 
   z-index: 2;
+
+}
+
+.pageTitle {
+
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 140%;
+  letter-spacing: 0.06em;
+  color: #C2E3FF;
+
 }
 
 .background {
