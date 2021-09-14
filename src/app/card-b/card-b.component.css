@@ -1,7 +1,7 @@
 @import url('../../assets/css/styles-b.css');
 
 .container {
-  background-image: url("/src/assets/images/card_background.jpg");
+  background-image: url("src/assets/images/card_background.svg");
   background-color: var(--dark);
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
