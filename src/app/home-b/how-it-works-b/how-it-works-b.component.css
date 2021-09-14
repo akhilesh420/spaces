@@ -47,7 +47,7 @@ h5, h6 {
 
 }
 
-.spread {
+.align {
 
   justify-content: space-between;
   align-self: center;
@@ -77,27 +77,19 @@ h5, h6 {
 
 }
 
-.relative {
-  position: relative;
-  width: 435px;
-  height: 411px;
-}
-
 .artwork {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: auto;
   height: 420px;
   border-radius: 20px;
   filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.4));
+  margin-top: 60px;
+}
+
+.spacer {
+  width: 35px;
 }
 
 .artist {
-
-  position: absolute;
-  top: 389px;
-  left: 158px;
   width: 310px;
   height: 62px;
   background-color: var(--dark);
@@ -107,7 +99,9 @@ h5, h6 {
   padding-right: 20px;
   box-sizing: border-box;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
-
+  margin-left: 150px;
+  margin-top: -20px;
+  z-index: 1;
 }
 
 .instagram {
@@ -136,4 +130,63 @@ h5, h6 {
 .space {
   margin-right: 96px;
   margin-top: 24px;
+}
+
+.wrap {
+  flex-wrap:wrap;
+}
+
+.margin {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.spaces-font {
+  color: var(--primary);
+  font-family: Recoleta;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 27px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  margin: 1px;
+}
+
+@media screen and (max-width: 1248px) {
+
+  .artwork {
+    height: 280px;
+  }
+
+  .artist {
+    width: 134px;
+    height: 43px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  h6 {
+    font-size: 12px;
+  }
+
+  .instagram {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  .spaces-font {
+    margin: unset;
+    margin-top: -8px;
+  }
+
+  .align {
+    justify-content: flex-start;
+  }
+
+  .spacer {
+    width: unset;
+  }
 }

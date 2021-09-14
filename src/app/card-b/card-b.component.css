@@ -10,11 +10,13 @@
   margin-top: 62px;
   border-radius: 38px;
   border: 4px solid var(--accent);
-  /* padding-left: 114px;
-  padding-right: 114px; */
+  padding-left: 116px;
+  padding-right: 116px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
-.center {
+.text-align {
   justify-content: center;
   align-items: center;
 }
@@ -23,10 +25,93 @@
   margin-top: 42px;
 }
 
-.evenly {
+.sub-title {
+  margin-top: -5px;
+  margin-bottom: 70px;
+}
+
+.align {
   justify-content: space-evenly;
 }
 
 .wrap {
-  flex-wrap: wrap;
+  flex-wrap:wrap;
+}
+
+.sub-card-padding-right {
+  padding-right: 104px;
+}
+
+.relative{
+  position: relative;
+}
+
+.identifier {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.identifier > img {
+  height: 92px;
+  width: 87px;
+}
+
+.position-A {
+  transform: translate(calc(-320% - 8.1px), -50%);
+}
+
+.position-A > img {
+  transform: rotate(-24deg);
+}
+
+.position-B {
+  transform: translate(calc(225% + 25px), -60%);
+}
+
+
+.position-B > img {
+  transform: rotate(10deg);
+}
+
+.text-left {
+  text-align: left;
+}
+
+
+@media screen and (min-width: 1206px)  {
+
+ .align.wrap > app-sub-card:nth-of-type(3) {
+   padding-right: 0;
+ }
+
+}
+
+
+@media screen and (max-width: 853px)  {
+
+  .align {
+    justify-content: flex-start;
+  }
+
+  .text-align {
+    justify-content: left;
+    align-items: left;
+  }
+
+}
+
+@media screen and (max-width: 550px) {
+
+  .container {
+    padding-left: 24px;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+
+    border-radius: unset;
+    border: unset;
+    border-top: 1px solid var(--accent)
+  }
+
 }
