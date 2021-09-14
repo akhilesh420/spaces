@@ -22,9 +22,9 @@
 .navbar {
 
   width: 100vw;
-  top: 18px;
   z-index: 2;
   justify-content: center;
+  margin-top: 18px;
 
 }
 

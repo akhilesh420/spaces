@@ -1,6 +1,9 @@
 @import url('../../../assets/css/styles-b.css');
    
-   
+   .backpanel {
+     width: 100vw;
+     overflow-x: hidden;
+   }
    
    h1, h2, h3, h4, h5, h6 {
 
@@ -173,18 +176,13 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 2;
     
   }
 
   .contextSymbolTwo {
 
     margin-left: 96px;
-
-  }
-
-  .contextSymbol > img {
-
-    z-index: 2;
 
   }
 
@@ -234,10 +232,15 @@
   .circleC {
 
     position: absolute;
-    top: -320px;
+    top: -620px;
     left: -295px;
     z-index: 0;
 
+  }
+
+  .whiteBarThree {
+    width: 100%;
+    border-radius: 6px 6px 6px 6px;
   }
 
   
