@@ -52,17 +52,12 @@
   top: 50%;
 }
 
-.identifier > img {
-  height: 92px;
-  width: 87px;
-}
-
 .position-A {
-  transform: translate(calc(-320% - 8.1px), -50%);
+  transform: translate(calc(-270% - 8.1px), -50%);
 }
 
 .position-A > img {
-  transform: rotate(-24deg);
+  transform: rotate(-12deg);
 }
 
 .position-B {
