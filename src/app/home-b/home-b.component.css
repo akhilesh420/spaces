@@ -1,5 +1,12 @@
 @import url('../../assets/css/styles-b.css');
 
+.landing-page {
+
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--dark);
+  
+}
 
 .how-it-works {
 

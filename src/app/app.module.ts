@@ -32,6 +32,7 @@ import { NavbarComponent } from './home-b/navbar/navbar.component';
 import { CardBComponent } from './card-b/card-b.component';
 import { SubCardComponent } from './card-b/sub-card/sub-card.component';
 import { CreatorBenefitsComponent } from './home-b/creator-benefits/creator-benefits.component';
+import { LandingBComponent } from './home-b/landing-b/landing-b.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { CreatorBenefitsComponent } from './home-b/creator-benefits/creator-bene
     CardBComponent,
     SubCardComponent,
     CreatorBenefitsComponent,
+    LandingBComponent,
   ],
   imports: [
     BrowserModule,
