@@ -24,6 +24,7 @@ h5, h6 {
   z-index: 0;
   position: absolute;
   top: 0px;
+  background: var(--primary);
 
 }
 
@@ -40,10 +41,14 @@ h5, h6 {
   height: 2910px;
   background: rgba(4, 6, 5, 0.6);
   backdrop-filter: blur(40px);
-  border-radius: 0px 0px 36px 36px;
+  border-bottom-left-radius: 36px;
+  border-bottom-right-radius: 36px;
+  border-top-left-radius: 36px;
+  border-top-right-radius: 36px;
   position: absolute;
-  top: 0px;
+  top: -62px;
   left: 0px;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.4);
 
 }
 
@@ -52,7 +57,7 @@ h5, h6 {
   justify-content: space-between;
   align-self: center;
   max-width: 1440px;
-  margin-top: 148px;
+  margin-top: 96px;
 
 }
 
