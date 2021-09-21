@@ -82,8 +82,8 @@
 
  .container {
 
-  padding-left: 60px;
-  padding-right: 33px;
+  padding-left: 40px;
+  padding-right: 13px;
   max-width: 698px;
   margin-top: 32px;
 
@@ -96,6 +96,15 @@
  }
 
 }
+
+/* @media screen and (max-width:796px) {
+
+  .container {
+
+    padding-left: 96px;
+    padding-right: ;
+  }
+} */
 
 @media screen and (max-width: 550px) {
 
