@@ -46,4 +46,19 @@
   align-items: center;
 }
 
+@media screen and (max-width: 1248px) {
 
+  .landing-page {
+
+    height: 876px;
+
+  }
+
+  .how-it-works {
+
+    top: 924px;
+
+  }
+
+
+}

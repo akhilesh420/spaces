@@ -166,25 +166,42 @@ h5, h6 {
 
 @media screen and (max-width: 1248px) {
 
-  .artwork {
-    height: 280px;
+  .align {
+
+    justify-content: center;
+    margin-top: 0px;
+    margin-left: 96px;
+
   }
 
-  .artist {
-    width: 134px;
-    height: 43px;
+  .art {
+
+    margin-right: 400px;
+    margin-top: 42px;
+
+  }
+
+  .artwork {
+    height: 360px;
+  }
+
+  /* .artist {
+
+    width: 210px;
     padding-left: 10px;
     padding-right: 10px;
-  }
+    border-radius: 12px;
 
-  h6 {
+  } */
+
+  /* h6 {
     font-size: 12px;
-  }
+  } */
 
-  .instagram {
+  /* .instagram {
     width: 20px;
     height: 20px;
-  }
+  } */
 }
 
 @media screen and (max-width: 550px) {
