@@ -74,25 +74,26 @@
 }
 
 
-@media screen and (min-width: 1206px)  {
+@media screen and (max-width: 1248px) {
 
  .align.wrap > app-sub-card:nth-of-type(3) {
    padding-right: 0;
  }
 
-}
+ .container {
 
+  padding-left: 60px;
+  padding-right: 33px;
+  max-width: 698px;
+  margin-top: 32px;
 
-@media screen and (max-width: 853px)  {
+ }
 
-  .align {
-    justify-content: flex-start;
-  }
+ .sub-card-padding-right {
 
-  .text-align {
-    justify-content: left;
-    align-items: left;
-  }
+  padding-right: 0px;
+
+ }
 
 }
 
@@ -103,7 +104,6 @@
     padding-right: 0;
     margin-left: 0;
     margin-right: 0;
-
     border-radius: unset;
     border: unset;
     border-top: 1px solid var(--accent)
