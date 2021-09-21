@@ -1,9 +1,9 @@
 .button {
 
-  width: 144px;
-  height: 48px;
-  background: #66B8FF;
-  border: 1px solid #FDF0DD;
+  width: 176px;
+  height: 66px;
+  background: var(--dark);
+  border: 1px solid var(--primary);
   box-sizing: border-box;
   border-radius: 8px;
   justify-content: center;
@@ -15,31 +15,82 @@
 
 .text {
   justify-content: center;
-  margin-left: 12px;
+  margin-left: 20px;
 }
 
 h3 {
-  font-size: 22px;
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 125%;
+  letter-spacing: 0.01em;
   transition: ease-in-out 0.3s;
+  color: var(--primary);
 }
 
 p {
-  color: var(--accent);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 125%;
+  letter-spacing: 0.01em;
+  color: #FFFFFF;
   transition: ease-in-out 0.3s;
 }
+
+span {
+
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 125%;
+  color: #C2E3FF;
+
+}
+
+.links {
+
+  margin-top: 20px;
+
+}
+
+.linkText {
+
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+
+}
+
+.emailStuff {
+
+  align-items: center;
+  justify-content: center;
+  margin-left: 75px;
+
+}
+
+.emailImage {
+
+  width: 30px;
+  height: auto;
+
+}
+
+
 
 @media(hover: hover) and (pointer: fine) {
 
   .button:hover {
 
-    background: var(--dark);
-    border: 1px solid #66B8FF;
+    background: var(--primary);
+    border: 1px solid var(--accent);
 
   }
 
   .button:hover > h3 {
 
-    color: #66B8FF;
+    color: var(--accent);
+    font-size: 24px;
 
   }
 

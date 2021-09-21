@@ -64,6 +64,7 @@ h6 {
     height: 100%;
     justify-content: center;
     align-items: center;
+    margin-top: 36px;
 
 }
 
@@ -93,5 +94,83 @@ h6 {
 .logo {
 
     filter: drop-shadow(33.4194px 13.3845px 89px rgba(0, 0, 0, 0.2)) drop-shadow(16.9186px 6.7759px 38.7984px rgba(0, 0, 0, 0.135)) drop-shadow(6.68388px 2.6769px 14.4625px rgba(0, 0, 0, 0.1)) drop-shadow(1.4621px 0.585571px 5.14531px rgba(0, 0, 0, 0.065));
+    margin-bottom: 72px;
+
+}
+
+.signUp {
+
+    margin-top: 20px;
+    
+}
+
+.underlineAnchor {
+
+    position: relative;
+
+}
+
+.underline {
+
+    position: absolute;
+    top: 36px;
+    transform: rotate(-1deg);
+
+}
+
+.padRow {
+
+    display: none;
+
+}
+
+@media screen and (max-width: 1248px) {
+
+    span {
+
+        font-size: 60px;
+
+    }
+
+    .contentRow {
+
+        align-items: flex-start;
+
+    }
+
+    .title {
+
+        font-size: 60px;
+
+    }
+
+    .signUp {
+
+        margin-top: 32px;
+
+    }
+
+    .desktopLogo {
+
+        display: none;
+
+    }
+
+    .padRow {
+
+        display: flex;
+        justify-content: center;
+        margin-top: 170px;
+
+    }
+
+    .padRow > .column > img {
+
+        width: 200px;
+        margin-right: 420px;
+
+    }
+
+
 
 }
