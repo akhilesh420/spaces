@@ -11,6 +11,12 @@
 
   }
 
+  h2 {
+
+    text-align: left;
+
+  }
+
   h4 {
 
     color: #0BDBFE;
@@ -246,6 +252,83 @@
   .whiteBarThree {
     width: 100%;
     border-radius: 6px 6px 6px 6px;
+  }
+
+  .artPad {
+
+    display: none;
+
+  }
+
+  .contextSymbolPad {
+
+    display: none;
+    
+  }
+
+  @media screen and (max-width: 1248px) {
+
+    .art {
+
+      display:none;
+
+    }
+    
+    .artPad {
+
+      display: flex;
+      margin-left: 52px;
+      margin-top: 42px;
+
+    }
+
+
+    .space {
+
+      margin-right: 0px;
+
+    }
+
+    .contextSymbolPad {
+
+      display: flex;
+
+    }
+
+    .contextSymbol {
+
+      display: none;
+
+    }
+
+    .context {
+
+      margin-left: 32px;
+      margin-top: 62px;
+      margin-right: 32px;
+
+    }
+
+    .contextTwo {
+
+      margin-right: 0px;
+      justify-content: flex-start;
+      margin-left: 46px;
+      margin-top: 62px;
+
+    }
+
+    .contextThree {
+
+      margin-right: 56px;
+      justify-content: flex-start;
+      margin-left: 46px;
+      margin-top: 62px;
+
+    }
+
+
+
   }
 
   
