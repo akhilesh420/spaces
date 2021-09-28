@@ -277,15 +277,16 @@
     .artPad {
 
       display: flex;
-      margin-left: 52px;
+      justify-content: center;
+      margin-right: 256px;
       margin-top: 42px;
 
     }
 
-
     .space {
 
       margin-right: 0px;
+      margin-top: 104px;
 
     }
 
@@ -311,9 +312,8 @@
 
     .contextTwo {
 
-      margin-right: 0px;
-      justify-content: flex-start;
-      margin-left: 46px;
+      justify-content: center;
+      margin-right: 146px;
       margin-top: 62px;
 
     }
@@ -321,9 +321,9 @@
     .contextThree {
 
       margin-right: 56px;
-      justify-content: flex-start;
-      margin-left: 46px;
+      justify-content: center;
       margin-top: 62px;
+      margin-right: 46px;
 
     }
 

@@ -166,6 +166,12 @@ h5, h6 {
 
 @media screen and (max-width: 1248px) {
 
+  .backpanel {
+
+    height: 4260px;
+  
+  }
+
   .align {
 
     justify-content: center;
