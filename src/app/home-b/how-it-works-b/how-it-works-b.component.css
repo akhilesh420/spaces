@@ -174,16 +174,18 @@ h5, h6 {
 
   .align {
 
-    justify-content: center;
     margin-top: 0px;
-    margin-left: 96px;
+    margin-left: 54px;
+    justify-content: center;
 
   }
 
   .art {
 
-    margin-right: 400px;
+    /* margin-right: 400px; */
     margin-top: 42px;
+    align-items: flex-start;
+    margin-right: 186px;
 
   }
 
@@ -191,23 +193,11 @@ h5, h6 {
     height: 360px;
   }
 
-  /* .artist {
+  .space {
 
-    width: 210px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 12px;
+    margin-right: 0px;
 
-  } */
-
-  /* h6 {
-    font-size: 12px;
-  } */
-
-  /* .instagram {
-    width: 20px;
-    height: 20px;
-  } */
+  }
 }
 
 @media screen and (max-width: 550px) {
