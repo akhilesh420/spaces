@@ -266,6 +266,12 @@
     
   }
 
+  .padIcon {
+
+    display: none;
+
+  }
+
   @media screen and (max-width: 1248px) {
 
     .spread {
@@ -333,7 +339,16 @@
 
     }
 
+    .padIcon {
 
+      display: flex;
+
+    }
+
+    /* .padIcon > img {
+
+
+    } */
 
   }
 
