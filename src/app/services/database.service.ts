@@ -19,19 +19,24 @@ export class DatabaseService {
     return this.countService.getCount(this.afs.collection('counter').doc('public'));
   }
 
-  async setUser(userInfo: User) {
-    const user = (await this.auth.currentUser);
-    const uid = user ? user.uid : this.afs.createId();
-    const emailRef = this.afs.firestore.collection('alphaUsers').doc(userInfo.email);
+  async setUser(user: User) {
+    const currentUser = (await this.auth.currentUser);
+    const uid = currentUser ? currentUser.uid : 'null';
+    const emailRef = this.afs.firestore.collection('alphaUsers').doc(user.email);
     const publicCountRef = this.afs.firestore.collection('counter').doc('public');
     const privateCountRef = this.afs.firestore.collection('counter').doc('private');
 
     const transaction =  this.afs.firestore.runTransaction(async (t) => {
       return t.get(emailRef).then((response) => {
         if (response.exists) throw 'email_used';
-
         const timestamp = new Date();
-        t.set(emailRef, {...userInfo, timestamp:timestamp, uid: uid, production: environment.production});
+        const names = user.name.split(' ');
+        t.set(emailRef, {...user,
+                         firstName: names[0],
+                         lastName: names[names.length - 1],
+                         timestamp:timestamp,
+                         uid: uid,
+                         production: environment.production});
         this.countService.batchIncrementCounter(publicCountRef, t);
         this.countService.batchIncrementCounter(privateCountRef, t);
 

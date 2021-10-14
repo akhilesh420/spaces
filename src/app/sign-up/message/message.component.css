@@ -5,9 +5,23 @@
 
 }
 
+.logo {
+  width: 100%;
+  justify-content: center;
+  margin-top: 36px;
+  margin-bottom: 36px;
+  cursor: pointer;
+}
+
 .restrict {
 
   max-width: 770px;
+
+}
+
+.cardPadding {
+
+  margin-right: 36px;
 
 }
 
@@ -47,7 +61,7 @@ a, a:hover, a:focus, a:active {
     position: absolute;
     z-index: -1;
     top: 0px;
-    height: 100%;
+    height: calc(110% + 48px);
     width: 100%;
     
   }
@@ -113,6 +127,7 @@ a, a:hover, a:focus, a:active {
       transition: ease-in-out 0.3s;
   
     }
+
   
   }
 
@@ -130,6 +145,12 @@ a, a:hover, a:focus, a:active {
         margin-top: 36px;
         margin-left: 0px;
 
+    }
+
+    .cardPadding {
+
+      margin-right: 0px;
+      
     }
 
     .phoneMargin {

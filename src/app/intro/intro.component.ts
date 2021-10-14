@@ -1,3 +1,4 @@
+import { SharedService } from './../services/shared.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 
 
@@ -8,9 +9,11 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 })
 export class IntroComponent implements OnInit, OnDestroy {
 
+
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   ngOnDestroy() {}
 

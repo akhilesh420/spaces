@@ -16,8 +16,14 @@ export class MixpanelService {
  * @memberof MixpanelService
  */
     init(): void {
-      mixpanel.init(environment.mixpanelProjectID, {batch_requests: true, debug: environment.mixpanelDebug});
+      mixpanel.init(environment.mixpanelProjectID, {
+        batch_requests: true,
+        debug: environment.mixpanelDebug,
+        // whether to ignore or respect the web browser's Do Not Track setting
+        ignore_dnt: true,
+      });
       this.timeEvent('click early access button');
+      this.timeEvent('route change');
     }
 
     /**
@@ -100,4 +106,24 @@ export class MixpanelService {
       this.track('click google signup button', action);
     }
 
+    routeChange(action: any = {}) {
+      this.track('route change', action);
+      this.timeEvent('route change');
+    }
+
+    setABtemplate(action = {}) {
+      this.track('AB template set', action);
+    }
+
+    inView(name: string, action: any = {}) {
+      this.track('view ' + name, action);
+    }
+
+    inViewTime(name: string) {
+      this.timeEvent('view ' + name);
+    }
+
+    setUserProperty(name: string, value: string) {
+      this.setProperty(name, value);
+    }
 }

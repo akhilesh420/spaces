@@ -4,54 +4,20 @@
 
 }
 
-.backgroundCover {
-
-    width: 100vw;
-    height: 1670px;
-    position: absolute;
-    z-index: -2;
-
-}
-
-.backgroundCover > img {
-
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-
-}
-
-.phoneCircles {
-
-    display: none;
-
-}
-
-.midCircles {
-
-    display: none;
-
-}
-
-.mainInfo {
-
-    margin-top: 254px;
-
-}
-
 .infoCard {
 
     height: auto;
     width: 640px;
-    backdrop-filter: blur(12px);
-    background: linear-gradient(108.79deg, rgba(102, 184, 255, 0.05) 50.68%, rgba(102, 184, 255, 0) 100%);
-    border: 1px solid rgba(253, 240, 221, 0.1);
+    backdrop-filter: blur(20px);
+    background: linear-gradient(108.79deg, rgba(102, 184, 255, 0.08) 50.68%, rgba(102, 184, 255, 0) 100%);
+    border: 1px solid var(--dark);
     box-sizing: border-box;
     filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.3));
     border-radius: 16px;
     margin-top: 64px;
     margin-left: 180px;
     float: left;
+
 
 }
 
@@ -60,8 +26,8 @@
     height: auto;
     width: 640px;
     backdrop-filter: blur(12px);
-    background: linear-gradient(108.79deg, rgba(102, 184, 255, 0.05) 50.68%, rgba(102, 184, 255, 0) 100%);
-    border: 1px solid rgba(253, 240, 221, 0.1);
+    background: linear-gradient(108.79deg, rgba(22, 60, 94, 0.08) 50.68%, rgba(102, 184, 255, 0) 100%);
+    border: 1px solid var(--dark);
     box-sizing: border-box;
     filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.3));
     border-radius: 16px;
@@ -187,63 +153,6 @@ h3 {
     
     }
 
-    .mainInfo {
-
-        margin-top: 190px;
-
-    }
 
 }
 
-@media screen and (max-width: 900px) {
-
-    .desktopCircles {
-
-        display: none;
-
-    }
-    
-    .midCircles {
-
-        display: block;
-    
-    }
-
-
-
-}
-
-@media screen and (max-width: 500px) {
-
-    .infoCard {
-
-        backdrop-filter: blur(50px);
-
-    }
-
-    .infoCardTwo {
-
-        backdrop-filter: blur(50px);
-
-    }
-
-    .phoneCircles {
-
-        display: block;
-    
-    }
-
-    .desktopCircles {
-
-        display: none;
-
-    }
-
-    .midCircles {
-
-        display: none;
-    
-    }
-
-
-}

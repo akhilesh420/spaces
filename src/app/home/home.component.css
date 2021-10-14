@@ -6,58 +6,8 @@
 app-intro {
 
   width: 100%;
-  margin-top: -190px;
+  /* margin-top: -190px; */
   height: auto;
-
-}
-
-.signUpButton {
-
-  margin-top: 48px;
-
-}
-
-.backgroundCover {
-
-  position: absolute;
-  z-index: -1;
-  top: 0px;
-  height: 100vh;
-  width: 100vw;
-  filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.35));
-
-}
-
-.backgroundCover > img {
-
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 0px 0px 16px 16px;
-
-}
-
-.mainPage {
-
-  height: 100vh;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.moreArrow {
-
-  width: auto;
-  height: auto;
-  margin-top: 48px;
-  animation: more-arrow 1s ease-in-out infinite both;
-
-}
-
-.moreArrow > img {
-
-  cursor: pointer;
 
 }
 
@@ -89,24 +39,6 @@ app-intro {
 
   margin-bottom: 72px;
 
-}
-
-.logo {
-
-  margin-top: 36px;
-
-}
-
-.alignSlogan {
-
-  justify-content: center;
-
-}
-
-h2 {
-  margin-bottom: 24px;
-  text-align: center;
-  margin-top: 16px;
 }
 
 .linksRow {
