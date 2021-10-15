@@ -26,7 +26,7 @@
   top: calc(100vh + 2808px);
   width: 100vw;
   height: 1638px;
-  background: #0D0618;
+  background: linear-gradient(180deg, #0D0618 0%, #24153C 80%);
   z-index: 0;
 
 }

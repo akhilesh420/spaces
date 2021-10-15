@@ -2,6 +2,7 @@
    
    .backpanel {
      width: 100vw;
+     position: relative;
      overflow-x: hidden;
    }
    
@@ -272,6 +273,16 @@
 
   }
 
+  .padBackground {
+
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    overflow-x: hidden;
+    display: none;
+
+  }
+
   @media screen and (max-width: 1248px) {
 
     .spread {
@@ -342,13 +353,9 @@
     .padIcon {
 
       display: flex;
+      position: relative;
 
     }
-
-    /* .padIcon > img {
-
-
-    } */
 
   }
 
