@@ -9,8 +9,10 @@
         <div class="row">
 
             <div class="column link">
-                
-                <div class="row">
+
+                <div class="row"
+                     [routerLink]='"."'
+                     [fragment]="'howitworks'">
 
                     <div class="column imageLink">
                         <img src = "assets/images/howitworksNav.svg">
@@ -25,8 +27,10 @@
             </div>
 
             <div class="column link linkSpacer">
-                
-                <div class="row">
+
+                <div class="row"
+                      [routerLink]='"."'
+                      [fragment]="'creators'">
 
                     <div class="column imageLink">
                         <img src = "assets/images/creatorbenefitsIcon.svg">
@@ -41,7 +45,7 @@
             </div>
 
             <!-- <div class="column link linkSpacer">
-                
+
                 <div class="row">
 
                     <div class="column imageLink">
@@ -62,14 +66,14 @@
 
     <div class="column signUpLink">
 
-        <div class="row signUpButton">
+        <div class="row signUpButton" routerLink='/signup' (click)='track()'>
 
             <div class="signUpText">
                 <h6>Early Access</h6>
             </div>
 
         </div>
-    
+
     </div>
-    
+
 </div>

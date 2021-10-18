@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MixpanelService } from 'src/app/services/mixpanel.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mixpanelService: MixpanelService,) { }
 
   ngOnInit(): void {
+  }
+
+  track() {
+    this.mixpanelService.goToEarlyAccess({location: 'navbar'});
   }
 
 }
