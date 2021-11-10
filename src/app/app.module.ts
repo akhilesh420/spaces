@@ -13,6 +13,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireAnalyticsModule, ScreenTrackingService, UserTrackingService  } from '@angular/fire/analytics';
 import { ViewTraceDirective } from './directives/view-trace.directive';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ViewTraceDirective } from './directives/view-trace.directive';
     TitleCaseDirective,
     LoadingComponent,
     ViewTraceDirective,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
