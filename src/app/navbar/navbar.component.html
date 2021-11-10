@@ -1,7 +1,10 @@
-<div class="row navbar align-center">
+<div class="blur fix" 
+    (window:scroll)="onScroll($event)"
+    [ngClass]="scrollPosition >= 10 ? 'appear' : 'disappear'"></div>
+<div class="row navbar align-center fix" >
   <div class="col">
     <div class="row align-center">
-      <div class="col">
+      <div class="col logo">
         <img src="assets/logo/symbol.png" class="symbol" alt="Postpress">
       </div>
       <div class="col name">

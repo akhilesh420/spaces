@@ -1,10 +1,57 @@
+.fix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
 .navbar {
     justify-content: space-between;
-    padding: 12px 72px 0 72px;
+    padding: 12px 72px 12px 72px;
 }
+
+.blur {
+    background: rgba(4, 6, 5, 0.1);
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    height: 80px;
+    width: 100%;
+}
+
+.appear {
+    animation: appear 0.3s ease-out forwards;
+}
+
+.disappear {
+    animation: disappear 0.3s ease-out forwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
+@keyframes disappear {
+0% {
+    opacity: 1;
+}
+100% {
+    opacity: 0;
+}
+}
+
 
 .align-center {
     align-items: center;
+}
+
+.logo {
+    height: 56px;
 }
 
 .symbol {

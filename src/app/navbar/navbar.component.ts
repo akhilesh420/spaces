@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  scrollPosition: number = 0;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onScroll(event) {
+    this.scrollPosition =  window.scrollY
   }
 
 }
