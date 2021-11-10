@@ -16,6 +16,15 @@ import { ViewTraceDirective } from './directives/view-trace.directive';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CollectContentComponent } from './collect-content/collect-content.component';
+import { AnimationGroupComponent } from './animation-group/animation-group.component';
+
+import { LottieModule, LottieCacheModule } from 'ngx-lottie';
+
+// Note we need a separate function as it's required
+// by the AOT compiler.
+export function playerFactory() {
+  return import(/* webpackChunkName: 'lottie-web' */ 'lottie-web/build/player/lottie_svg');
+}
 
 @NgModule({
   declarations: [
@@ -26,8 +35,11 @@ import { CollectContentComponent } from './collect-content/collect-content.compo
     HomeComponent,
     NavbarComponent,
     CollectContentComponent,
+    AnimationGroupComponent,
   ],
   imports: [
+    LottieModule.forRoot({ player: playerFactory }), //Lottie player
+    LottieCacheModule.forRoot(), //Lottie cache
     BrowserModule,
     AppRoutingModule,
     FormsModule,

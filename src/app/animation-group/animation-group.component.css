@@ -1,0 +1,53 @@
+.container {
+    position: relative;
+    width: 750px;
+    height: 456.18px;
+}
+
+.tiktok {
+    position: absolute;
+    height: auto;
+    width: 240px;
+    left: 10px;
+    top: calc(28px - (244px - 147.57px) / 2);
+}
+
+.twitter {
+    position: absolute;
+    height: auto;
+    width: 260px;
+    left: 235px;
+    top: calc(0px - (264px - 150.6px) / 2);
+}
+
+.instagram {
+    position: absolute;
+    height: auto;
+    width: 260px;
+    left: 397px;
+    top: calc(113px - (264px - 150.6px) / 2);
+}
+
+.pinterest {
+    position: absolute;
+    height: auto;
+    width: 240px;
+    left: 255px;
+    bottom: calc(0px - (244px - 142.18px) / 2);
+}
+
+.youtube {
+    position: absolute;
+    height: auto;
+    width: 360px;
+    left: 76px;
+    top: calc(133px - (364px - 208.53px) / 2);
+}
+
+.behance {
+    position: absolute;
+    height: auto;
+    width: 220px;
+    left: -93px;
+    top: calc(229px - (224px - 135.27px) / 2);
+}

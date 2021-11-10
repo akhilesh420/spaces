@@ -18,6 +18,7 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   background-color: var(--primary);
   background-image: url("src/assets/background/desktop-backgroundx4.png");
@@ -66,6 +67,10 @@ div {
   font-style: normal;
 }
 
+b {
+  font-weight: 600;
+}
+
 h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
   padding: 0;
@@ -94,16 +99,21 @@ h2 {
   /* or 80px */
 
   letter-spacing: 0.01em;
+
+  color: var(--dark);
 }
 
 h3 {
   font-family: Source Sans Pro;
   font-style: normal;
-  font-weight: 900;
-  font-size: 36px;
-  line-height: 125%;
-  /* identical to box height, or 45px */
-  letter-spacing: 0.005em;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 135%;
+  /* or 32px */
+
+  letter-spacing: -0.005em;
+  color: var(--dark);
+
 }
 
 h4 {
@@ -115,6 +125,8 @@ h4 {
   /* identical to box height, or 45px */
 
   letter-spacing: 0.005em;
+  color: var(--dark);
+
 }
 
 h5 {
@@ -124,6 +136,9 @@ h5 {
   font-size: 24px;
   line-height: 125%;
   /* identical to box height, or 30px */
+
+  color: var(--dark);
+
 }
 
 h6 {
@@ -135,15 +150,27 @@ h6 {
   /* identical to box height, or 30px */
 
   letter-spacing: 0.005em;
-  color: #040605;
+
+  color: var(--dark);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1152px) {
   h1 {
     font-family: Recoleta;
     font-style: normal;
     font-weight: 900;
     font-size: 26px;
     line-height: 125%;
+  }
+
+  h2 {
+    font-family: Recoleta;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 125%;
+    /* or 60px */
+
+    letter-spacing: 0.01em;
   }
 }
