@@ -1,8 +1,8 @@
 <div class="container">
-    <ng-lottie class='tiktok' [options]="tiktok"></ng-lottie>
-    <ng-lottie class="twitter" [options]="twitter"></ng-lottie>
-    <ng-lottie class="instagram" [options]="instagram"></ng-lottie>
-    <ng-lottie class="pinterest" [options]="pinterest"></ng-lottie>
-    <ng-lottie class="youtube" [options]="youtube"></ng-lottie>
-    <ng-lottie class="behance" [options]="behance"></ng-lottie>
+    <ng-lottie (complete)="onComplete($event)"  class='tiktok' [options]="tiktok" (animationCreated)="animationCreated($event, 'tiktok')"></ng-lottie>
+    <ng-lottie (complete)="onComplete($event)" class="twitter" [options]="twitter" (animationCreated)="animationCreated($event, 'twitter')"></ng-lottie>
+    <ng-lottie (complete)="onComplete($event)" class="instagram" [options]="instagram" (animationCreated)="animationCreated($event, 'instagram')"></ng-lottie>
+    <ng-lottie (complete)="onComplete($event)" class="pinterest" [options]="pinterest" (animationCreated)="animationCreated($event, 'pinterest')"></ng-lottie>
+    <ng-lottie (complete)="onComplete($event)" class="youtube" [options]="youtube" (animationCreated)="animationCreated($event, 'youtube')"></ng-lottie>
+    <ng-lottie (complete)="onComplete($event)" class="behance" [options]="behance" (animationCreated)="animationCreated($event, 'behance')"></ng-lottie>
 </div>
