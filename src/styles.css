@@ -19,10 +19,6 @@ body {
   position: fixed;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
-/* font-family: 'Source Sans Pro', sans-serif;
-font-family: 'Source Serif Pro', serif; */
-
 :root {
   --primary: #66B8FF;
   --accent: #FDF0DD;
@@ -45,6 +41,20 @@ font-family: 'Source Serif Pro', serif; */
   flex-direction: row;
 }
 
+
+/* Typography */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@font-face {
+  font-family: 'Recoleta';
+  src: url('src/assets/fonts/recoleta/Recoleta-Black.eot');
+  src: local('Recoleta Black'), local('Recoleta-Black'),
+      url('src/assets/fonts/recoleta/Recoleta-Black.eot?#iefix') format('embedded-opentype'),
+      url('src/assets/fonts/recoleta/Recoleta-Black.woff') format('woff'),
+      url('src/assets/fonts/recoleta/Recoleta-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
 
 h1, h2, h3, h4 {
   text-rendering: optimizeLegibility;
@@ -70,4 +80,24 @@ h3 {
   /* or 32px */
 
   letter-spacing: -0.005em;
+}
+
+h4 {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 125%;
+  /* identical to box height, or 45px */
+
+  letter-spacing: 0.005em;
+}
+
+h5 {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  /* identical to box height, or 30px */
 }

@@ -14,6 +14,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireAnalyticsModule, ScreenTrackingService, UserTrackingService  } from '@angular/fire/analytics';
 import { ViewTraceDirective } from './directives/view-trace.directive';
 import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HomeComponent } from './home/home.component';
     LoadingComponent,
     ViewTraceDirective,
     HomeComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
