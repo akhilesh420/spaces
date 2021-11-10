@@ -19,15 +19,6 @@ body {
   position: fixed;
 }
 
-.mainLogo {
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%)
-
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 /* font-family: 'Source Sans Pro', sans-serif;
 font-family: 'Source Serif Pro', serif; */
@@ -54,96 +45,29 @@ font-family: 'Source Serif Pro', serif; */
   flex-direction: row;
 }
 
-.dark {
-  background: var(--dark);
-  color: var(--dark);
-}
-
-.light {
-  background: var(--accent);
-  color: var(--accent);
-  background-blend-mode: hard-light;
-  mix-blend-mode: hard-light;
-}
-
-.primary {
-  background: var(--primary);
-  color: var(--primary);
-  mix-blend-mode: normal;
-}
 
 h1, h2, h3, h4 {
   text-rendering: optimizeLegibility;
 }
 
-h1 {
-
-  font-family: 'Source Serif Pro', serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 60px;
-  line-height: 140%;
-  color: var(--accent);
-  mix-blend-mode: hard-light;
-  letter-spacing: 0em;
-  margin: 0;
-  padding: 0;
-
-}
-
 h2 {
-
-  font-family: 'Source Serif Pro', serif;
+  font-family: Recoleta;
   font-style: normal;
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 140%;
-  color: var(--accent);
-  letter-spacing: 0em;
-  margin: 0;
-  padding: 0;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 125%;
+  /* or 80px */
 
+  letter-spacing: 0.01em;
 }
 
 h3 {
-
-  font-family: 'Source Sans Pro', sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 140%;
-  color: var(--accent);
-  mix-blend-mode: normal;
-  letter-spacing: 0.02em;
-  margin: 0;
-  padding: 0;
-
-}
-
-h4 {
-
-  font-family: 'Source Sans Pro', sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 125%;
-  color: var(--primary);
-  margin: 0;
-  padding: 0;
-
-}
-
-p {
-
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 125%;
-  letter-spacing: 0.01em;
-  color: var(--white);
-  margin: 0;
-  padding: 0;
+  font-size: 24px;
+  line-height: 135%;
+  /* or 32px */
 
+  letter-spacing: -0.005em;
 }
-
