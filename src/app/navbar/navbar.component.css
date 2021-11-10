@@ -1,9 +1,13 @@
+.index {
+    z-index: 99;
+}
+
 .fix {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-  }
+}
 
 .navbar {
     justify-content: space-between;
@@ -67,4 +71,36 @@
     background: #FDF0DD;
     border-radius: 6px;
     padding: 9px 10px 9px 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        padding: 8px 12px 8px 12px;
+    }
+
+    .blur {
+        height: 64px;   
+    }
+
+    .logo {
+        height: 48px;
+    }
+    
+    .symbol {
+        height: 48px;
+    }
+
+    .name {
+        margin-left: 12px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .button {
+       display: none; 
+    }
+
+    .navbar {
+        justify-content: center;
+    }
 }

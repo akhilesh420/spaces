@@ -137,3 +137,13 @@ h6 {
   letter-spacing: 0.005em;
   color: #040605;
 }
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-family: Recoleta;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 125%;
+  }
+}

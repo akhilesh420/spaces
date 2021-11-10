@@ -15,6 +15,7 @@ import { AngularFireAnalyticsModule, ScreenTrackingService, UserTrackingService 
 import { ViewTraceDirective } from './directives/view-trace.directive';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { CollectContentComponent } from './collect-content/collect-content.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     ViewTraceDirective,
     HomeComponent,
     NavbarComponent,
+    CollectContentComponent,
   ],
   imports: [
     BrowserModule,
