@@ -1,6 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~aos/dist/aos.css";
 
+:root {
+  --primary: #66B4FF;
+  /* --accent: #FDF0DD; Should be the purple color*/ 
+  --dark: #040605;
+  --light: #FDF0DD;
+}
+
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,6 +19,7 @@ body {
   padding: 0;
   margin: 0;
   -webkit-overflow-scrolling: touch;
+  background-color: var(--primary);
   background-image: url("src/assets/background/desktop-backgroundx4.png");
   background-repeat: no-repeat;
   background-position: left top;
@@ -24,16 +32,13 @@ body {
   position: fixed;
 }
 
-:root {
-  --primary: #66B8FF;
-  --accent: #FDF0DD;
-  --dark: #040605;
-  --white: #ffffff;
-  --red: #CC2A28;
-}
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+div {
+  box-sizing: border-box;
 }
 
 .column {
@@ -61,10 +66,23 @@ body {
   font-style: normal;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
   padding: 0;
   margin: 0;
+}
+
+h1 {
+  font-family: Recoleta;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 125%;
+  /* identical to box height, or 45px */
+
+  letter-spacing: 0.015em;
+
+  color: var(--light);
 }
 
 h2 {
@@ -81,12 +99,11 @@ h2 {
 h3 {
   font-family: Source Sans Pro;
   font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 135%;
-  /* or 32px */
-
-  letter-spacing: -0.005em;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 125%;
+  /* identical to box height, or 45px */
+  letter-spacing: 0.005em;
 }
 
 h4 {
@@ -107,4 +124,16 @@ h5 {
   font-size: 24px;
   line-height: 125%;
   /* identical to box height, or 30px */
+}
+
+h6 {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  /* identical to box height, or 30px */
+
+  letter-spacing: 0.005em;
+  color: #040605;
 }
