@@ -124,7 +124,7 @@ h4 {
   /* identical to box height, or 45px */
 
   letter-spacing: 0.005em;
-  color: var(--dark);
+  color: var(--light);
 
 }
 
@@ -136,8 +136,7 @@ h5 {
   line-height: 125%;
   /* identical to box height, or 30px */
 
-  color: var(--dark);
-
+  color: var(--light);
 }
 
 h6 {
@@ -151,6 +150,19 @@ h6 {
   letter-spacing: 0.005em;
 
   color: var(--dark);
+}
+
+input {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  /* identical to box height, or 30px */
+
+  letter-spacing: 0.005em;
+  color: rgba(4, 6, 5, 0.7);
+  padding:  9px 12px 9px 12px;
 }
 
 @media only screen and (max-width: 1152px) {

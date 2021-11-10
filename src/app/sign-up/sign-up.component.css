@@ -1,0 +1,26 @@
+.center {
+    justify-content: center;
+}
+
+.gap {
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.field {
+    width: 218px;
+    height: 48px;
+    background: var(--light);
+    border: 2px solid var(--dark);
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+.button {
+    width: 146px;
+    height: 48px;
+    background: var(--primary);
+    border-radius: 6px;
+    text-align: center;
+    padding-top: 9px;
+}
