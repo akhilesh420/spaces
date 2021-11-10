@@ -113,7 +113,6 @@ h3 {
 
   letter-spacing: -0.005em;
   color: var(--dark);
-
 }
 
 h4 {
@@ -170,7 +169,32 @@ h6 {
     font-size: 48px;
     line-height: 125%;
     /* or 60px */
+    
+    letter-spacing: 0.01em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  h2 {
+    font-family: Recoleta;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 125%;
+    /* or 42px */
 
     letter-spacing: 0.01em;
+  }
+
+  h3 {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 125%;
+    /* or 22px */
+
+    letter-spacing: -0.005em;
   }
 }

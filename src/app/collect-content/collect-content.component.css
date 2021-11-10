@@ -56,6 +56,14 @@
     left: 405px;
 }
 
+.icon {
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    top: 106px;
+    left: 329px;
+}
+
 @media only screen and (max-width: 1152px) {
 
     .backpanel {
@@ -64,7 +72,6 @@
     }
 
     .title {
-        position: absolute;
         width: 487px;
         height: 120px;
         left: 24px;
@@ -85,6 +92,50 @@
     .animations {
         top: 352px;
         left: -21px;
+    }
+
+    .icon {
+        width: 36px;
+        height: 36px;
+        top: 93px;
+        left: 262px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .backpanel {
+        width: 292px;
+        height: 468px;
+    }
+
+    .title {
+        width: 260px;
+        height: 86px;
+        left: 10px;
+        top: 24px;
+    }
+
+    .paragraph {
+        width: 245px;
+        height: 92px;
+        left: 10px;
+        top: 122px;
+    }
+
+    .divider {
+        left: 24px;
+        top: 320px;
+    }
+
+    .animations {
+        top: 352px;
+        left: -21px;
+    }
+
+    .icon {
+        display: none;
     }
 
 }

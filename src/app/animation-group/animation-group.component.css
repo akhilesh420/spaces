@@ -51,3 +51,46 @@
     left: -93px;
     top: calc(229px - (224px - 135.27px) / 2);
 }
+
+@media only screen and (max-width: 1152px) {
+    .container {
+        width: 580px;
+        height: 352.78px;
+    }
+
+    .tiktok {
+        width: 185.6px;
+        left: 72px;
+        top: calc(21.65px - (189.594px - 114.12px) / 2);
+    }
+
+    .twitter {
+        width: 201.07px;
+        left: 253.65px;
+        top: calc(0px - (205.06px - 116.47px) / 2);
+    }
+
+    .instagram {
+        width: 201.07px;
+        left: 378.93px;
+        top: calc(87.39px - (205.06px - 116.47px) / 2);
+    }
+
+    .pinterest {
+        width: 185.6px;
+        left: 255px;
+        bottom: calc(0px - (189.59px - 109.95px) / 2);
+    }
+
+    .youtube {
+        width: 278.4px;
+        left: 130.69px;
+        top: calc(102.85px - (282.4px - 161.26px) / 2);
+    }
+
+    .behance {
+        width: 170.13px;
+        left: 0px;
+        top: calc(177.09px - (174.13px - 104.61px) / 2);
+    }
+}

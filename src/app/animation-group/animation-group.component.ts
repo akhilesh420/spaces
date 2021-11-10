@@ -19,7 +19,7 @@ export class AnimationGroupComponent implements OnInit {
  
   youtube: AnimationOptions = {path: 'assets/Lottie animations/Youtube/youtube-3713694.json', };
 
-  behance: AnimationOptions = {path: 'assets/Lottie animations/Instagram/instagram-3713696.json',};
+  behance: AnimationOptions = {path: 'assets/Lottie animations/Behance/behance-3713689.json',};
 
   constructor() { }
 
