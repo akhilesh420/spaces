@@ -9,8 +9,8 @@ import { AnimationOptions } from 'ngx-lottie';
 })
 export class AnimationGroupComponent implements OnInit {
 
-  private intialSegment: [number, number] = [30, 90];
-  private segment: [number, number] = [30, 90];
+  private intialSegment: [number, number] = [0, 90];
+  private segment: [number, number] = [0, 90];
 
   pinterest: AnimationOptions = {path: 'assets/Lottie animations/Pinterest/pinterest-3713687.json',initialSegment: this.intialSegment, autoplay: false, loop: false};
   instagram: AnimationOptions = {path: 'assets/Lottie animations/Instagram/instagram-3713696.json',initialSegment: this.intialSegment, autoplay: false, loop: false};
