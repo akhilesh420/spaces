@@ -20,6 +20,7 @@ import { AnimationGroupComponent } from './animation-group/animation-group.compo
 
 import { LottieModule, LottieCacheModule } from 'ngx-lottie';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 
 // Note we need a separate function as it's required
 // by the AOT compiler.
@@ -38,6 +39,7 @@ export function playerFactory() {
     CollectContentComponent,
     AnimationGroupComponent,
     SignUpComponent,
+    HowItWorksComponent,
   ],
   imports: [
     LottieModule.forRoot({ player: playerFactory }), //Lottie player
