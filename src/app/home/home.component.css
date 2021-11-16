@@ -1,8 +1,14 @@
-.landing {
-    position: absolute;
-    position: absolute;
+video {
     width: 635px;
     height: auto;
-    left: 259px;
-    top: 218px;
+}
+
+.center {
+    justify-content: center;
+}
+
+.controls {
+    width: 50px;
+    height: 50px;
+    color: aqua;
 }

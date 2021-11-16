@@ -1,7 +1,19 @@
-<!-- <video #animation muted autoplay playsinline controls (canplaythrough)="play();" class="landing">
-    <source src="assets/Landing animation/Landing Animation.webm" type="video/webm">
-    <source src="assets/Landing animation/Landing Animation.mov" type="video/mov">
-</video> -->
+<div class="col">
+    <div class="row center">
+        <video  #animation 
+                class="landing" 
+                [muted]="true" 
+                autoplay 
+                playsinline 
+                preload="none" 
+                role='img' 
+                muted>
+            <source src="assets/Landing animation/Landing Animation.webm" type="video/webm">
+            <source src="assets/Landing animation/Landing Animation.mov" type="video/mov">
+        </video>
+    </div>
+</div>
+
 
 <!-- <img class="landing" src="assets/Landing animation/Intro-Animation.gif" alt=""> -->
 
