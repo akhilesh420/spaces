@@ -111,7 +111,7 @@
 
     .backpanel {
         width: 292px;
-        height: 468px;
+        height: 444px;
     }
 
     .title {
@@ -122,24 +122,27 @@
     }
 
     .paragraph {
-        width: 245px;
-        height: 92px;
+        width: 247px;
+        height: 96px;
         left: 10px;
-        top: 122px;
+        top: 128px;
     }
 
     .divider {
-        left: 24px;
-        top: 320px;
+        left: 10px;
+        top: 236px;
     }
 
     .animations {
-        top: 352px;
-        left: -21px;
+        top: 268px;
+        left: 0px;
     }
 
     .icon {
-        display: none;
+        width: 36px;
+        height: 36px;
+        top: 2px;
+        left: 254px;
     }
 
 }

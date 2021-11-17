@@ -10,16 +10,12 @@ import { AnimationOptions } from 'ngx-lottie';
 export class HomeComponent implements OnInit {
 
   landingOption: AnimationOptions = {path: 'assets/Landing animation/Landing Animation.json'};
-  @ViewChild('animation') animation: ElementRef;
+  @ViewChild('animation') animation: ElementRef<HTMLVideoElement>;
+
+  videoLoop: NodeJS.Timeout;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
-  play() {
-    this.animation.nativeElement.play()
-      .catch(() => console.log('fuck'));
-  }
-
 }
