@@ -1,14 +1,45 @@
-video {
-    width: 635px;
-    height: auto;
-}
-
 .center {
     justify-content: center;
+    align-items: center;
 }
 
-.controls {
-    width: 50px;
-    height: 50px;
-    color: aqua;
+.container {
+    height: calc(100vh - 16px);
+}
+
+.video-container{
+    width: 604px;
+    height: 180px;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.row {
+    height: 100%;
+}
+
+@media only screen and (max-width: 1152px) {
+
+    .video-container{
+        width: 424px;
+        height: 120px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .video-container{
+        width: 247px;
+        height: 70px;
+    }
+
+    .container {
+        height: calc(100vh - 150px);
+    }
+    
 }

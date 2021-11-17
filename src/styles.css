@@ -38,8 +38,10 @@ body {
   display: none;
 }
 
-div {
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .column {
@@ -202,11 +204,11 @@ input {
   h3 {
     font-family: Source Sans Pro;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 600;
     font-size: 18px;
-    line-height: 125%;
-    /* or 22px */
-
+    line-height: 135%;
+    /* or 24px */
+    
     letter-spacing: -0.005em;
   }
 }
