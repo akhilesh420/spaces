@@ -68,7 +68,7 @@
 }
 
 .button {
-    background: #FDF0DD;
+    border: solid 2px #FDF0DD;
     border-radius: 6px;
     padding: 9px 10px 9px 10px;
 }

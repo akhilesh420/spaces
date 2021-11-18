@@ -19,8 +19,9 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+  scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  background-color: var(--primary);
+  background-color: var(--dark);
   background-image: url("src/assets/background/desktop-backgroundx4.png");
   background-repeat: no-repeat;
   background-position: left top;
@@ -80,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-family: Recoleta;
+  font-family: 'Recoleta';
   font-style: normal;
   font-weight: 900;
   font-size: 36px;
@@ -93,7 +94,7 @@ h1 {
 }
 
 h2 {
-  font-family: Recoleta;
+  font-family: 'Recoleta';
   font-style: normal;
   font-weight: 900;
   font-size: 64px;
@@ -106,7 +107,7 @@ h2 {
 }
 
 h3 {
-  font-family: Source Sans Pro;
+  font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -118,7 +119,7 @@ h3 {
 }
 
 h4 {
-  font-family: Source Sans Pro;
+  font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 900;
   font-size: 36px;
@@ -131,7 +132,7 @@ h4 {
 }
 
 h5 {
-  font-family: Source Sans Pro;
+  font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -142,26 +143,21 @@ h5 {
 }
 
 h6 {
-  font-family: Source Sans Pro;
+  font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 125%;
-  /* identical to box height, or 30px */
-
   letter-spacing: 0.005em;
-
   color: var(--dark);
 }
 
 input {
-  font-family: Source Sans Pro;
+  font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 125%;
-  /* identical to box height, or 30px */
-
   letter-spacing: 0.005em;
   color: rgba(4, 6, 5, 0.7);
   padding:  9px 12px 9px 12px;
@@ -169,7 +165,7 @@ input {
 
 @media only screen and (max-width: 1152px) {
   h1 {
-    font-family: Recoleta;
+    font-family: 'Recoleta';
     font-style: normal;
     font-weight: 900;
     font-size: 26px;
@@ -177,13 +173,11 @@ input {
   }
 
   h2 {
-    font-family: Recoleta;
+    font-family: 'Recoleta';
     font-style: normal;
     font-weight: 900;
     font-size: 48px;
     line-height: 125%;
-    /* or 60px */
-    
     letter-spacing: 0.01em;
   }
 }
@@ -191,24 +185,19 @@ input {
 @media only screen and (max-width: 600px) {
 
   h2 {
-    font-family: Recoleta;
+    font-family: 'Recoleta';
     font-style: normal;
     font-weight: 900;
     font-size: 34px;
     line-height: 125%;
-    /* or 42px */
-
     letter-spacing: 0.01em;
   }
 
   h3 {
-    font-family: Source Sans Pro;
+    font-family: 'Source Sans Pro';
     font-style: normal;
-    font-weight: 600;
     font-size: 18px;
     line-height: 135%;
-    /* or 24px */
-    
     letter-spacing: -0.005em;
   }
 }
