@@ -8,8 +8,9 @@
 }
 
 .video-container{
-    width: 604px;
-    height: 180px;
+    width: 1484px;
+    height: 720px;
+    overflow-x: hidden;
 }
 
 video {
@@ -26,8 +27,8 @@ video {
 @media only screen and (max-width: 1152px) {
 
     .video-container{
-        width: 424px;
-        height: 120px;
+        width: 988px;
+        height: 480px;
     }
 
     .container {
@@ -40,8 +41,8 @@ video {
 @media only screen and (max-width: 600px) {
 
     .video-container{
-        width: 247px;
-        height: 70px;
+        width: 576px;
+        height: 280px;
     }
 
     .container {
