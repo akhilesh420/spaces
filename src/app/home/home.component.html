@@ -1,20 +1,35 @@
 <div class="col center container">
     <div class="row center">
         <div class="video-container">
-            <video  
-                #animation 
-                [muted]="true" 
-                autoplay 
-                playsinline 
-                preload="none" 
-                role='img' 
-                muted>
-            <source src="assets/Landing animation/Landing Animation.webm" type="video/webm"> 
-            <source src="assets/Landing animation/Landing Animation.mp4" type="video/mp4">
-        </video>
+            <video  #animation 
+                    [muted]="true" 
+                    autoplay 
+                    playsinline 
+                    preload="none" 
+                    role='img' 
+                    muted>
+                <source src="assets/Landing animation/Landing Animation.webm" type="video/webm"> 
+                <source src="assets/Landing animation/Landing Animation.mp4" type="video/mp4">
+            </video> 
+        <!-- <img src="assets/Landing animation/landing_animation.gif"> -->
+        <!-- <object classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"
+                width="160" height="136"
+                codebase="http://www.apple.com/qtactivex/qtplugin.cab">
+                <param name="src" VALUE="buhbuhbuh.mov"/>
+                <param name="autoplay" VALUE="true"/>
+                <param name="loop" VALUE="true"/>
+                <param name="controller" value="true"/>
+                <embed 
+                        scale="tofit"
+                        controller="true"
+                        autoplay="true"
+                        loop="true" 
+                        PLUGINSPAGE="http://www.apple.com/quicktime/download/"
+                        src="assets/Landing animation/Landing Animation.mov">
+        </object> -->
         </div>
     </div>
 </div>
 <app-collect-content></app-collect-content>
-<!-- <app-sign-up></app-sign-up>
-<app-how-it-works></app-how-it-works> -->
+<app-sign-up name="signup"></app-sign-up>
+<app-how-it-works></app-how-it-works>

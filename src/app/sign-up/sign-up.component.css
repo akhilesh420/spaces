@@ -3,7 +3,10 @@
 }
 
 .gap {
-    gap: 18px;
+    column-gap: 18px;
+}
+
+.spacer {
     margin-top: 18px;
 }
 
@@ -21,6 +24,36 @@
     height: 48px;
     background: var(--primary);
     border-radius: 6px;
-    text-align: center;
-    padding-top: 9px;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1152px) {
+    
+    .gap {
+        column-gap: 24px;
+        row-gap: 12px;
+    }
+
+    .restrict {
+       max-width: 218px;
+    }
+
+    .center-align {
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .gap {
+        column-gap: 12px;
+    }
+
+    .restrict-phone {
+        max-width: 218px;
+    }
+
 }
