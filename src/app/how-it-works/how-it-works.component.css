@@ -1,5 +1,6 @@
 .sign-up-spacing {
     margin-top: 64px;
+    margin-bottom: 48px;
 }
 
 .content {
@@ -88,6 +89,38 @@ h3 {
 
 @media only screen and (max-width: 1152px) {
 
+    .container {
+        width: 600px;
+        height: 778px;
+    }
+    
+    .title {
+        width: auto;
+        height: 120px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }   
+
+    .paragraph {
+        width: 469px;
+        height: 96px;
+        top: 138px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .touch-icon {
+        top: calc(41px + 10px);
+        left: calc(113px + 12px) ;
+        transform: rotate(12.66deg);
+    }
+
+    .like-icon {
+        top: -45px;
+        left: 455px;
+    }
+
     .animation-A {
         display: none;
     }
@@ -99,9 +132,63 @@ h3 {
     .animation-C {
         display: none;
     }
+
+    .animation-group {
+        display: block;
+        top: 258px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .animation-container {
+        width: 420px;
+        height: 520px;
+    }
+    
 }
 
 @media only screen and (max-width: 600px) {
 
+    .container {
+        width: 300px;
+        height: 720px;
+    }
+    
+    .title {
+        width: 273px;
+        height: 86px;
+        top: 0;
+    }   
+
+    .paragraph {
+        width: 272px;
+        height: 72px;
+        top: 104px;
+    }
+
+    .touch-icon {
+        width: 64px;
+        height: 64px;
+        top: calc(25px + 10px);
+        left: calc(20px + 10px) ;
+        transform: rotate(12.66deg);
+    }
+
+    .like-icon {
+        width: 48px;
+        height: 48px;
+        top: -30px;
+        left: 246px;
+    }
+
+    .animation-group {
+        bottom: 0;
+    }
+
+    .animation-container {
+        width: 314px;
+        height: 520px;
+    }
+    
     
 }
