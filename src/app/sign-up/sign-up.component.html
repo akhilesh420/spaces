@@ -1,23 +1,53 @@
-<div class="col center-align">
-    <div class="row center">
-        <h4>Early Access</h4>
-    </div>
-    <div class="row center">
-        <h5>Join 1200 more creatives.</h5>
-    </div>
-    <div class="row wrap spacer center gap restrict-phone">
-        <div class="col">
-            <div class="row gap wrap restrict">
-                <input class="field" placeholder="Name">
-                <input class="field" placeholder="Email">
+<form (ngSubmit)="manualUser()">
+    <div class="col center-align">
+        <div class="row center">
+            <h4>Early Access</h4>
+        </div>
+        <div class="row center">
+            <h5>Join 1200 more creatives.</h5>
+        </div>
+        <div class="row wrap spacer center gap restrict-phone">
+            <div class="col">
+                <div class="row gap wrap restrict">
+                    <input  class="field"
+                            placeholder="Name" 
+                            [(ngModel)]="name"
+                            (focusout)='validName()'
+                            (keyup)='validName()'
+                            name='name'
+                            id="name">
+                    <input  class="field" 
+                            placeholder="Email"
+                            [(ngModel)]="email"
+                            (focusout)='validEmail()'
+                            (keyup)='validEmail()'
+                            name='email'
+                            id="email">
+                </div>
+            </div>
+            <div class="col center">
+                <div class="row">
+                    <button class="button" type="submit" [disabled]="creating">
+                        <h5 *ngIf="!creating; else loading">Sign Up</h5>
+                        <ng-template #loading>
+                            <app-loading></app-loading>
+                        </ng-template>
+                    </button>
+                </div>
             </div>
         </div>
-        <div class="col center">
-            <div class="row">
-                <button class="button">
-                    <h5>Sign Up</h5>
-                </button>
-            </div>
+        <div class="row center spacing">
+            <h5 class="letter-spacing or">OR</h5>
         </div>
+        <button class="google-button" type="button" (click)="googleSignUp();">
+            <div class="row center g-signup-gap">
+                <div class="col">
+                    <img class="google-sign-up" src="assets/icons/google_sign_up.png" alt="Google sign up">
+                </div>
+                <div class="col center">
+                    <h5 class="letter-spacing">Sign up with Google</h5>
+                </div>
+            </div>
+        </button>
     </div>
-</div>
+</form>

@@ -30,6 +30,32 @@
     flex-wrap: wrap;
 }
 
+.or {
+    font-size: 18px;
+    letter-spacing: 0.005em;
+}
+
+.letter-spacing {
+    letter-spacing: 0.005em;
+}
+
+.google-sign-up {
+    width: 46px;
+    height: auto;
+}
+
+.spacing {
+    margin-top: 12px;
+}
+
+.g-signup-gap {
+    column-gap: 12px;
+}
+
+.google-button {
+    background-color: transparent;
+}
+
 @media only screen and (max-width: 1152px) {
     
     .gap {
@@ -54,6 +80,10 @@
 
     .restrict-phone {
         max-width: 218px;
+    }
+
+    .letter-spacing {
+        font-size: 18px;
     }
 
 }
