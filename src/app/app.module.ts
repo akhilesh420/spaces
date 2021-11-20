@@ -22,6 +22,7 @@ import { NgImageSliderModule } from 'ng-image-slider';
 import { LottieModule, LottieCacheModule } from 'ngx-lottie';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
+import { NoBurnoutComponent } from './no-burnout/no-burnout.component';
 
 // Note we need a separate function as it's required
 // by the AOT compiler.
@@ -41,6 +42,7 @@ export function playerFactory() {
     AnimationGroupComponent,
     SignUpComponent,
     HowItWorksComponent,
+    NoBurnoutComponent,
   ],
   imports: [
     LottieModule.forRoot({ player: playerFactory }), //Lottie player
