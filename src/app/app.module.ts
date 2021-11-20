@@ -18,6 +18,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CollectContentComponent } from './collect-content/collect-content.component';
 import { AnimationGroupComponent } from './animation-group/animation-group.component';
 
+import { NgImageSliderModule } from 'ng-image-slider';
 import { LottieModule, LottieCacheModule } from 'ngx-lottie';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
@@ -51,6 +52,7 @@ export function playerFactory() {
     AngularFirestoreModule, // firestore
     AngularFireAuthModule, // auth
     AngularFireAnalyticsModule, // analytics
+    NgImageSliderModule, //Image Carousel
   ],
   providers: [
     ScreenTrackingService,

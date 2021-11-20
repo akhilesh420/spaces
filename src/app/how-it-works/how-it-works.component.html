@@ -12,7 +12,15 @@
             <div class="animation-container animation-A"></div>
             <div class="animation-container animation-B"></div>
             <div class="animation-container animation-C"></div>
-            <div class="animation-container animation-group"></div>
+            <div class="animation-container animation-group">
+                <ng-image-slider    [images]="imageObject" 
+                                    [videoAutoPlay]="true" 
+                                    [showArrow]="false" 
+                                    [infinite]="true" 
+                                    [imageSize]="{width: '100%', height: '100%'}"
+                                    #nav>
+                </ng-image-slider>
+            </div>
         </div>
     </div>
 </div>
