@@ -54,6 +54,7 @@
 
 .google-button {
     background-color: transparent;
+    width: 266px;
 }
 
 @media only screen and (max-width: 1152px) {
@@ -84,6 +85,10 @@
 
     .letter-spacing {
         font-size: 18px;
+    }
+
+    .google-button {
+        width: 214px;
     }
 
 }

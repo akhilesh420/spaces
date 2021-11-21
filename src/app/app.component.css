@@ -1,3 +1,5 @@
 .master-container{
   position: relative;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
