@@ -1,16 +1,15 @@
 <div class="col center container">
     <div class="row center">
         <div class="video-container">
+            <input type="file" name="" id="file/" (change)="onContentChange($event)">
             <video  #animation 
                     [muted]="true" 
                     autoplay 
                     playsinline 
                     preload="none" 
                     role='img' 
-                    muted
-                    (canplay)="onContentChange($event);">
-                <source src="assets/Landing animation/Landing Animation.mov" type="video/mp4; codecs='hvc1'">
-                <source src="assets/Landing animation/Landing Animation.webm" type="video/webm"> 
+                    muted [src]="value | async" type="video/mp4; codecs='hvc1'">
+                <!-- <source src="assets/Landing animation/Landing Animation.mp4" type="video/mp4"> -->
             </video> 
         <!-- <img src="assets/Landing animation/output.gif"> -->
         <!-- <object classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"
