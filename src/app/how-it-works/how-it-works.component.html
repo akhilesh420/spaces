@@ -9,7 +9,20 @@
             </h3>
             <img class='like-icon' src="assets/icons/1-k-like.svg" alt="like icon">
             <img class='touch-icon' src="assets/icons/touch-gesture.svg" alt="touch gesture icon">
-            <div class="animation-container animation-A"></div>
+            <div class="animation-container animation-A">
+                <video  #animation 
+                    [muted]="true" 
+                    autoplay 
+                    playsinline 
+                    preload="none" 
+                    role='img' 
+                    muted
+                    loop>
+                    <source src="assets/app animations/Discover through people.webm" type="video/webm"> 
+                    <source src="assets/app animations/Discover through people.mp4" type="video/mp4">
+                </video> 
+                <video src="assets/app animations/Discover through people.webm"></video>
+            </div>
             <div class="animation-container animation-B"></div>
             <div class="animation-container animation-C"></div>
             <div class="animation-container animation-group">
