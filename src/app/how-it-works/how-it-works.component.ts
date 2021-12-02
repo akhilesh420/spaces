@@ -50,7 +50,6 @@ export class HowItWorksComponent implements OnInit {
   }
 
   onEnded() {
-    console.log('ended');
     this.incrementPosition();
     this.scrollTo(this.activePosition);
   }
