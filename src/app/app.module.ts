@@ -24,6 +24,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { NoBurnoutComponent } from './no-burnout/no-burnout.component';
 import { FooterComponent } from './footer/footer.component';
+import { CarouselButtonsComponent } from './carousel-buttons/carousel-buttons.component';
 
 // Note we need a separate function as it's required
 // by the AOT compiler.
@@ -45,6 +46,7 @@ export function playerFactory() {
     HowItWorksComponent,
     NoBurnoutComponent,
     FooterComponent,
+    CarouselButtonsComponent,
   ],
   imports: [
     LottieModule.forRoot({ player: playerFactory }), //Lottie player

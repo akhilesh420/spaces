@@ -18,7 +18,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   title = 'Postpress';
   notifier$ = new Subject();
 
-  @ViewChild('master') master: ElementRef<HTMLElement>;
+  @ViewChild('resize') resize: ElementRef<HTMLElement>;
 
   constructor(private authService: AuthService,
               private windowService: WindowService,
@@ -58,7 +58,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   onResize() {
-    this.windowService.setDimensions(this.master.nativeElement.offsetHeight, this.master.nativeElement.offsetWidth);
+    this.windowService.setDimensions(this.resize.nativeElement.offsetHeight, this.resize.nativeElement.offsetWidth);
   }
 
   ngOnDestroy() {

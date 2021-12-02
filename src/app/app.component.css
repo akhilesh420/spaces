@@ -3,3 +3,11 @@
   overflow-x: hidden;
   overflow-y: visible;
 }
+
+.resize-container { 
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}

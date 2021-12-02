@@ -37,17 +37,48 @@
             </div>
             <div class="animation-container animation-C"></div>
             <div class="animation-container animation-group">
-                <video  #animation 
-                        [muted]="true" 
-                        autoplay 
-                        playsinline 
-                        preload="none" 
-                        role='img' 
-                        muted
-                        loop>
-                    <source src="assets/app animations/Discover through people.webm" type="video/webm"> 
-                    <source src="assets/app animations/Discover through people.mp4" type="video/mp4">
-                </video> 
+                <div class="scroll-container" #scrollContainer>
+                    <div class="video-container">
+                        <video  [muted]="true"  
+                                playsinline 
+                                preload="none" 
+                                role='img' 
+                                muted
+                                autoplay
+                                (ended)="onEnded()"
+                                #video>
+                            <source src="assets/app animations/Discover through people.webm" type="video/webm"> 
+                            <source src="assets/app animations/Discover through people.mp4" type="video/mp4">   
+                        </video>
+                    </div> 
+                    <div class="video-container">
+                        <video  [muted]="true"  
+                                playsinline 
+                                preload="none" 
+                                role='img' 
+                                muted
+                                autoplay
+                                (ended)="onEnded()"
+                                #video>
+                            <source src="assets/app animations/Discover through people.webm" type="video/webm"> 
+                            <source src="assets/app animations/Discover through people.mp4" type="video/mp4">   
+                        </video>
+                    </div>   
+                    <div class="video-container">
+                        <video  [muted]="true"  
+                                playsinline 
+                                preload="none" 
+                                role='img' 
+                                muted
+                                autoplay
+                                (ended)="onEnded()"
+                                #video>
+                            <source src="assets/app animations/Discover through people.webm" type="video/webm"> 
+                            <source src="assets/app animations/Discover through people.mp4" type="video/mp4">   
+                        </video>
+                    </div>     
+                </div>
+                <app-carousel-buttons [count]="3" [activeButton]="activePosition" (activeButtonChange)="scrollTo($event)" class="carousel-buttons"></app-carousel-buttons>
             </div>
         </div>
     </div>
