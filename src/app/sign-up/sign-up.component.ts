@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
 import { User } from '../models/user.model';
 import { AuthService } from '../services/auth.service';
 import { DatabaseService } from '../services/database.service';
 import { MixpanelService } from '../services/mixpanel.service';
+import { SharedService } from '../services/shared.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -15,15 +17,18 @@ export class SignUpComponent implements OnInit {
   name = '';
   email = '';
   creating: Boolean = false;
+  earlyCount: BehaviorSubject<number>;
   errors: { name: string  | undefined;
             email: string  | undefined;} = {name: undefined, email: undefined};
 
   constructor(private databaseService: DatabaseService,
               private mixpanelService: MixpanelService,
               private authService: AuthService,
+              private sharedService: SharedService,
               private router: Router) { }
 
   ngOnInit(): void {
+    this.earlyCount = this.sharedService.getUserCount();
   }
 
   manualUser() {
