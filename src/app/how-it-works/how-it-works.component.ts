@@ -9,6 +9,7 @@ import { Component, ElementRef, OnInit, ViewChild, ViewChildren, HostListener, Q
 export class HowItWorksComponent implements OnInit {
   
   activePosition: number = 0;
+  timeout: NodeJS.Timeout;
   @ViewChild('scrollContainer') scrollContainer: ElementRef<HTMLElement>;
   @ViewChildren('video') videos: QueryList<ElementRef<HTMLVideoElement>>;
 
@@ -18,15 +19,16 @@ export class HowItWorksComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    this.videoState();
+    this.videos.forEach(video => video.nativeElement.pause());
   }
 
-  @HostListener('window:scroll', ['$event'])
+  @HostListener('window:scroll', ['$event']) //Vertical scroll
   onWindowScroll($event) {
     this.videoState()
   }
 
   videoState() {
+    if (!this.getVideo(this.activePosition).nativeElement.duration) return;
     const top = this.scrollContainer.nativeElement.getBoundingClientRect().top;
     const height = this.scrollContainer.nativeElement.offsetHeight;
     const windowHeight = this.windowService.height;
@@ -37,7 +39,7 @@ export class HowItWorksComponent implements OnInit {
     }
   }
 
-  scrollTo(position: number) {
+  playAnimation(position: number) { //Horizontal scroll
     if (!this.scrollContainer) return;
     this.activePosition = position;
     const width = this.scrollContainer.nativeElement.offsetWidth;
@@ -46,12 +48,20 @@ export class HowItWorksComponent implements OnInit {
       left: width * position,
       behavior: 'smooth'
     });
-    this.getVideo(this.activePosition).nativeElement.play();
+    this.videos.forEach(video => video.nativeElement.pause());
+    setTimeout(() => this.getVideo(this.activePosition).nativeElement.play(), 300);
   }
 
   onEnded() {
     this.incrementPosition();
-    this.scrollTo(this.activePosition);
+    this.playAnimation(this.activePosition);
+  }
+
+  onPlay() {
+    const currentTime = this.getVideo(this.activePosition).nativeElement.currentTime;
+    const duration = this.getVideo(this.activePosition).nativeElement.duration;
+    clearTimeout(this.timeout);
+    this.timeout = setTimeout(() => this.onEnded(), (duration - currentTime) * 1000);
   }
 
   incrementPosition() {

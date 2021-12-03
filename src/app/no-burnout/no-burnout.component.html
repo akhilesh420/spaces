@@ -12,7 +12,16 @@
             <img class='clock' src="assets/icons/alarm clock.svg" alt="alarm clock">
             <img class='handshake' src="assets/icons/shakehand.svg" alt="hand shake">
             <img class='arrow' src="assets/icons/arrow.svg" alt="arrow">
-            <div class="showcase"></div>
+            <div class="showcase">
+                <div class="scroll-container" #scrollContainer>
+                    <div class="image-container" *ngFor="let affiliate of affiliates">
+                        <a href="https://www.instagram.com/{{affiliate.name}}/" target="_blank">
+                            <img [src]="affiliate.src" [alt]="affiliate.name">
+                        </a>
+                    </div>     
+                </div>
+                <app-carousel-buttons [count]="affiliates.length" [activeButton]="activePosition" (activeButtonChange)="changeImage($event)" class="carousel-buttons"></app-carousel-buttons>
+            </div>
         </div>
     </div>
 </div>
