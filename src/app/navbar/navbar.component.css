@@ -87,10 +87,16 @@
 }
 
 .button {
+
+    background: none;
     border: solid 2px #FDF0DD;
     border-radius: 6px;
     padding: 9px 10px 9px 10px;
-    background-color: var(--light);
+    
+}
+
+.button > h6 {
+    color: #FDF0DD;
 }
 
 @media only screen and (max-width: 1152px) {

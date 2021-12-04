@@ -42,8 +42,7 @@ h3 {
 .animation-container {
     position: absolute;
     width: 320px;
-    height: 364px;
-
+    height: 428px;
     background: #D2D4DA;
     border: 2px solid #040605;
     box-sizing: border-box;
@@ -224,7 +223,7 @@ video {
 
     .animation-container {
         width: 314px;
-        height: 520px;
+        height: 420px;
     }
     
     
