@@ -28,6 +28,19 @@ input:focus {
    
 }
 
+button {
+
+    transition: border ease 0.6s;
+    transition: background ease 0.6s;
+
+}
+
+button > h5 {
+
+    transition: color ease 0.6s;
+
+}
+
 .button {
     width: 146px;
     height: 48px;
@@ -98,6 +111,23 @@ input:focus {
 
     .google-button {
         width: 214px;
+    }
+
+}
+
+@media (hover: hover) {
+    
+    button:hover {
+
+      border: 2px solid var(--primary);
+      background: var(--dark);
+
+    }
+
+    button:hover > h5 {
+
+        color: var(--primary);
+
     }
 
 }
