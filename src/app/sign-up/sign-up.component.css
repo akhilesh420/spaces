@@ -19,6 +19,15 @@
     border-radius: 6px;
 }
 
+input:focus {
+
+    outline: none;
+    background: var(--dark);
+    color: var(--light);
+    border: 2px solid var(--light);
+   
+}
+
 .button {
     width: 146px;
     height: 48px;
