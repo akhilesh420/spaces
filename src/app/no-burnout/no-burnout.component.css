@@ -145,6 +145,7 @@ img {
         height: 54px;
         left: 47px;
         transform: rotate(-28.44deg);
+        top: 8px;
     }
 
     .handshake {
@@ -195,8 +196,8 @@ img {
 
     .clock {
         height: 36px;
-        left: 263.31px;
-        transform: rotate(40deg);
+        left: 284px;
+        transform: rotate(20deg);
     }
 
     .handshake {

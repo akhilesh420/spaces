@@ -8,9 +8,13 @@
 }
 
 .video-container{
-    width: 1484px;
-    height: 720px;
+    width: 693px;
+    height: 359px;
     overflow: hidden;
+    border-radius: 12px;
+    border: solid 2px #fdf0dd;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.3);
 }
 
 video, img {
@@ -26,8 +30,8 @@ video, img {
 @media only screen and (max-width: 1152px) {
 
     .video-container{
-        width: 988px;
-        height: 480px;
+        width: 580px;
+        height: 280px;
     }
 
     .container {
@@ -40,8 +44,8 @@ video, img {
 @media only screen and (max-width: 600px) {
 
     .video-container{
-        width: 100vw;
-        height: 280px;
+        width: 90vw;
+        height: 220px;
     }
 
     .container {
