@@ -1,5 +1,5 @@
 .sign-up-spacing {
-    margin-bottom: 64px;
+    margin-bottom: 36px;
 }
 
 .content {
@@ -70,6 +70,10 @@
         height: 691px;
     }
 
+    .sign-up-spacing {
+        margin-bottom: 48px;
+    }
+
     .title {
         width: 487px;
         height: 120px;
@@ -104,6 +108,10 @@
 
 @media only screen and (max-width: 600px) {
 
+    .sign-up-spacing {
+        margin-bottom: 44px;
+    }
+    
     .backpanel {
         width: 292px;
         height: 444px;

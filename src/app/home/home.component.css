@@ -21,6 +21,7 @@ video, img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border-radius: 12px;
 }
 
 .row {
@@ -32,11 +33,12 @@ video, img {
     .video-container{
         width: 580px;
         height: 280px;
+        border-radius: 12px;
     }
 
     .container {
         height: unset;
-        margin-bottom: 124px;
+        margin-bottom: 94px;
         margin-top: 188px;
     }
 }
@@ -44,12 +46,14 @@ video, img {
 @media only screen and (max-width: 600px) {
 
     .video-container{
-        width: 90vw;
+        width: 95vw;
+        max-width: 420px;
         height: 220px;
+        border-radius: 12px;
     }
 
     .container {
-        margin-bottom: 72px;
+        margin-bottom: 48px;
         margin-top: 136px;
     }
     

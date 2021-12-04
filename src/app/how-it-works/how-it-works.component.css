@@ -1,5 +1,5 @@
 .sign-up-spacing {
-    margin-top: 64px;
+    margin-top: 92px;
     margin-bottom: 86px;
 }
 
@@ -32,6 +32,12 @@ h2 {
     height: 96px;
     top: 178px;
     left: 341.5px;
+}
+
+.phonePara {
+
+    display: none;
+
 }
 
 h3 {
@@ -180,14 +186,35 @@ video {
         width: 420px;
         height: 520px;
     }
+
+    .sign-up-spacing {
+        margin-bottom: 0px;
+        margin-top: 92px;
+    }
     
 }
 
 @media only screen and (max-width: 600px) {
 
+    .sign-up-spacing {
+        margin-top: 72px;
+    }
+
+    .phonePara {
+
+        display: inline-block;
+
+    }
+
+    .desktopPara {
+
+        display: none;
+
+    }
+
     .container {
         width: 300px;
-        height: 750px;
+        height: 564px;
     }
     
     .title {
@@ -224,7 +251,9 @@ video {
     .animation-container {
         width: 314px;
         height: 420px;
+        top: 200px;
     }
+
     
     
 }
