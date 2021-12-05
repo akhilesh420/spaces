@@ -76,7 +76,8 @@ button > h5 {
 
 .google-button {
     background-color: transparent;
-    width: 274px;
+    width: 276px;
+    box-sizing: border-box;
 }
 
 @media only screen and (max-width: 1152px) {
