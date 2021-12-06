@@ -1,5 +1,5 @@
-<div class="col center container">
-    <div class="row center">
+<div class="col center container index">
+    <div class="row pointer center" routerLink="."  fragment="introduction">
         <div class="video-container">
             <video  #animation 
                     [muted]="true" 
@@ -10,11 +10,10 @@
                     muted>
                 <source src="assets/Landing animation/Landing_Animation.mp4" type="video/mp4">
             </video> 
-            <!-- <img src="assets/Landing animation/intro.gif"> -->
         </div>
     </div>
 </div>
-<app-collect-content></app-collect-content>
+<app-collect-content name="introduction"></app-collect-content>
 <app-sign-up name="signup"></app-sign-up>
 <app-how-it-works></app-how-it-works>
 <app-no-burnout></app-no-burnout>

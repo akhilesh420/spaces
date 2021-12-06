@@ -17,6 +17,7 @@
                                 (keyup)='validName()'
                                 name='name'
                                 id="name"
+                                type="text"
                                 [class.error-input]="errorField.name">
                         <input  class="field" 
                                 placeholder="Email"
@@ -25,6 +26,7 @@
                                 (keyup)='validEmail()'
                                 name='email'
                                 id="email"
+                                type="email"
                                 [class.error-input]="errorField.email">
                     </div>
                 </div>
@@ -50,7 +52,7 @@
                                 <img class="google-sign-up" src="assets/icons/google_sign_up.png" alt="Google sign up">
                             </div>
                             <div class="col center">
-                                <h5 class="letter-spacing">Sign up with Google</h5>
+                                <h5 class="letter-spacing google-width">Sign up with Google</h5>
                             </div>
                         </div>
                     </button>

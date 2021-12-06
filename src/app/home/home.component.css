@@ -17,6 +17,10 @@
     box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.3);
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 video, img {
     height: 100%;
     width: 100%;

@@ -163,6 +163,10 @@ button > h5 {
         width: 214px;
     }
 
+    .google-width {
+        width: 156px;
+    }
+
 }
 
 @media (hover: hover) {
