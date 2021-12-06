@@ -58,10 +58,11 @@ export class HowItWorksComponent implements OnInit {
   }
 
   onPlay() {
-    const currentTime = this.getVideo(this.activePosition).nativeElement.currentTime;
-    const duration = this.getVideo(this.activePosition).nativeElement.duration;
+    const video = this.getVideo(this.activePosition);
+    video.nativeElement.currentTime = 0;
+    const duration = video.nativeElement.duration;
     clearTimeout(this.timeout);
-    this.timeout = setTimeout(() => this.onEnded(), (duration - currentTime) * 1000);
+    this.timeout = setTimeout(() => this.onEnded(), duration * 1000);
   }
 
   incrementPosition() {
