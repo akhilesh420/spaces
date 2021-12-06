@@ -51,7 +51,7 @@
 .email-symbol {
     position: absolute;
     left: 426px;
-    top: 119px;
+    top: 123px;
     width: 24px;
     height: auto; 
 }
@@ -61,7 +61,7 @@
     width: 113px;
     height: 15px;
     left: 464px;
-    top: 120px;
+    top: 124px;
     font-size: 12px;
 }
 
@@ -110,7 +110,7 @@
     .email-symbol {
         position: absolute;
         left: 71px;
-        top: 103px;
+        top: 105px;
         width: 24px;
         height: auto; 
     }
@@ -120,7 +120,7 @@
         width: 113px;
         height: 15px;
         left: 109px;
-        top: 104px;
+        top: 106px;
         font-size: 12px;
     }
 }

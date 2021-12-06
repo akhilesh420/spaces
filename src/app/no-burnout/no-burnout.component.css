@@ -224,6 +224,9 @@ img {
 
     .spacing {
         margin-bottom: 0px;
-        padding-top: 38px;
+    }
+
+    .phoneSpace {
+        padding-top: 48px;
     }
 }
