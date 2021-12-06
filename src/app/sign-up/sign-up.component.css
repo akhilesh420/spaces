@@ -30,8 +30,8 @@ input:focus {
 
 button {
 
-    transition: border ease 0.6s;
-    transition: background ease 0.6s;
+    transition: background ease 0.6s, border ease 0.6s;
+    border: 2px solid transparent;
 
 }
 
@@ -46,6 +46,7 @@ button > h5 {
     height: 48px;
     background: var(--primary);
     border-radius: 6px;
+    position: relative;
 }
 
 .wrap {
@@ -77,6 +78,51 @@ button > h5 {
 .google-button {
     background-color: transparent;
     width: 274px;
+    border-radius: 6px;
+}
+
+.container {
+    position: relative;
+    width: 157px;
+    height: 49px;
+}
+
+.insta-symbol {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 24px;
+    height: auto;
+}
+
+.instagram {
+    position: absolute;
+    width: 119px;
+    height: 15px;
+    left: 38px;
+    top: 5px;
+    font-size: 12px;
+}
+
+.email-symbol {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 24px;
+    height: auto; 
+}
+
+.email {
+    position: absolute;
+    width: 113px;
+    height: 15px;
+    left: 38px;
+    bottom: 2px;
+    font-size: 12px;
+}
+
+.error {
+    color: var(--danger);
 }
 
 @media only screen and (max-width: 1152px) {

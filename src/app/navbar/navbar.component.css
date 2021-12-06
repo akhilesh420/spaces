@@ -92,8 +92,7 @@
     border: solid 2px #FDF0DD;
     border-radius: 6px;
     padding: 9px 10px 9px 10px;
-    transition: background ease 0.6s;
-    transition: border ease 0.6s;
+    transition: background ease 0.6s, border ease 0.6s;
     
 }
 
