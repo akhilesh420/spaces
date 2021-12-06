@@ -15,13 +15,14 @@
             <img class='like-icon' src="assets/icons/1-k-like.png" alt="like icon">
             <img class='touch-icon' src="assets/icons/touch-gesture.png" alt="touch gesture icon">
             <div class="animation-container animation-A">
-                <video  #animation 
+                <video  #animationA
                         [muted]="true" 
                         autoplay 
                         playsinline 
                         preload="none" 
                         role='img' 
                         muted
+                        (play)="onPlayDesktop(animationA);"
                         loop>
                     <source src="assets/app animations/discover_through_people.mp4" type="video/mp4">
                 </video> 
@@ -30,13 +31,14 @@
                 <p>Discover through people</p> 
             </div>
             <div class="animation-container animation-B">
-                <video  #animation 
+                <video  #animationB
                         [muted]="true" 
                         autoplay 
                         playsinline 
                         preload="none" 
                         role='img' 
                         muted
+                        (play)="onPlayDesktop(animationB);"
                         loop>
                     <source src="assets/app animations/create_spaces.mp4" type="video/mp4">
                 </video> 
@@ -45,13 +47,14 @@
                 <p>Create spaces</p> 
             </div>
             <div class="animation-container animation-C">
-                <video  #animation 
+                <video  #animationC 
                         [muted]="true" 
                         autoplay 
                         playsinline 
                         preload="none" 
                         role='img' 
                         muted
+                        (play)="onPlayDesktop(animationC);"
                         loop>
                     <source src="assets/app animations/grow_together.mp4" type="video/mp4">
                 </video> 

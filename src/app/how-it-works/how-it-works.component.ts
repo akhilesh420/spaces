@@ -65,6 +65,10 @@ export class HowItWorksComponent implements OnInit {
     this.timeout = setTimeout(() => this.onEnded(), duration * 1000);
   }
 
+  onPlayDesktop(animation: HTMLVideoElement) {
+    animation.currentTime = 0;
+  }
+
   incrementPosition() {
     this.activePosition = (this.activePosition + 1) % 3;
   }

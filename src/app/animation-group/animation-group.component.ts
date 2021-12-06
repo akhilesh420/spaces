@@ -1,4 +1,6 @@
-import { Component, NgZone, OnInit, AfterViewInit } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import { WindowService } from './../services/window.service';
+import { Component, NgZone, OnInit, AfterViewInit, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { AnimationItem } from 'lottie-web';
 import { AnimationOptions } from 'ngx-lottie';
 
@@ -7,55 +9,51 @@ import { AnimationOptions } from 'ngx-lottie';
   templateUrl: './animation-group.component.html',
   styleUrls: ['./animation-group.component.css']
 })
-export class AnimationGroupComponent implements OnInit {
+export class AnimationGroupComponent implements OnInit {  
 
-  private intialSegment: [number, number] = [0, 90];
-  private segment: [number, number] = [30, 90];
+  // pinterest: AnimationOptions = {path: 'assets/Lottie animations/Pinterest/pinterest-3713687.json'};
+  // instagram: AnimationOptions = {path: 'assets/Lottie animations/Instagram/instagram-3713696.json'};
+  // twitter: AnimationOptions = {path: 'assets/Lottie animations/Twitter/twitter-3713693.json'};
+  // youtube: AnimationOptions = {path: 'assets/Lottie animations/Youtube/youtube-3713694.json'};
+  // behance: AnimationOptions = {path: 'assets/Lottie animations/Behance/behance-3713689.json'};
+  // tiktok: AnimationOptions = {path: 'assets/Lottie animations/Tiktok/tiktok-3713691.json'}; 
 
-  pinterest: AnimationOptions = {path: 'assets/Lottie animations/Pinterest/pinterest-3713687.json'};
-  instagram: AnimationOptions = {path: 'assets/Lottie animations/Instagram/instagram-3713696.json'};
-  twitter: AnimationOptions = {path: 'assets/Lottie animations/Twitter/twitter-3713693.json'};
-  youtube: AnimationOptions = {path: 'assets/Lottie animations/Youtube/youtube-3713694.json'};
-  behance: AnimationOptions = {path: 'assets/Lottie animations/Behance/behance-3713689.json'};
-  tiktok: AnimationOptions = {path: 'assets/Lottie animations/Tiktok/tiktok-3713691.json'}; 
-
-  // pinterest: AnimationOptions = {path: 'assets/Lottie animations/Pinterest/pinterest-3713687.json',initialSegment: this.intialSegment, autoplay: false, loop: false};
-  // instagram: AnimationOptions = {path: 'assets/Lottie animations/Instagram/instagram-3713696.json',initialSegment: this.intialSegment, autoplay: false, loop: false};
-  // twitter: AnimationOptions = {path: 'assets/Lottie animations/Twitter/twitter-3713693.json', initialSegment: this.intialSegment, autoplay: false, loop: false};
-  // youtube: AnimationOptions = {path: 'assets/Lottie animations/Youtube/youtube-3713694.json', initialSegment: this.intialSegment, autoplay: false, loop: false};
-  // behance: AnimationOptions = {path: 'assets/Lottie animations/Behance/behance-3713689.json', initialSegment: this.intialSegment, autoplay: false, loop: false};
-  // tiktok: AnimationOptions = {path: 'assets/Lottie animations/Tiktok/tiktok-3713691.json', initialSegment: this.intialSegment, autoplay: true, loop: false}; 
+  animationCount:number = 6;
+  playAnimation: boolean = false;
+  pinterest: AnimationOptions = {path: 'assets/Lottie animations/Pinterest/pinterest-3713687.json', autoplay: false, loop: false};
+  instagram: AnimationOptions = {path: 'assets/Lottie animations/Instagram/instagram-3713696.json', autoplay: false, loop: false};
+  twitter: AnimationOptions = {path: 'assets/Lottie animations/Twitter/twitter-3713693.json', autoplay: false, loop: false};
+  youtube: AnimationOptions = {path: 'assets/Lottie animations/Youtube/youtube-3713694.json', autoplay: false, loop: false};
+  behance: AnimationOptions = {path: 'assets/Lottie animations/Behance/behance-3713689.json', autoplay: false, loop: false};
+  tiktok: AnimationOptions = {path: 'assets/Lottie animations/Tiktok/tiktok-3713691.json', autoplay: false, loop: false}; 
 
 
   private animationItems: {name: string, animationItem: AnimationItem}[] = [];
-  private counter = 0;
-  private count = 0;
 
-  constructor(private ngZone: NgZone) { }
+  @ViewChild('container') container: ElementRef<HTMLElement>;
+
+
+  constructor(private windowService: WindowService) { }
 
   ngOnInit(): void {
   }
 
-  ngAfterViewInit() {
-
-  }
-
   animationCreated(animationItem: AnimationItem, name: string): void {
     this.animationItems.push({name: name, animationItem: animationItem});
-    // animationItem.setSpeed(2);
+    if (this.playAnimation) this.animationPlay();
   }
 
-  onComplete(event) {
-    ++this.counter;
-    const index = this.counter % this.animationItems.length;
-    this.ngZone.runOutsideAngular(() => {
-      const segment = this.counter < this.animationItems.length ? this.intialSegment : this.segment;
-      this.animationItems[index].animationItem.playSegments(segment, true);
-    });
+  @HostListener('window:scroll', ['$event']) //Vertical scroll
+  onWindowScroll($event) {
+    const top = this.container.nativeElement.getBoundingClientRect().top;
+    const height = this.container.nativeElement.offsetHeight;
+    const percentage = 0.8;
+    const windowHeight = this.windowService.height;
+    if (top <=  windowHeight * percentage && top >= -height * percentage) this.animationPlay(); 
   }
 
-  onFrameChange(event) {
-    ++this.count;
-    console.log(this.count);
+  animationPlay() {
+    this.playAnimation = true;
+    if (this.animationItems.length === this.animationCount) this.animationItems.forEach(animation => animation.animationItem.play());
   }
 }
