@@ -50,7 +50,9 @@ h3 {
     width: 320px;
     height: 428px;
     background: #D2D4DA;
-    border: 1px solid #fdf0dd40;
+    border-top: 1px solid #040605;
+    border-left: 1px solid #040605;
+    border-right: 1px solid #040605;
     box-sizing: border-box;
     box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.3);
     border-radius: 8px 8px 0px 0px;
@@ -80,10 +82,10 @@ h3 {
     position: absolute;
     width: 320px;
     height: 36px;
-
     background: var(--dark);
     border-radius: 0px 0px 8px 8px;
-    padding: 6.5px 0;
+    padding: 6px 0;
+    box-shadow: 0px -4px 8px rgba(4, 6, 5, 0.25);
 }
 
 .caption-A {
@@ -157,10 +159,10 @@ video {
 }
 
 p {
-    font-family: Source Sans Pro;
+    font-family: 'Source Sans Pro';
     font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 16px;
     line-height: 125%;    
     text-align: center;
     letter-spacing: 0.007em;

@@ -76,15 +76,16 @@ h3 {
     height: 460px;
     left: 649px;
     top: 31px;
-
-    /* GS - 20 */
-
     background: #D2D4DA;
-    border: 2px solid #FDF0DD;
+    border-top: 2px solid #040605;
+    border-left: 2px solid #040605;
+    border-right: 2px solid #040605;
     box-sizing: border-box;
     box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.3);
-    border-radius: 8px 8px 0 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
+
 
 .carousel-buttons {
     position: absolute;
@@ -120,10 +121,10 @@ img {
     height: 36px;
     left: 649px;
     top: 494px;
-
     background: var(--dark);
     border-radius: 0px 0px 8px 8px;
     padding: 6.5px 0;
+    box-shadow: 0px -4px 8px rgba(4, 6, 5, 0.25);
 }
 
 a {
@@ -131,10 +132,10 @@ a {
 }
 
 p {
-    font-family: Source Sans Pro;
+    font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 125%;    
     text-align: center;
     letter-spacing: 0.007em;
