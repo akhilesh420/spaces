@@ -58,3 +58,19 @@ video, img {
     }
     
 }
+
+@media only screen and (max-width: 410px) {
+
+    .video-container{
+        height: 200px;
+    }
+
+}
+
+@media only screen and (max-width: 360px) {
+
+    .video-container{
+        height: 170px;
+    }
+
+}
