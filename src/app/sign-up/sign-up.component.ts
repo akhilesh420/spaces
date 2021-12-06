@@ -20,6 +20,7 @@ export class SignUpComponent implements OnInit {
   creating: boolean = false;
   earlyCount: BehaviorSubject<number>;
   error: string  | undefined =  undefined;
+  errorField: {name: boolean, email: boolean} = {name: false, email: false};
   // errors: { name: string  | undefined;
   //   email: string  | undefined;} = {name: undefined, email: undefined};
   signUpState: boolean = false;
@@ -78,14 +79,27 @@ export class SignUpComponent implements OnInit {
   }
 
   validName() {
-    if (!this.name || this.name.length === 0) return this.error = 'Name is required';
+    if (!this.name || this.name.length === 0) {
+      this.errorField.name = true;
+      return this.error = 'Name is required';
+    }
+    this.errorField.name = false;
     return this.error = undefined;
   }
 
   validEmail() {
-    if (!this.email || this.email.length === 0) return this.error = 'Email is required';
+    if (!this.email || this.email.length === 0) {
+      this.errorField.email = true;
+      return this.error = 'Email is required';
+    }
+
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (!re.test(String(this.email).toLowerCase())) return this.error = 'Invalid email';
+    if (!re.test(String(this.email).toLowerCase())) {
+      this.errorField.email = true;
+      return this.error = 'Invalid email';
+    }
+    
+    this.errorField.email = false;
     return this.error = undefined;
   }
 

@@ -125,6 +125,10 @@ button > h5 {
     color: var(--danger);
 }
 
+.error-input {
+    border-color: var(--danger);
+}
+
 @media only screen and (max-width: 1152px) {
     
     .gap {

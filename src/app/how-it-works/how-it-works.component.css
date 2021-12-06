@@ -53,7 +53,7 @@ h3 {
     border: 1px solid #fdf0dd40;
     box-sizing: border-box;
     box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
+    border-radius: 8px 8px 0px 0px;
     overflow: hidden;
 }
 
@@ -73,6 +73,35 @@ h3 {
 }
 
 .animation-group {
+    display: none;
+}
+
+.caption-container {
+    position: absolute;
+    width: 320px;
+    height: 36px;
+
+    background: var(--dark);
+    border-radius: 0px 0px 8px 8px;
+    padding: 6.5px 0;
+}
+
+.caption-A {
+    top: 553px;
+    left: 0;
+}
+
+.caption-B {
+    top: 738px;
+    left: 416px;
+}
+
+.caption-C {
+    top: 509px;
+    right: 0;
+}
+
+.caption-group {
     display: none;
 }
 
@@ -127,6 +156,59 @@ video {
     transform: translateX(-50%);
 }
 
+p {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 125%;    
+    text-align: center;
+    letter-spacing: 0.007em;
+    color: var(--light);
+}
+
+@keyframes appear {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+    2% {
+        height: 23px;
+        opacity: 0;
+    }
+    100% {
+        height: 23px;
+        opacity: 1;
+    }
+  }
+
+@-webkit-keyframes appear {
+    0% {
+        height: 0;
+        -webkit-opacity: 0;
+    }
+    2% {
+        height: 23px;
+        -webkit-opacity: 0;
+    }
+    100% {
+        height: 23px;
+        -webkit-opacity: 1;
+    }
+  }
+
+.appear {
+    animation: appear 0.5s ease-out forwards;
+    -webkit-animation: appear 0.5s ease-out forwards;
+}
+
+.disappear {
+    /* animation: appear 0.3s ease-out reverse forwards;
+    -webkit-animation: appear 0.3s ease-out reverse forwards; */
+    height: 0;
+    opacity: 0;
+}
+
 
 @media only screen and (max-width: 1152px) {
 
@@ -162,15 +244,7 @@ video {
         left: 455px;
     }
 
-    .animation-A {
-        display: none;
-    }
-    
-    .animation-B {
-        display: none;
-    }
-    
-    .animation-C {
+    .animation-A , .animation-B , .animation-C {
         display: none;
     }
 
@@ -185,6 +259,22 @@ video {
     .animation-container {
         width: 420px;
         height: 520px;
+    }
+
+    .caption-container {
+        width: 420px;
+        height: 36px;
+    }
+
+    .caption-A, .caption-B, .caption-C {
+        display: none;
+    }
+    
+    .caption-group {
+        display: block;
+        top: 778px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .sign-up-spacing {
@@ -254,6 +344,15 @@ video {
         top: 200px;
     }
 
+    .caption-container {
+        width: 314px;
+        height: 36px;
+        top: 620px;
+    }
     
+    .caption-group {
+        bottom: 0;
+    }
+
     
 }

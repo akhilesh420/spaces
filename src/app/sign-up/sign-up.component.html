@@ -16,14 +16,16 @@
                                 (focusout)='validName()'
                                 (keyup)='validName()'
                                 name='name'
-                                id="name">
+                                id="name"
+                                [class.error-input]="errorField.name">
                         <input  class="field" 
                                 placeholder="Email"
                                 [(ngModel)]="email"
                                 (focusout)='validEmail()'
                                 (keyup)='validEmail()'
                                 name='email'
-                                id="email">
+                                id="email"
+                                [class.error-input]="errorField.email">
                     </div>
                 </div>
                 <div class="col center">

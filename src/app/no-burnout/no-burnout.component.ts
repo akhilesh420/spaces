@@ -18,6 +18,7 @@ export class NoBurnoutComponent implements OnInit {
   ];
   @ViewChild('scrollContainer') scrollContainer: ElementRef<HTMLElement>;
   timeout: NodeJS.Timeout;
+  slideTime: number = 2000; //milliseconds
 
   constructor(private windowService: WindowService) { }
 
@@ -43,7 +44,7 @@ export class NoBurnoutComponent implements OnInit {
         behavior: 'smooth'
       });
       clearTimeout(this.timeout);
-      this.timeout = setTimeout(() => this.changeImage(++this.activePosition % this.affiliates.length), 5000);
+      this.timeout = setTimeout(() => this.changeImage(++this.activePosition % this.affiliates.length), this.slideTime);
     } else {
       clearTimeout(this.timeout);
     }

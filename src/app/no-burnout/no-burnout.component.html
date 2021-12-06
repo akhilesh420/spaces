@@ -15,12 +15,15 @@
             <div class="showcase">
                 <div class="scroll-container" #scrollContainer>
                     <div class="image-container" *ngFor="let affiliate of affiliates">
-                        <a href="https://www.instagram.com/{{affiliate.name}}/" target="_blank">
-                            <img [src]="affiliate.src" [alt]="affiliate.name">
-                        </a>
+                        <img [src]="affiliate.src" [alt]="affiliate.name">
                     </div>     
                 </div>
                 <app-carousel-buttons [count]="affiliates.length" [activeButton]="activePosition" (activeButtonChange)="changeImage($event)" class="carousel-buttons"></app-carousel-buttons>
+            </div>
+            <div class="caption-container">
+                <a *ngFor="let affiliate of affiliates; let i = index" href="https://www.instagram.com/{{affiliate.name}}/" target="_blank">
+                    <p [ngClass]="activePosition === i ? 'appear' : 'disappear'">@{{affiliate.name}}</p> 
+                </a>
             </div>
         </div>
     </div>

@@ -26,6 +26,9 @@
                     <source src="assets/app animations/discover_through_people.mp4" type="video/mp4">
                 </video> 
             </div>
+            <div class="caption-container caption-A">
+                <p>Discover through people</p> 
+            </div>
             <div class="animation-container animation-B">
                 <video  #animation 
                         [muted]="true" 
@@ -38,6 +41,9 @@
                     <source src="assets/app animations/create_spaces.mp4" type="video/mp4">
                 </video> 
             </div>
+            <div class="caption-container caption-B">
+                <p>Create spaces</p> 
+            </div>
             <div class="animation-container animation-C">
                 <video  #animation 
                         [muted]="true" 
@@ -49,6 +55,9 @@
                         loop>
                     <source src="assets/app animations/grow_together.mp4" type="video/mp4">
                 </video> 
+            </div>
+            <div class="caption-container caption-C">
+                <p>Grow together</p> 
             </div>
             <div class="animation-container animation-group">
                 <div class="scroll-container" #scrollContainer>
@@ -90,6 +99,11 @@
                     </div>     
                 </div>
                 <app-carousel-buttons [count]="3" [activeButton]="activePosition" (activeButtonChange)="playAnimation($event)" class="carousel-buttons"></app-carousel-buttons>
+            </div>
+            <div class="caption-container caption-group">
+                <p [ngClass]="activePosition === 0 ? 'appear' : 'disappear'">Discover through people</p> 
+                <p [ngClass]="activePosition === 1 ? 'appear' : 'disappear'">Create spaces</p> 
+                <p [ngClass]="activePosition === 2 ? 'appear' : 'disappear'">Grow together</p> 
             </div>
         </div>
     </div>
