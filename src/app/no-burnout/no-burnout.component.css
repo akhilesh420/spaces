@@ -10,7 +10,7 @@
 .container {
     position: relative;
     width: 1102px;
-    height: 491px;
+    height: 527px;
 }
 
 h2 {
@@ -83,7 +83,7 @@ h3 {
     border: 2px solid #FDF0DD;
     box-sizing: border-box;
     box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
 }
 
 .carousel-buttons {
@@ -114,11 +114,80 @@ img {
     display: inline-block;
 }
 
+.caption-container {
+    position: absolute;
+    width: 453px;
+    height: 36px;
+    left: 649px;
+    top: 494px;
+
+    background: var(--dark);
+    border-radius: 0px 0px 8px 8px;
+    padding: 6.5px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 125%;    
+    text-align: center;
+    letter-spacing: 0.007em;
+    color: var(--light);
+}
+
+@keyframes appear {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+    2% {
+        height: 23px;
+        opacity: 0;
+    }
+    100% {
+        height: 23px;
+        opacity: 1;
+    }
+  }
+
+@-webkit-keyframes appear {
+    0% {
+        height: 0;
+        -webkit-opacity: 0;
+    }
+    2% {
+        height: 23px;
+        -webkit-opacity: 0;
+    }
+    100% {
+        height: 23px;
+        -webkit-opacity: 1;
+    }
+  }
+
+.appear {
+    animation: appear 0.5s ease-out forwards;
+    -webkit-animation: appear 0.5s ease-out forwards;
+}
+
+.disappear {
+    /* animation: appear 0.3s ease-out reverse forwards;
+    -webkit-animation: appear 0.3s ease-out reverse forwards; */
+    height: 0;
+    opacity: 0;
+}
+
 @media only screen and (max-width: 1152px) {
     
     .container {
         width: 600px;
-        height: 860px;
+        height: 896px;
     }
 
     .spacing {
@@ -170,6 +239,12 @@ img {
         top: 380px;
     }
 
+    .caption-container {
+        width: 480px;
+        left: 60px;
+        top: 860px;
+    }
+
     .spacing {
         margin-bottom: 36px;
     }
@@ -179,7 +254,7 @@ img {
 
     .container {
         width: 300px;
-        height: 609px;
+        height: 645px;
     }
 
     .title {
@@ -220,6 +295,12 @@ img {
         height: 320px;
         left: 0;
         top: 259px;
+    }
+
+    .caption-container {
+        width: 300px;
+        left: 0px;
+        top: 579px;
     }
 
     .spacing {

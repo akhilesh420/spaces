@@ -24,16 +24,16 @@
 }
 
 .appear {
-    animation: appear 0.3s ease-out forwards;
-    -webkit-animation: appear 0.3s ease-out forwards;
+    animation: nav-appear 0.3s ease-out forwards;
+    -webkit-animation: nav-appear 0.3s ease-out forwards;
 }
 
 .disappear {
-    animation: disappear 0.3s ease-out forwards;
-    -webkit-animation: disappear 0.3s ease-out forwards;
+    animation: nav-disappear 0.3s ease-out forwards;
+    -webkit-animation: nav-disappear 0.3s ease-out forwards;
 }
 
-@keyframes appear {
+@keyframes nav-appear {
     0% {
         opacity: 0;
     }
@@ -42,7 +42,7 @@
     }
   }
 
-@keyframes disappear {
+@keyframes nav-disappear {
 0% {
     opacity: 1;
 }
@@ -51,7 +51,7 @@
 }
 }
 
-@-webkit-keyframes appear {
+@-webkit-keyframes nav-appear {
     0% {
         -webkit-opacity: 0;
     }
@@ -60,7 +60,7 @@
     }
   }
 
-@-webkit-keyframes disappear {
+@-webkit-keyframes nav-disappear {
     0% {
         -webkit-opacity: 1;
     }
@@ -92,8 +92,7 @@
     border: solid 2px #FDF0DD;
     border-radius: 6px;
     padding: 9px 10px 9px 10px;
-    transition: background ease 0.6s;
-    transition: border ease 0.6s;
+    transition: background ease 0.6s, border ease 0.6s;
     
 }
 

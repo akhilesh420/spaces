@@ -1,57 +1,79 @@
 <form (ngSubmit)="manualUser()">
     <div class="col center-align">
         <div class="row center">
-            <h4>Early Access</h4>
+            <h4>{{signUpState ? "Success!" : "Early Access"}}</h4>
         </div>
         <div class="row center">
             <h5>Join {{earlyCount | async}} more creatives.</h5>
         </div>
-        <div class="row wrap spacer center gap restrict-phone">
-            <div class="col">
-                <div class="row gap wrap restrict">
-                    <input  class="field"
-                            placeholder="Name" 
-                            [(ngModel)]="name"
-                            (focusout)='validName()'
-                            (keyup)='validName()'
-                            name='name'
-                            id="name">
-                    <input  class="field" 
-                            placeholder="Email"
-                            [(ngModel)]="email"
-                            (focusout)='validEmail()'
-                            (keyup)='validEmail()'
-                            name='email'
-                            id="email">
+        <ng-container *ngIf="!signUpState; else socials">
+            <div class="row wrap spacer center gap restrict-phone">
+                <div class="col">
+                    <div class="row gap wrap restrict">
+                        <input  class="field"
+                                placeholder="Name" 
+                                [(ngModel)]="name"
+                                (focusout)='validName()'
+                                (keyup)='validName()'
+                                name='name'
+                                id="name"
+                                type="text"
+                                [class.error-input]="errorField.name">
+                        <input  class="field" 
+                                placeholder="Email"
+                                [(ngModel)]="email"
+                                (focusout)='validEmail()'
+                                (keyup)='validEmail()'
+                                name='email'
+                                id="email"
+                                type="email"
+                                [class.error-input]="errorField.email">
+                    </div>
+                </div>
+                <div class="col center">
+                    <div class="row">
+                        <button class="button" type="submit" [disabled]="creating">
+                            <h5>{{ creating ? "Loading..." : "Sign Up"}}</h5>
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="col center">
-                <div class="row">
-                    <button class="button" type="submit" [disabled]="creating">
-                        <h5 *ngIf="!creating; else loading">Sign Up</h5>
-                        <ng-template #loading>
-                            <app-loading></app-loading>
-                        </ng-template>
+            <div class="row center spacing">
+                <h5 class="letter-spacing or error">{{error}}</h5>
+            </div>
+            <div class="row center spacing">
+                <h5 class="letter-spacing or">OR</h5>
+            </div>
+            <div class="row center">
+                <div class="col">
+                    <button class="google-button" type="button" (click)="googleSignUp();">
+                        <div class="row center g-signup-gap">
+                            <div class="col">
+                                <img class="google-sign-up" src="assets/icons/google_sign_up.png" alt="Google sign up">
+                            </div>
+                            <div class="col center">
+                                <h5 class="letter-spacing google-width">Sign up with Google</h5>
+                            </div>
+                        </div>
                     </button>
                 </div>
             </div>
-        </div>
-        <div class="row center spacing">
-            <h5 class="letter-spacing or">OR</h5>
-        </div>
-        <div class="row center">
-            <div class="col">
-                <button class="google-button" type="button" (click)="googleSignUp();">
-                    <div class="row center g-signup-gap">
-                        <div class="col">
-                            <img class="google-sign-up" src="assets/icons/google_sign_up.png" alt="Google sign up">
-                        </div>
-                        <div class="col center">
-                            <h5 class="letter-spacing">Sign up with Google</h5>
-                        </div>
+        </ng-container>
+        <ng-template #socials>
+            <div class="row spacing center">
+                <div class="col">
+                    <div class="container">
+                        <a href="https://www.instagram.com/postpress.io/" target="_blank">
+                            <img class="insta-symbol" src="assets/icons/instagram.svg" alt="Instagram">
+                            <h5 class="instagram pointer">Follow us on Instagram</h5>
+                        </a>
+                        <a href="mailto:contact@postpress.io">
+                            <img class="email-symbol" src="assets/icons/email.svg" alt="Email">
+                            <h5 class="email pointer">contact@postpress.io</h5>
+                        </a>
                     </div>
-                </button>
+                </div>
             </div>
-        </div>
+        </ng-template> 
     </div>
 </form>

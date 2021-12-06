@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 import { User } from '../models/user.model';
 import { AuthService } from '../services/auth.service';
 import { DatabaseService } from '../services/database.service';
@@ -16,10 +17,14 @@ export class SignUpComponent implements OnInit {
 
   name = '';
   email = '';
-  creating: Boolean = false;
+  creating: boolean = false;
   earlyCount: BehaviorSubject<number>;
-  errors: { name: string  | undefined;
-            email: string  | undefined;} = {name: undefined, email: undefined};
+  error: string  | undefined =  undefined;
+  errorField: {name: boolean, email: boolean} = {name: false, email: false};
+  // errors: { name: string  | undefined;
+  //   email: string  | undefined;} = {name: undefined, email: undefined};
+  signUpState: boolean = false;
+  $notifier: Subject<null> = new Subject();
 
   constructor(private databaseService: DatabaseService,
               private mixpanelService: MixpanelService,
@@ -29,16 +34,21 @@ export class SignUpComponent implements OnInit {
 
   ngOnInit(): void {
     this.earlyCount = this.sharedService.getUserCount();
+    this.databaseService.userSignedUp
+      .pipe(takeUntil(this.$notifier)).subscribe((value) => this.signUpState = value)
   }
 
   manualUser() {
     if (this.creating) return;
     this.validName();
     this.validEmail();
-    if (this.errors.name || this.errors.email) return;
+    if (this.error) return;
     this.creating = true;
     const user: User = new User(this.name, this.email, 'manual');
-    this.saveUser(user);
+    this.saveUser(user)
+      .catch((e) => {
+        console.log(e);
+      });
   }
 
   googleSignUp() {
@@ -49,7 +59,7 @@ export class SignUpComponent implements OnInit {
       this.saveUser(user);
     })
     .catch((e) => {
-      if (e === "This email has already been used!") setTimeout(() => alert(e), 1);
+      if (e === "This email has already been used!") setTimeout(() => this.error = e, 1);
       console.log(e);
     })
     .finally(() => this.mixpanelService.clickGoogleSignUp());
@@ -61,19 +71,40 @@ export class SignUpComponent implements OnInit {
         this.mixpanelService.earlyAccess({...user, timestamp});
         this.router.navigate(['message']);
       })
-      .catch((e) => alert(e));
+      .catch((e) => {
+        if (e === "This email has already been used!") this.error = e;
+        console.log(e);
+      });
     this.creating = false
   }
 
   validName() {
-    if (!this.name || this.name.length === 0) return this.errors.name = 'Name is required';
-    return this.errors.name = undefined;
+    if (!this.name || this.name.length === 0) {
+      this.errorField.name = true;
+      return this.error = 'Name is required';
+    }
+    this.errorField.name = false;
+    return this.error = undefined;
   }
 
   validEmail() {
-    if (!this.email || this.email.length === 0) return this.errors.email = 'Email is required';
+    if (!this.email || this.email.length === 0) {
+      this.errorField.email = true;
+      return this.error = 'Email is required';
+    }
+
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (!re.test(String(this.email).toLowerCase())) return this.errors.email = 'Invalid email';
-    return this.errors.email = undefined;
+    if (!re.test(String(this.email).toLowerCase())) {
+      this.errorField.email = true;
+      return this.error = 'Invalid email';
+    }
+    
+    this.errorField.email = false;
+    return this.error = undefined;
+  }
+
+  ngOnDestroy() {
+    this.$notifier.next();
+    this.$notifier.complete();
   }
 }
