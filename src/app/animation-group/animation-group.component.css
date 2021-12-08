@@ -1,0 +1,139 @@
+.container {
+    position: relative;
+    width: 750px;
+    height: 456.18px;
+}
+
+.tiktok {
+    position: absolute;
+    height: auto;
+    width: 240px;
+    left: 10px;
+    top: calc(28px - (244px - 147.57px) / 2);
+}
+
+.twitter {
+    position: absolute;
+    height: auto;
+    width: 260px;
+    left: 235px;
+    top: calc(0px - (264px - 150.6px) / 2);
+}
+
+.instagram {
+    position: absolute;
+    height: auto;
+    width: 260px;
+    left: 397px;
+    top: calc(113px - (264px - 150.6px) / 2);
+}
+
+.pinterest {
+    position: absolute;
+    height: auto;
+    width: 240px;
+    left: 255px;
+    bottom: calc(0px - (244px - 142.18px) / 2);
+}
+
+.youtube {
+    position: absolute;
+    height: auto;
+    width: 360px;
+    left: 76px;
+    top: calc(133px - (364px - 208.53px) / 2);
+}
+
+.behance {
+    position: absolute;
+    height: auto;
+    width: 220px;
+    left: -93px;
+    top: calc(229px - (224px - 135.27px) / 2);
+}
+
+@media only screen and (max-width: 1152px) {
+    .container {
+        width: 580px;
+        height: 352.78px;
+    }
+
+    .tiktok {
+        width: 185.6px;
+        left: 72px;
+        top: calc(21.65px - (189.594px - 114.12px) / 2);
+    }
+
+    .twitter {
+        width: 201.07px;
+        left: 253.65px;
+        top: calc(0px - (205.06px - 116.47px) / 2);
+    }
+
+    .instagram {
+        width: 201.07px;
+        left: 378.93px;
+        top: calc(87.39px - (205.06px - 116.47px) / 2);
+    }
+
+    .pinterest {
+        width: 185.6px;
+        left: 255px;
+        bottom: calc(0px - (189.59px - 109.95px) / 2);
+    }
+
+    .youtube {
+        width: 278.4px;
+        left: 130.69px;
+        top: calc(102.85px - (282.4px - 161.26px) / 2);
+    }
+
+    .behance {
+        width: 170.13px;
+        left: 0px;
+        top: calc(177.09px - (174.13px - 104.61px) / 2);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 292px;
+        height: 179.43px;
+    }
+
+    .tiktok {
+        width: 94.4px;
+        left: 33.58px;
+        top: calc(11px - (98.4px - 58.04px) / 2);
+    }
+
+    .twitter {
+        width: 102.27px;
+        left: 126px;
+        top: calc(0px - (106.26px - 59.24px) / 2);
+    }
+
+    .instagram {
+        width: 102.27px;
+        left: 189.733px;
+        top: calc(44.45px - (106.26px - 59.24px) / 2);
+    }
+
+    .pinterest {
+        width: 94.4px;
+        left: 133.88px;
+        top: calc(124.51px - (118.24px - 59.24px) / 2);
+    }
+
+    .youtube {
+        width: 141.6px;
+        left: 63.47px;
+        top: calc(52.41px - (145.59px - 82.02px) / 2);
+    }
+
+    .behance {
+        width: 78.67px;
+        left: 0px;
+        top: calc(90.07px - (82.67px - 45.57px) / 2);
+    }
+}

@@ -1,125 +1,80 @@
-.main {
-  position: relative;
-  overflow-x: hidden;
-}
-
-app-intro {
-
-  width: 100%;
-  /* margin-top: -190px; */
-  height: auto;
-
-}
-
-.restrict {
-
-  margin-top: 124px;
-
-}
-
 .center {
-  justify-content: center;
-  align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
-.wrap {
-  flex-wrap: wrap;
+.container {
+    height: calc(100vh - 64px);
 }
 
-.wrap > div {
-  margin-left: 64px;
-  margin-right: 64px;
+.video-container{
+    width: 693px;
+    height: 359px;
+    overflow: hidden;
+    border-radius: 12px;
+    border: solid 2px #fdf0dd;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.3);
 }
 
-.bottom-margin {
-  margin-bottom: 48px;
+.pointer {
+    cursor: pointer;
 }
 
-.bottom-margin-exp {
-
-  margin-bottom: 72px;
-
+video, img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
-.linksRow {
-
-  margin-bottom: 16px;
-  margin-top: 24px;
-  width: 340px;
-  margin-left: calc((100% - 340px)/2);
-
+.row {
+    height: 100%;
 }
 
-.links {
+@media only screen and (max-width: 1152px) {
 
-  align-items: center;
-  /* Replace width with 50% when insta icon is added back */
-  width: 100%;
+    .video-container{
+        width: 580px;
+        height: 280px;
+        border-radius: 12px;
+    }
 
+    .container {
+        height: unset;
+        margin-bottom: 94px;
+        margin-top: 188px;
+    }
 }
 
-.emailLink > a > img {
+@media only screen and (max-width: 600px) {
 
-  height: 30px;
-  width: 30px;
+    .video-container{
+        width: 95vw;
+        max-width: 420px;
+        height: 220px;
+        border-radius: 12px;
+    }
 
+    .container {
+        margin-bottom: 48px;
+        margin-top: 136px;
+    }
+    
 }
 
+@media only screen and (max-width: 410px) {
 
-
-@media screen and (max-width: 1164px) {
-  .restrict {
-    max-width: 550px;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .restrict {
-    margin-top: 64px;
-  }
-}
-
-@media screen and (max-width: 550px) {
-
-  .wrap > div {
-
-    margin-left: 0px;
-    margin-right: 0px;
-
-  }
-
-}
-
-@keyframes more-arrow{
-
-  0% {
-
-    opacity: 1;
-
-  }
-
-  50% {
-
-    opacity: 0.4;
-
-  }
-
-  100% {
-
-    opacity: 1;
-
-  }
+    .video-container{
+        height: 200px;
+    }
 
 }
 
-@keyframes scale-logo {
+@media only screen and (max-width: 360px) {
 
-  0% {
-    transform: scale(0);
-  }
-
-  100% {
-    transform: scale(1);
-  }
+    .video-container{
+        height: 170px;
+    }
 
 }

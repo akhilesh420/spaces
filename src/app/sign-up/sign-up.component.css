@@ -1,181 +1,187 @@
-h3 {
-
-    font-size: 25px;
-
+.center {
+    justify-content: center;
 }
 
-h4 {
+.gap {
+    column-gap: 18px;
+}
 
-    color: var(--accent);
+.spacer {
+    margin-top: 18px;
+}
 
+.field {
+    width: 218px;
+    height: 48px;
+    background: var(--light);
+    border: 2px solid var(--dark);
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+input:focus {
+
+    outline: none;
+    background: var(--dark);
+    color: var(--light);
+    border: 2px solid var(--light);
+   
 }
 
 button {
 
-    border-style: none;
-    outline-style: none;
-    background-color: var(--primary);
+    transition: background ease 0.6s, border ease 0.6s;
+    border: 2px solid transparent;
+
 }
 
-.logo {
-    width: 100%;
-    justify-content: center;
-    margin-top: 36px;
-    cursor: pointer;
+button > h5 {
+
+    transition: color ease 0.6s;
+
 }
 
-.alignContainer {
+.button {
+    width: 146px;
+    height: 48px;
+    background: var(--primary);
+    border-radius: 6px;
+    position: relative;
+}
 
-    width: 100%;
-    justify-content: center;
+.wrap {
+    flex-wrap: wrap;
+}
 
+.or {
+    font-size: 18px;
+    letter-spacing: 0.005em;
+}
+
+.letter-spacing {
+    letter-spacing: 0.005em;
+}
+
+.google-sign-up {
+    width: 46px;
+    height: auto;
+}
+
+.spacing {
+    margin-top: 12px;
+}
+
+.g-signup-gap {
+    column-gap: 12px;
+}
+
+.google-button {
+    background-color: transparent;
+    width: 276px;
+    border-radius: 6px;
 }
 
 .container {
-
-    width: 420px;
-    background: #66B8FF;
-    border: 1px solid #FDF0DD;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 8px #000000;
-    border-radius: 16px;
-    margin-top: 36px;
-    margin-bottom: 36px;
-
+    position: relative;
+    width: 157px;
+    height: 49px;
 }
 
-.signUpHelpers {
-
-    width: 100%;
-    margin-bottom: 12px;
-    justify-content: center;
-
+.insta-symbol {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 24px;
+    height: auto;
 }
 
-button > img {
-
-    cursor: pointer;
- 
-}
-
-.orMarker {
-
-    width: 100%;
-    margin-bottom: 2px;
-    text-align: center;
-    justify-content: center;
-
-}
-
-.marker > p {
-
+.instagram {
+    position: absolute;
+    width: 119px;
+    height: 15px;
+    left: 38px;
+    top: 5px;
     font-size: 12px;
-
 }
 
-.title {
-
-    width: 100%;
-    margin-top: 36px;
-    margin-bottom: 24px;
-    justify-content: center;
-
+.email-symbol {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 24px;
+    height: auto; 
 }
 
-.feild {
-
-    width: calc(100% - 32px);
-    margin-top: 36px;
-    align-self: center;
-    justify-content: center;
-
-
-}
-
-.feildSize {
-
-    width: 100%;
-
-}
-
-.feildTitle {
-
-    margin-bottom: 2px;
-    margin-left: 8px;
-
-}
-
-.feildInput {
-
-    background: #FDF0DD;
-    border-radius: 8px;
-    width: 100%;
-    height: 36px;
-    border: 1px solid #FFFFFF;
-
-}
-
-.no-margin-top {
-
-    margin-top: 0px;
-    
-}
-
-.input {
-
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 125%;
-    color: #040605;
-    padding: 0px;
-    border-radius: 8px;
-    background: rgba(253, 240, 221, 0.9);
-    width: 100%;
-    border: none;
-    text-indent: 8px;
-
-}
-
-.input:focus {
-
-    outline: var(--primary);
-    background-color: #fdf0dd;
-
-}
-
-.error-border {
-  border: 1px solid var(--red);
+.email {
+    position: absolute;
+    width: 113px;
+    height: 15px;
+    left: 38px;
+    bottom: 2px;
+    font-size: 12px;
 }
 
 .error {
+    color: var(--danger);
+}
 
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 18px;
-    color: var(--red);
-    margin-top: 2px;
-    margin-left: 8px;
+.error-input {
+    border-color: var(--danger);
+}
+
+@media only screen and (max-width: 1152px) {
+    
+    .gap {
+        column-gap: 24px;
+        row-gap: 12px;
+    }
+
+    .restrict {
+       max-width: 218px;
+    }
+
+    .center-align {
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .gap {
+        column-gap: 12px;
+    }
+
+    .restrict-phone {
+        max-width: 218px;
+    }
+
+    .letter-spacing {
+        font-size: 18px;
+    }
+
+    .google-button {
+        width: 214px;
+    }
+
+    .google-width {
+        width: 156px;
+    }
 
 }
 
-.nextIcon {
+@media (hover: hover) {
+    
+    button:hover {
 
-    margin-bottom: 24px;
-    cursor: pointer;
+      border: 2px solid var(--primary);
+      background: var(--dark);
 
-}
+    }
 
-@media screen and (max-width: 550px) {
+    button:hover > h5 {
 
-    .container {
+        color: var(--primary);
 
-        border-radius: 0px;
-        width: 100%;
-
-  }
+    }
 
 }

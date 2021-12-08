@@ -4,12 +4,15 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { User } from '../models/user.model';
 import { environment } from 'src/environments/environment';
+import { BehaviorSubject } from 'rxjs';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class DatabaseService {
+
+  userSignedUp: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
   constructor(private afs: AngularFirestore,
               private auth: AngularFireAuth,
@@ -42,7 +45,9 @@ export class DatabaseService {
 
         return Promise.resolve(timestamp);
       });
-    }).catch((e) =>{
+    })
+    .then(() => this.userSignedUp.next(true))
+    .catch((e) =>{
       if (e === 'email_used') throw "This email has already been used!";
       throw "Something went wrong! Please try again.";
     });

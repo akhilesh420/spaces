@@ -1,0 +1,151 @@
+.sign-up-spacing {
+    margin-bottom: 36px;
+}
+
+.content {
+    justify-content: center;
+}
+
+.backpanel {
+    width: 1008px;
+    height: 548px;
+    background: linear-gradient(106.47deg, rgba(102, 184, 255, 0.5) 0%, rgba(253, 240, 221, 0.9) 51.43%);
+    box-shadow: 0px 1px 16px rgba(4, 6, 5, 0.25);
+    backdrop-filter: blur(60px);
+    border-radius: 16px;
+    border: 2px solid #FDF0DD;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    width: 650px;
+    height: 160px;
+    left: 21px;
+    top: 36px;
+}
+
+.paragraph {
+    position: absolute;
+    width: 289px;
+    height: 128px;
+    left: 21px;
+    top: 214px;
+    color: rgba(4, 6, 5, 0.9);
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.divider {
+    position: absolute;
+    width: 174px;
+    height: 8px;
+    left: 21px;
+    top: 360px;
+    background: #FDF0DD;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+.animations {
+    position: absolute;
+    top: 137px;
+    left: 405px;
+}
+
+.icon {
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    top: 106px;
+    left: 329px;
+}
+
+@media only screen and (max-width: 1152px) {
+
+    .backpanel {
+        width: 540px;
+        height: 691px;
+    }
+
+    .sign-up-spacing {
+        margin-bottom: 48px;
+    }
+
+    .title {
+        width: 487px;
+        height: 120px;
+        left: 24px;
+    }
+
+    .paragraph {
+        width: 329px;
+        height: 128px;
+        left: 24px;
+        top: 174px;
+    }
+
+    .divider {
+        left: 24px;
+        top: 320px;
+    }
+
+    .animations {
+        top: 352px;
+        left: -21px;
+    }
+
+    .icon {
+        width: 36px;
+        height: 36px;
+        top: 93px;
+        left: 262px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .sign-up-spacing {
+        margin-bottom: 44px;
+    }
+    
+    .backpanel {
+        width: 292px;
+        height: 444px;
+    }
+
+    .title {
+        width: 260px;
+        height: 86px;
+        left: 10px;
+        top: 24px;
+    }
+
+    .paragraph {
+        width: 247px;
+        height: 96px;
+        left: 10px;
+        top: 128px;
+    }
+
+    .divider {
+        left: 10px;
+        top: 236px;
+    }
+
+    .animations {
+        top: 268px;
+        left: 0px;
+    }
+
+    .icon {
+        width: 36px;
+        height: 36px;
+        top: 2px;
+        left: 254px;
+    }
+
+}

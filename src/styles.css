@@ -1,17 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~aos/dist/aos.css";
 
+:root {
+  --primary: #66B4FF;
+  /* --accent: #FDF0DD; Should be the purple color*/ 
+  --dark: #040605;
+  --light: #FDF0DD;
+  --danger: #F05A5F;
+}
+
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  image-rendering: optimizeQuality;
 }
 
 body {
-  height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
+  overflow-y: visible;
+  scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  background-color: var(--dark);
+  background-image: url("src/assets/background/desktop-backgroundx4.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-attachment: local;
+  background-size: 100% 100%;
 }
 
 .body-no-scroll {
@@ -19,32 +37,24 @@ body {
   position: fixed;
 }
 
-.mainLogo {
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%)
-
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
-/* font-family: 'Source Sans Pro', sans-serif;
-font-family: 'Source Serif Pro', serif; */
-
-:root {
-  --primary: #66B8FF;
-  --accent: #FDF0DD;
-  --dark: #040605;
-  --white: #ffffff;
-  --red: #CC2A28;
-}
 
 ::-webkit-scrollbar {
   display: none;
 }
 
-.column {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.col {
   display: flex;
   flex-direction: column;
 }
@@ -54,96 +64,150 @@ font-family: 'Source Serif Pro', serif; */
   flex-direction: row;
 }
 
-.dark {
-  background: var(--dark);
-  color: var(--dark);
+
+/* Typography */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@font-face {
+  font-family: 'Recoleta';
+  src: url('src/assets/fonts/recoleta/Recoleta-Black.eot');
+  src: local('Recoleta Black'), local('Recoleta-Black'),
+      url('src/assets/fonts/recoleta/Recoleta-Black.eot?#iefix') format('embedded-opentype'),
+      url('src/assets/fonts/recoleta/Recoleta-Black.woff') format('woff'),
+      url('src/assets/fonts/recoleta/Recoleta-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
 }
 
-.light {
-  background: var(--accent);
-  color: var(--accent);
-  background-blend-mode: hard-light;
-  mix-blend-mode: hard-light;
+b {
+  font-weight: 600;
 }
 
-.primary {
-  background: var(--primary);
-  color: var(--primary);
-  mix-blend-mode: normal;
-}
-
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
-
-  font-family: 'Source Serif Pro', serif;
+  font-family: 'Recoleta';
   font-style: normal;
-  font-weight: bold;
-  font-size: 60px;
-  line-height: 140%;
-  color: var(--accent);
-  mix-blend-mode: hard-light;
-  letter-spacing: 0em;
-  margin: 0;
-  padding: 0;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 125%;
+  /* identical to box height, or 45px */
 
+  letter-spacing: 0.015em;
+
+  color: var(--light);
 }
 
 h2 {
-
-  font-family: 'Source Serif Pro', serif;
+  font-family: 'Recoleta';
   font-style: normal;
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 140%;
-  color: var(--accent);
-  letter-spacing: 0em;
-  margin: 0;
-  padding: 0;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 125%;
+  /* or 80px */
 
+  letter-spacing: 0.01em;
+
+  color: var(--dark);
 }
 
 h3 {
-
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pro';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 24px;
-  line-height: 140%;
-  color: var(--accent);
-  mix-blend-mode: normal;
-  letter-spacing: 0.02em;
-  margin: 0;
-  padding: 0;
+  line-height: 135%;
+  /* or 32px */
 
+  letter-spacing: -0.005em;
+  color: var(--dark);
 }
 
 h4 {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 125%;
+  /* identical to box height, or 45px */
 
-  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 0.005em;
+  color: var(--light);
+
+}
+
+h5 {
+  font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 125%;
-  color: var(--primary);
-  margin: 0;
-  padding: 0;
+  /* identical to box height, or 30px */
 
+  color: var(--light);
 }
 
-p {
-
-  font-family: 'Source Sans Pro', sans-serif;
+h6 {
+  font-family: 'Source Sans Pro';
   font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 24px;
   line-height: 125%;
-  letter-spacing: 0.01em;
-  color: var(--white);
-  margin: 0;
-  padding: 0;
-
+  letter-spacing: 0.005em;
+  color: var(--dark);
 }
 
+input {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  letter-spacing: 0.005em;
+  color: rgba(4, 6, 5, 0.7);
+  padding:  9px 12px 9px 12px;
+}
+
+
+@media only screen and (max-width: 1152px) {
+  h1 {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 125%;
+  }
+
+  h2 {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 125%;
+    letter-spacing: 0.01em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  h2 {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 125%;
+    letter-spacing: 0.01em;
+  }
+
+  h3 {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 135%;
+    letter-spacing: -0.005em;
+  }
+}
