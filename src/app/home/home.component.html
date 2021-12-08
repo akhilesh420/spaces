@@ -1,41 +1,20 @@
-<div class="column main center">
-
-  <!-- Switch for AB test -->
-  <app-banner appViewTrace name='starting card'></app-banner>
-
-  <app-intro appViewTrace name='Introduction'></app-intro>
-  <div class="restrict">
-    <div class="row wrap center">
-      <div data-aos="fade-up" class="bottom-margin" appViewTrace name='how it works card'>
-        <app-how-it-works id='howitworks'></app-how-it-works>
-      </div>
-      <div data-aos="fade-up" class='column bottom-margin-exp'>
-        <app-benefits class='bottom-margin' appViewTrace name='benefits card'></app-benefits>
-        <app-sign-up-banner location='benefits card'></app-sign-up-banner>
-      </div>
-      <div data-aos="fade-up" class="column bottom-margin">
-        <app-mission-statement class='bottom-margin' appViewTrace name='mission statement card'></app-mission-statement>
-        <app-sign-up-banner location='mission statement card'></app-sign-up-banner>
-      </div>
-    </div>
-
-    <div class="row linksRow" appViewTrace name='links'>
-
-        <div class="instaLink column links">
-          <a href="https://www.instagram.com/postpress.io/" target="_blank" (click)='clickInstagram();'>
-            <img src = "assets/images/instaLink.svg">
-          </a>
+<div class="col center container index">
+    <div class="row pointer center" routerLink="."  fragment="introduction">
+        <div class="video-container">
+            <video  #animation 
+                    [muted]="true" 
+                    autoplay 
+                    playsinline 
+                    preload="none" 
+                    role='img' 
+                    muted>
+                <source src="assets/Landing animation/Landing_Animation.mp4" type="video/mp4">
+            </video> 
         </div>
-
-        <div class="emailLink column links">
-          <a href="mailto:contact@postpress.io" (click)='clickEmail();'>
-            <img src = "assets/images/emailIcon.svg">
-          </a>
-        </div>
-
     </div>
-  </div>
 </div>
-
-
-
+<app-collect-content name="introduction"></app-collect-content>
+<app-sign-up name="signup"></app-sign-up>
+<app-how-it-works></app-how-it-works>
+<app-no-burnout></app-no-burnout>
+<app-sign-up name="signup"></app-sign-up>

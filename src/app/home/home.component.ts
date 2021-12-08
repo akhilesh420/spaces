@@ -1,6 +1,6 @@
-import { SharedService } from './../services/shared.service';
-import { MixpanelService } from './../services/mixpanel.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AnimationItem } from 'lottie-web';
+import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-home',
@@ -9,16 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private mixpanelService: MixpanelService) { }
+  landingOption: AnimationOptions = {path: 'assets/Landing animation/Landing Animation.json'};
+  @ViewChild('animation') animation: ElementRef<HTMLVideoElement>;
+
+  videoLoop: NodeJS.Timeout;
+
+  constructor() { }
 
   ngOnInit(): void {
-}
-
-  clickEmail() {
-    this.mixpanelService.clickEmail({location: "home page"});
-  }
-
-  clickInstagram() {
-    this.mixpanelService.clickInstagram();
   }
 }

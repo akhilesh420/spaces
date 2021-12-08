@@ -1,0 +1,113 @@
+<div class="col sign-up-spacing">
+    <div class="row content">
+        <div class="container">
+            <h2 class="title">Make interactive <br> spaces.</h2>
+            <h3 class="paragraph desktopPara">
+                <b>Use your collection to create new experiences.</b>
+                <br>Engage your audience, while helping
+                <br>other creators grow.
+            </h3>
+            <h3 class = "paragraph phonePara">
+                <b>Use your collection to create new<br>experiences.</b>
+                Engage your audience,<br>while helping
+                other creators grow.
+            </h3>
+            <img class='like-icon' src="assets/icons/1-k-like.png" alt="like icon">
+            <img class='touch-icon' src="assets/icons/touch-gesture.png" alt="touch gesture icon">
+            <div class="animation-container animation-A">
+                <video  #animationA
+                        [muted]="true" 
+                        autoplay 
+                        playsinline 
+                        preload="none" 
+                        role='img' 
+                        muted
+                        (play)="onPlayDesktop(animationA);"
+                        loop>
+                    <source src="assets/app animations/discover_through_people.mp4" type="video/mp4">
+                </video> 
+            </div>
+            <div class="caption-container caption-A">
+                <p>Discover through people</p> 
+            </div>
+            <div class="animation-container animation-B">
+                <video  #animationB
+                        [muted]="true" 
+                        autoplay 
+                        playsinline 
+                        preload="none" 
+                        role='img' 
+                        muted
+                        (play)="onPlayDesktop(animationB);"
+                        loop>
+                    <source src="assets/app animations/create_spaces.mp4" type="video/mp4">
+                </video> 
+            </div>
+            <div class="caption-container caption-B">
+                <p>Create spaces</p> 
+            </div>
+            <div class="animation-container animation-C">
+                <video  #animationC 
+                        [muted]="true" 
+                        autoplay 
+                        playsinline 
+                        preload="none" 
+                        role='img' 
+                        muted
+                        (play)="onPlayDesktop(animationC);"
+                        loop>
+                    <source src="assets/app animations/grow_together.mp4" type="video/mp4">
+                </video> 
+            </div>
+            <div class="caption-container caption-C">
+                <p>Grow together</p> 
+            </div>
+            <div class="animation-container animation-group">
+                <div class="scroll-container" #scrollContainer>
+                    <div class="video-container">
+                        <video  [muted]="true"  
+                                playsinline 
+                                preload="none" 
+                                role='img' 
+                                muted
+                                autoplay
+                                (play)="onPlay();"
+                                #video>
+                            <source src="assets/app animations/discover_through_people.mp4" type="video/mp4">
+                        </video>
+                    </div> 
+                    <div class="video-container">
+                        <video  [muted]="true"  
+                                playsinline 
+                                preload="none" 
+                                role='img' 
+                                muted
+                                autoplay
+                                (play)="onPlay();"
+                                #video>
+                            <source src="assets/app animations/create_spaces.mp4" type="video/mp4"> 
+                        </video>
+                    </div>   
+                    <div class="video-container">
+                        <video  [muted]="true"  
+                                playsinline 
+                                preload="none" 
+                                role='img' 
+                                muted
+                                autoplay
+                                (play)="onPlay();"
+                                #video>
+                            <source src="assets/app animations/grow_together.mp4" type="video/mp4">  
+                        </video>
+                    </div>     
+                </div>
+                <app-carousel-buttons [count]="3" [activeButton]="activePosition" (activeButtonChange)="playAnimation($event)" class="carousel-buttons"></app-carousel-buttons>
+            </div>
+            <div class="caption-container caption-group">
+                <p [ngClass]="activePosition === 0 ? 'appear' : 'disappear'">Discover through people</p> 
+                <p [ngClass]="activePosition === 1 ? 'appear' : 'disappear'">Create spaces</p> 
+                <p [ngClass]="activePosition === 2 ? 'appear' : 'disappear'">Grow together</p> 
+            </div>
+        </div>
+    </div>
+</div>

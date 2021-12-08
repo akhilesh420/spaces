@@ -1,0 +1,23 @@
+<div class="blur fix index" 
+    (window:scroll)="onScroll($event)"
+    [ngClass]="scrollPosition >= 10 ? 'appear' : 'disappear'">
+</div>
+<div class="row navbar align-center fix index">
+  <div class="col">
+    <div class="row align-center">
+      <div class="col logo">
+        <embed src="assets/logo/symbol.svg" class="symbol" alt="Postpress">
+      </div>
+      <div class="col name">
+        <h1>
+          Postpress
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <button class="button" routerLink="."  fragment="signup">
+      <h6>Early Access</h6>
+    </button>
+  </div>
+</div>

@@ -1,5 +1,10 @@
-<div class="master-container"
+<div class="resize-container" 
     (window:resize)="onResize()"
-    #master>
-  <router-outlet></router-outlet>
+    #resize>
 </div>
+<div class="master-container">
+  <app-navbar></app-navbar>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>
+

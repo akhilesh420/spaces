@@ -1,124 +1,79 @@
-<div class="row logo" routerLink='/home'>
-
-    <img src = "assets/images/logo.svg">
-
-</div>
-
-<div class="row alignContainer">
-
-    <div class="column container">
-
-        <div class="row title">
-
-            <h2>Early Access</h2>
-
+<form (ngSubmit)="manualUser()">
+    <div class="col center-align">
+        <div class="row center">
+            <h4>{{signUpState ? "Success!" : "Early Access"}}</h4>
         </div>
-
-        <!-- Google sign-up button -->
-        <div class="row signUpHelpers">
-
-            <div id="my-signin2" class = "signInButton" (click)='googleSignUp();'>
-              <button>
-                  <img src = "assets/images/googleButton.svg">
-              </button>
+        <div class="row center">
+            <h5>Join {{earlyCount | async}} more creatives.</h5>
+        </div>
+        <ng-container *ngIf="!signUpState; else socials">
+            <div class="row wrap spacer center gap restrict-phone">
+                <div class="col">
+                    <div class="row gap wrap restrict">
+                        <input  class="field"
+                                placeholder="Name" 
+                                [(ngModel)]="name"
+                                (focusout)='validName()'
+                                (keyup)='validName()'
+                                name='name'
+                                id="name"
+                                type="text"
+                                [class.error-input]="errorField.name">
+                        <input  class="field" 
+                                placeholder="Email"
+                                [(ngModel)]="email"
+                                (focusout)='validEmail()'
+                                (keyup)='validEmail()'
+                                name='email'
+                                id="email"
+                                type="email"
+                                [class.error-input]="errorField.email">
+                    </div>
+                </div>
+                <div class="col center">
+                    <div class="row">
+                        <button class="button" type="submit" [disabled]="creating">
+                            <h5>{{ creating ? "Loading..." : "Sign Up"}}</h5>
+                        </button>
+                    </div>
+                </div>
             </div>
-
-        </div>
-
-        <!-- Apple sign-up button -->
-        <!-- <div class="row signUpHelpers">
-
-            <div id="appleid-signin" class="signin-button" data-color="black" data-border="false" data-type="sign-in"></div>
-
-        </div> -->
-
-        <div class="orMarker">
-
-            <div class="marker">
-                <h4>OR</h4>
+            <div class="row center spacing">
+                <h5 class="letter-spacing or error">{{error}}</h5>
             </div>
-
-        </div>
-
-        <div class="row feild no-margin-top">
-
-            <div class="column feildSize">
-
-                <div class="feildTitle row">
-                    <h4>Name</h4>
-                </div>
-
-                <div class="feildInput row"
-                    [ngClass]='{"error-border": !!errors.name}'>
-
-                    <input type='text'
-                           class = "input"
-                           [(ngModel)]="name"
-                           (focusout)='validName()'
-                           (keyup)='validName()'
-                           name='fullname'
-                           id="fullname">
-
-                </div>
-
-                <div *ngIf='errors.name' class="feildError row">
-
-                  <p class = "error">{{errors.name}}</p>
-
-                </div>
-
+            <div class="row center spacing">
+                <h5 class="letter-spacing or">OR</h5>
             </div>
-
-        </div>
-
-        <div class="row feild">
-
-            <div class="column feildSize">
-
-                <div class="feildTitle row">
-                    <h4>E-mail address</h4>
+            <div class="row center">
+                <div class="col">
+                    <button class="google-button" type="button" (click)="googleSignUp();">
+                        <div class="row center g-signup-gap">
+                            <div class="col">
+                                <img class="google-sign-up" src="assets/icons/google_sign_up.png" alt="Google sign up">
+                            </div>
+                            <div class="col center">
+                                <h5 class="letter-spacing google-width">Sign up with Google</h5>
+                            </div>
+                        </div>
+                    </button>
                 </div>
-
-                <div class="feildInput row" [ngClass]='{"error-border": !!errors.email}'>
-                  <input type="email"
-                         class = "input"
-                         [(ngModel)]="email"
-                         (focusout)='validEmail()'
-                         (keyup)='validEmail()'
-                          name='email'
-                          id="email">
-                </div>
-
-                <div *ngIf='errors.email' class="feildError row">
-
-                    <p class = "error">{{errors.email}}</p>
-
-                </div>
-
             </div>
-
-        </div>
-
-        <div class="row nextIcon feild" (click)='manualUser()'>
-
-
-          <app-loading *ngIf='creating; else button'></app-loading>
-
-          <ng-template #button>
-            <!-- Confirm arrow -->
-            <img *ngIf='!errors.name && !errors.email; else errorIcon'
-            src = "assets/images/nextIcon.svg">
-
-            <!-- Error arrow -->
-            <ng-template #errorIcon>
-              <img src = "assets/images/nextIconError.svg">
-            </ng-template>
-          </ng-template>
-
-        </div>
-
+        </ng-container>
+        <ng-template #socials>
+            <div class="row spacing center">
+                <div class="col">
+                    <div class="container">
+                        <a href="https://www.instagram.com/postpress.io/" target="_blank">
+                            <img class="insta-symbol" src="assets/icons/instagram.svg" alt="Instagram">
+                            <h5 class="instagram pointer">Follow us on Instagram</h5>
+                        </a>
+                        <a href="mailto:contact@postpress.io">
+                            <img class="email-symbol" src="assets/icons/email.svg" alt="Email">
+                            <h5 class="email pointer">contact@postpress.io</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </ng-template> 
     </div>
-
-</div>
-
-
+</form>
